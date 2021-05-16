@@ -1,9 +1,10 @@
+import { NavLink } from 'react-router-dom';
+
 const Navigation = () => {
   return (
     <nav>
-      <p>Home</p>
-      <p>My Albums</p>
-      <p>Liked Albums</p>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/liked">Liked Albums</NavLink>
     </nav>
   )
 }

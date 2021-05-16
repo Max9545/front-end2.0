@@ -18,7 +18,7 @@ function App() {
           <Route path="/liked">
             <p>Eventual liked album cards Container</p>
           </Route>
-          <Route path="">
+          <Route path="*">
             <h1>This page doesn't exist! Please navigate back to home with the sidebar</h1>
           </Route>
         </Switch>
