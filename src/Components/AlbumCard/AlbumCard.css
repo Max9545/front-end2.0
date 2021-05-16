@@ -6,7 +6,7 @@
   
 }
  .cover {
-   width: 75vw;
+  width: 75vw;
  }
 
 .date {
@@ -14,14 +14,14 @@
 }
 
  .discogs-link {
-   background-color: #FFBF00;
-   border-radius: 7px;
+  background-color: #FFBF00;
+  border-radius: 7px;
  }
 
  .genre {
-   background-color: red;
-   padding: 1vh 2vw 1vh 2vw;
-   margin: 1%;
+  background-color: red;
+  padding: 1vh 2vw 1vh 2vw;
+  margin: 1%;
  }
 
  .genre-container {
