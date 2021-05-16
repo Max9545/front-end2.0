@@ -7,10 +7,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header></header>
+      <header>Future Header / Branding mark</header>
       <Navigation />
       <main>
-        
+        <p>Card Container</p>
       </main>
     </div>
   );

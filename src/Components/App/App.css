@@ -13,6 +13,14 @@ nav {
   grid-area: nav;
 }
 
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
