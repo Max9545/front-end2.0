@@ -7,7 +7,7 @@ const albums = [
     }, 
     year: 1967, 
     genres: ['Funk', 'Soul', 'R&B'], 
-    coverImage: "https://i.ytimg.com/vi/IST6qRfVqwY/hqdefault.jpg"
+    coverImage: "https://upload.wikimedia.org/wikipedia/en/4/40/Jb-the-payback.jpg"
   }, 
   {
     id: 2, 
