@@ -1,9 +1,12 @@
 import React from 'react'
 import './Details.css';
-import './assets/X_button.svg'
+import '../Details/assets/discogs_logo.svg'
 import albums from '../../mockData';
+import DiscogsLogo from '../Details/assets/discogs_logo.svg';
+// import { ReactComponent as DiscogsLogo }  from '../Details/assets/discogs_logo.svg'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import CloseIcon from '@material-ui/icons/Close';
 
 const DetailsModal = () => {
   const discogsLink = 'https://www.discogs.com/James-Brown-The-Payback/master/33990';
@@ -11,12 +14,12 @@ const DetailsModal = () => {
   return (
     <div className="modal-container">
       <section className="modal">
-        {/* <img src='./assets/X_button.svg' alt='Exit Detials' /> */}
         <article className="box left">
-          <img className="album-cover" src={albums[0].coverImage} alt=""/>
+          <img className="album-cover shadow" src={albums[0].coverImage} alt=""/>
           <div className="links">
-            <FavoriteBorderIcon />
-            <a href={discogsLink} target="_blank"><img src="../Details/assets/discogs logo.svg"/>Purchase on Discogs</a>
+            <FavoriteBorderIcon className="click"/>
+            <a href={discogsLink} target="_blnk"></a>
+            <img className="discogsLogo" src={DiscogsLogo}/>
           </div>
           <div className="modal-text">
             <p>{albums[0].artists.name}</p>
@@ -25,10 +28,13 @@ const DetailsModal = () => {
           </div>
         </article>
         <article className="box right">
-          <iframe src="https://open.spotify.com/embed/album/49vpRrUcAr2bj6aYQr0Cfl" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          <iframe className="shadow" src="https://open.spotify.com/embed/album/49vpRrUcAr2bj6aYQr0Cfl" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
           {/* <div>Spotify Playlist</div> */}
         </article>
       </section>
+      <div className="close-container">
+        <CloseIcon className="close-icon click"/>
+      </div>
     </div>
   )
 }
