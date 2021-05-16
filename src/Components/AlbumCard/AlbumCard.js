@@ -1,20 +1,20 @@
 import './AlbumCard.css'
 
-function AlbumCard({ album }) {
+function AlbumCard({ coverImage, title, name, year, genres }) {
 
 
   const displayGenres = (list) => {
-   return list.map(genre => <p>{genre}</p>)
+   return list.map(genre => <p className='genre' data-cy='genre'>{genre}</p>)
   }
 
 
   return (
     <>
-      <img src={album.coverImage}/>
-      <h2>{album.artists.name}</h2>
-      <h3>{album.title}</h3>
-      <p>{album.year}</p>
-      {displayGenres(album.genres)}
+      <img className='cover' data-cy='cover'src={coverImage}/>
+      <h2 className='title' data-cy='title'>{title}</h2>
+      <h3 className='artist' dat-cy='artist'>{name}</h3>
+      <p className='date' data-cy='date'>{year}</p>
+      {displayGenres(genres)}
     </>
   )
 }
