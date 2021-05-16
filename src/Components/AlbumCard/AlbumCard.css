@@ -1,12 +1,14 @@
 .card {
-  margin: 5%;
+  margin: 3%;
   background-color: #2a0800;
   color: #ccfbfe;
-  padding: 5%;
+  padding: 20px;
   width: 280px;
+  height: 507px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-self: center;
 }
  .cover {
   /* width: 250px; */
@@ -36,4 +38,8 @@
  .genre-container {
   margin: 2vh 0 2vh 0;
   display: flex;
+ }
+
+ .title {
+   margin: 0;
  }

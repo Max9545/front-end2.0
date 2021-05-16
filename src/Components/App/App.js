@@ -28,10 +28,10 @@ const albums = [
 function App() {
 
   return (
-    <>
+    <div className='app'>
       <AlbumCardsDisplay albums={albums}/>
       {/* <AlbumCard album={albums[0]}/> */}
-    </>
+    </div>
   );
 }
 

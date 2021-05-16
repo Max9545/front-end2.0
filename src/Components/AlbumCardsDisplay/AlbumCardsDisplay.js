@@ -24,10 +24,12 @@ function AlbumCardsDisplay({ albums }) {
   }
 
   return (
+    <>
+    <h2>Albums</h2>
     <div className='card-container' data-cy='card-container'>
-      <h2>Albums</h2>
       {currentAlbums && currentAlbumsDisplay()}
     </div>
+    </>
   )
 }
 

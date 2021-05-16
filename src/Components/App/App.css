@@ -1,5 +1,7 @@
-.App {
-  display: flex;
-  justify-content: center;
+.app {
+  width: 100vw;
 }
 
+html {
+  width: 100vw;
+}
