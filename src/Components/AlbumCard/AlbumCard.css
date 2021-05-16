@@ -16,9 +16,11 @@
  .discogs-link {
   background-color: #FFBF00;
   border-radius: 7px;
+  padding:2%;
  }
 
  .genre {
+   color: #2a0800;
   background-color: red;
   padding: 1vh 2vw 1vh 2vw;
   margin: 1%;
