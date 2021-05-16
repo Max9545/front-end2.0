@@ -2,6 +2,8 @@ import React from 'react'
 import './Details.css';
 import './assets/X_button.svg'
 import albums from '../../mockData';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const DetailsModal = () => {
   const discogsLink = 'https://www.discogs.com/James-Brown-The-Payback/master/33990';
@@ -12,7 +14,10 @@ const DetailsModal = () => {
         {/* <img src='./assets/X_button.svg' alt='Exit Detials' /> */}
         <article className="box left">
           <img className="album-cover" src={albums[0].coverImage} alt=""/>
-          <a href={discogsLink} target="_blank">Purchase on Discogs</a>
+          <div className="links">
+            <FavoriteBorderIcon />
+            <a href={discogsLink} target="_blank"><img src="../Details/assets/discogs logo.svg"/>Purchase on Discogs</a>
+          </div>
           <div className="modal-text">
             <p>{albums[0].artists.name}</p>
             <p>{albums[0].title}</p>
@@ -20,7 +25,7 @@ const DetailsModal = () => {
           </div>
         </article>
         <article className="box right">
-          <iframe src="https://open.spotify.com/embed/album/49vpRrUcAr2bj6aYQr0Cfl" width="380" height="490" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          <iframe src="https://open.spotify.com/embed/album/49vpRrUcAr2bj6aYQr0Cfl" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
           {/* <div>Spotify Playlist</div> */}
         </article>
       </section>
