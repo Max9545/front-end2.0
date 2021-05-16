@@ -9,12 +9,13 @@
   min-height: 100vh;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 100px auto;
   grid-template-areas:
-    "header header header header"
-    "nav main main main";
+    "header header header header header"
+    "nav main main main main";
   width: 100vw;
+   
 }
 
 nav {
@@ -28,7 +29,7 @@ nav {
 
 header {
   grid-area: header;
-  background-color: var(--accent-color);
+  background-color: var(--text-color);
   color: var(--primary-color);
 }
 
@@ -40,6 +41,10 @@ main {
 
 a {
   text-decoration: none;
+}
+
+a:visited {
+  color: var(--accent-color);
 }
 
 .App-logo {
