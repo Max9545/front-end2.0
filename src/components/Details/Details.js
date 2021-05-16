@@ -2,10 +2,10 @@ import React from 'react'
 import './Details.css';
 import '../Details/assets/discogs_logo.svg'
 import albums from '../../mockData';
-import DiscogsLogo from '../Details/assets/discogs_logo.svg';
-// import { ReactComponent as DiscogsLogo }  from '../Details/assets/discogs_logo.svg'
+import discogsLogo from '../Details/assets/discogs_logo.svg';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import { Tooltip } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 
 const DetailsModal = () => {
@@ -17,9 +17,13 @@ const DetailsModal = () => {
         <article className="box left">
           <img className="album-cover shadow" src={albums[0].coverImage} alt=""/>
           <div className="links">
-            <FavoriteBorderIcon className="click"/>
-            <a href={discogsLink} target="_blnk"></a>
-            <img className="discogsLogo" src={DiscogsLogo}/>
+          <Tooltip title="Add to Favorites" placement="right">
+            <FavoriteBorderIcon aria-label={"Add to Favorites"} className="click"/>
+          </Tooltip>
+            <div className="discogs-link">
+              <a href={discogsLink} target="_blnk"></a>
+              <img className="discogs-logo" src={discogsLogo}/>
+            </div>
           </div>
           <div className="modal-text">
             <p>{albums[0].artists.name}</p>
@@ -29,11 +33,12 @@ const DetailsModal = () => {
         </article>
         <article className="box right">
           <iframe className="shadow" src="https://open.spotify.com/embed/album/49vpRrUcAr2bj6aYQr0Cfl" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-          {/* <div>Spotify Playlist</div> */}
         </article>
       </section>
       <div className="close-container">
-        <CloseIcon className="close-icon click"/>
+        <Tooltip title="Close">
+          <CloseIcon aria-label={"close modal"} className="close-icon click"/>
+        </Tooltip>
       </div>
     </div>
   )
