@@ -27,7 +27,7 @@ function AlbumCardsDisplay({ albums }) {
   return (
     <>
       <h2>Albums</h2>
-       { currentAlbums && currentAlbumsDisplay()}
+       {currentAlbums && currentAlbumsDisplay()}
     </>
   )
 }

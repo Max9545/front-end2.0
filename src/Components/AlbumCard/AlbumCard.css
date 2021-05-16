@@ -1,0 +1,23 @@
+.card {
+  margin: 5%;
+  background-color: #2a0800;
+  color: #ccfbfe;
+  padding: 5%;
+  
+}
+ .cover {
+   width: 75vw;
+ }
+
+ .discogs-link {
+   background-color: #FFBF00;
+   border-radius: 7px;
+ }
+
+ .genre {
+   padding: 0 1vw 0 1vw;
+ }
+
+ .genre-container {
+   display: flex;
+ }
