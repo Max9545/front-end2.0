@@ -1,4 +1,5 @@
 import AlbumCard from '../AlbumCard/AlbumCard';
+import AlbumCardsDisplay from '../AlbumCardsDisplay/AlbumCardsDisplay'
 import './App.css';
 
 const albums = [
@@ -10,10 +11,11 @@ const albums = [
 ]
 
 function App() {
-  console.log(albums)
+
   return (
     <>
-    <AlbumCard album={albums[0]}/>
+      <AlbumCardsDisplay albums={albums}/>
+      {/* <AlbumCard album={albums[0]}/> */}
     </>
   );
 }
