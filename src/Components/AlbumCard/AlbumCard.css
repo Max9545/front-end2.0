@@ -3,10 +3,14 @@
   background-color: #2a0800;
   color: #ccfbfe;
   padding: 5%;
-  
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
  .cover {
-  width: 75vw;
+  /* width: 250px; */
+  height: 250px;
  }
 
 .date {
@@ -17,16 +21,19 @@
   background-color: #FFBF00;
   border-radius: 7px;
   padding:2%;
+  width: 45%;
+  align-self: flex-end;
  }
 
  .genre {
-   color: #2a0800;
+  color: #2a0800;
   background-color: red;
-  padding: 1vh 2vw 1vh 2vw;
+  /* padding: 1vh 2vw 1vh 2vw; */
+  padding: 2%;
   margin: 1%;
  }
 
  .genre-container {
-  margin:2vh 0 2vh 0;
+  margin: 2vh 0 2vh 0;
   display: flex;
  }
