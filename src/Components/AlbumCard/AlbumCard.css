@@ -9,15 +9,22 @@
    width: 75vw;
  }
 
+.date {
+  margin: 0;
+}
+
  .discogs-link {
    background-color: #FFBF00;
    border-radius: 7px;
  }
 
  .genre {
-   padding: 0 1vw 0 1vw;
+   background-color: red;
+   padding: 1vh 2vw 1vh 2vw;
+   margin: 1%;
  }
 
  .genre-container {
-   display: flex;
+  margin:2vh 0 2vh 0;
+  display: flex;
  }
