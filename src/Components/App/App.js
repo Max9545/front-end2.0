@@ -12,10 +12,19 @@ import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 
+
+
+
+
+
 function App() {
   const isTabletOrMobile = useMediaQuery({
     query: '(max-width: 780px)'
   });
+
+  const [currentAlbumsToDisplay, setCurrentAlbumsToDisplay] = useState([])
+
+
 
   return (
     <div className="App">
@@ -23,15 +32,23 @@ function App() {
         <h1 className="header__h1">Selector</h1>
         <Search />
       </header>
+<<<<<<< HEAD
       <Navigation isMobile={ isTabletOrMobile } />
+=======
+      <Navigation isMobile={ isTabletOrMobile }/>
+>>>>>>> 3021b09... Make card appera from API call
       {/* <DetailsModal /> */}
       <main>
         <Switch>
           <Route exact path="/">
             <section className="glass">
+<<<<<<< HEAD
               <AlbumCardsDisplay 
                 albums={ albums }
               />
+=======
+              <AlbumCardsDisplay/>
+>>>>>>> 3021b09... Make card appera from API call
             </section>
           </Route>
           <Route path="/liked">
