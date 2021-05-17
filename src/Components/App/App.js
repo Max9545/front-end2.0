@@ -4,19 +4,22 @@ import Navigation from './Navigation';
 import { Switch, Route } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 
 function App() {
-  const [screen, setScreen] = useState(window.innerWidth());
+  const isTabletOrMobile = useMediaQuery({
+    query: '(max-width: 780px)'
+  });
 
   return (
     <div className="App">
       <header>
         <h1>Selector</h1>
-        <p>Current screen size {}</p>
+        <p>Current screen size { screen }</p>
       </header>
-      <Navigation />
+      <Navigation isMobile={ isTabletOrMobile }/>
       <main>
         <Switch>
           <Route exact path="/">
