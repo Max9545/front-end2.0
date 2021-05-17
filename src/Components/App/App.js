@@ -1,6 +1,6 @@
 import AlbumCard from '../AlbumCard/AlbumCard';
 import AlbumCardsDisplay from '../AlbumCardsDisplay/AlbumCardsDisplay'
-import Navigation from './Navigation';
+import Navigation from '../Navigation/Navigation';
 import { Switch, Route } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import './App.css';
