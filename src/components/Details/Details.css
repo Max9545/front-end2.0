@@ -1,0 +1,281 @@
+* {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-container,
+.modal {
+  height: 100%;
+  width: 100%;
+}
+
+.modal-container {
+  display: flex;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(0, 0%, 0%, 0.4);
+  padding: 10px 10px 0px;
+}
+
+.modal {
+  height: 89%;
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1em;
+  z-index: 1;
+}
+
+
+.box {
+  height: 50%;
+}
+
+.shadow {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.box.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.album-cover {
+  height: 260px;
+  border-radius: 9px;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.links {
+  width: 65%;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.discogs-logo {
+  height: 22px;
+}
+
+.discogs-link-details {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  height: 25px;
+  width: 70px;
+  position: fixed;
+  justify-self: center;
+}
+
+.modal-text {
+  height: 50%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: end;
+  position: fixed;
+  text-align: start;
+  display: none;
+}
+
+.box.right {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+iframe {
+  height: 100%;
+  border: none;
+  border-radius: 7px;
+}
+
+.close-container {
+  height: 94vh;
+  width: 0;
+}
+
+.close-icon {
+  transform: scale(1.25);
+  padding-right: 5px;
+}
+
+.click {
+  color: hsl(0, 100%, 99%);
+  cursor: pointer;
+}
+
+.click:hover {
+  color: hsl(0, 0%, 0%);
+}
+
+@media only screen and (max-width: 320px) {
+  .box.right {
+    width: 85%;
+    margin-top: 12px;
+  }
+
+  .album-cover {
+    height: 170px;
+  }
+
+  iframe {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 0%, 0%, 0.4);
+    padding: 5%;
+    /* display: none; */
+  }
+
+  .modal {
+    height: 60vh;
+    width: 95vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+    border-radius: 5em;
+  }
+
+  .glass-modal {
+    height: 60vh;
+    width: 90vw;
+    border-radius: 5.2em;
+  }
+
+  .box {
+    height: 50vh;
+    width: 42%;
+  }
+
+  .box.left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .album-cover {
+    height: 300px;
+  }
+
+  .links {
+    width: 80%;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    margin: 15px 0px 7px;
+  }
+
+  .favorite-button {
+    transform: scale(1.5);
+  }
+
+  .discogs-logo {
+    height: 28px;
+  }
+  
+  .discogs-link-details {
+    width: 60px;
+  }
+  
+  a {
+    height: 28px;
+    width: 70px;
+  }
+
+  .modal-text {
+    position: relative;
+    font-size: 1.3em;
+    display: flex;
+  }
+
+  .modal-text > p {
+    margin: 7px 0px;
+    padding-left: 5px;
+  }
+
+  .box.right {
+    margin: 0;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  .close-icon {
+    transform: scale(2);
+  }
+
+  .close-container {
+    height: 65vh;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .modal {
+    height: 70vh;
+    width: 70vw;
+    min-width: 550px;
+    max-width: 900px;
+  }
+
+  .glass-modal {
+    height: 70vh;
+    width: 70vw;
+    min-width: 550px;
+    max-width: 900px;
+  }
+
+  .box {
+    height: 55vh;
+  }
+
+  .album-cover {
+    height: 500px;
+  }
+
+  .favorite-button {
+    transform: scale(1);
+    margin-left: 5px;
+  }
+
+  .discogs-logo {
+    height: 22px;
+  }
+  
+  .discogs-link-details {
+    width: 70px;
+  }
+  
+  a {
+    height: 25px;
+    width: 60px;
+  }
+
+  .close-container {
+    height: 72vh;
+  }
+
+  .close-icon {
+    transform: scale(1.5);
+  }
+}
