@@ -31,7 +31,7 @@ const Navigation = ({ isMobile }) => {
   }
 
   return (
-    <nav className="glass">
+    <nav className={isMobile ? "nav__mobile_view glass" : "nav__web_view glass"}>
       { determineMobile() }
     </nav>
   )
