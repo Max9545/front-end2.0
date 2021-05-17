@@ -35,6 +35,15 @@ body,
   z-index: 1;
 }
 
+.glass {
+  height: 87%;
+  width: 87%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: .5em;
+}
+
 .box {
   height: 50%;
 }
@@ -141,6 +150,13 @@ iframe {
     border-radius: 5em;
   }
 
+  .glass {
+    height: 70vh;
+    width: 70vw;
+    min-width: 550px;
+    max-width: 900px;
+    border-radius: 5.2em;
+  }
 
   .box {
     height: 55vh;
