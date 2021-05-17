@@ -55,6 +55,13 @@ a:visited {
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
 
 .App-logo {
   height: 40vmin;

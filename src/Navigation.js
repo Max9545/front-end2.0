@@ -19,9 +19,13 @@ const Navigation = ({ isMobile }) => {
 
     if (isMobile) {
       return (
-        <button>
-          <MenuIcon />
-        </button>
+        <details>
+          <summary>
+            <MenuIcon />
+          </summary>
+          <NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink>
+          <NavLink to="/liked" activeStyle={activeStyle}>Liked Albums</NavLink>
+        </details>
       )
     }
   }
