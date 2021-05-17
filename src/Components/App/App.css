@@ -3,6 +3,7 @@
   --secondary-color: #775144;
   --accent-color: #ffbf00;
   --text-color: #cdd6dd;
+  font-size: 16px;
 }
 
 .App {
@@ -82,4 +83,12 @@ a:visited {
   }
 }
 
-
+@media screen and (max-width: 780px) {
+  .App {
+    grid-template-columns: 100vw;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main";
+  }
+}
