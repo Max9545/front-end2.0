@@ -11,7 +11,6 @@
   align-self: center;
 }
  .cover {
-  /* width: 250px; */
   height: 250px;
  }
 
@@ -20,7 +19,7 @@
 }
 
  .discogs-link {
-  background-color: #FFBF00;
+  background-color: var(--accent-color);
   border-radius: 7px;
   padding:2%;
   width: 45%;
