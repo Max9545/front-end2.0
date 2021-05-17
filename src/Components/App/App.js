@@ -22,10 +22,6 @@ function App() {
     query: '(max-width: 780px)'
   });
 
-  const [currentAlbumsToDisplay, setCurrentAlbumsToDisplay] = useState([])
-
-
-
   return (
     <div className="App">
       <header>
