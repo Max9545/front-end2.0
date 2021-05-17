@@ -1,5 +1,5 @@
 * {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -17,6 +17,7 @@ body,
 .modal-container {
   display: flex;
   width: 100%;
+  position: absolute;
   align-items: center;
   justify-content: center;
   background-color: hsla(0, 0%, 0%, 0.4);
@@ -98,6 +99,7 @@ a {
   align-self: center;
   justify-self: end;
   position: fixed;
+  text-align: start;
   display: none;
 }
 
@@ -149,6 +151,7 @@ iframe {
     justify-content: center;
     background-color: hsla(0, 0%, 0%, 0.4);
     padding: 5%;
+    /* display: none; */
   }
 
   .modal {
