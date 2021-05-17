@@ -15,23 +15,53 @@ body,
 }
 
 .modal-container {
+  display: flex;
   width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(0, 0%, 0%, 0.4);
+  padding: 10px 10px 0px;
 }
 
 .modal {
+  height: 89%;
+  width: 92%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 1em;
+  z-index: 1;
+}
+
+.box {
+  height: 50%;
 }
 
 .shadow {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3)
 }
 
+.box.left {
+  display: flex;
+  flex-direction: column;
+}
+
 .album-cover {
-  height: 45%;
-  width: 45%;
+  height: 85%;
+  width: 85%;
   border-radius: 9px;
+  align-self: center;
+  margin-top: 10px
+}
+
+.links {
+  width: 65%;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  margin: 10px 0px;
 }
 
 .discogs-logo {
@@ -51,23 +81,35 @@ a {
   justify-self: center;
 }
 
-.box {
+.modal-text {
   height: 50%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: end;
+  position: fixed;
+  display: none;
+}
+
+.box.right {
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 iframe {
   height: 100%;
-  width: 98%;
   border-radius: 7px;
 }
 
 .close-container {
-  height: 72vh;
-  width: 2.1%;
+  height: 94vh;
+  width: 0;
 }
 
 .close-icon {
-  transform: scale(1.5);
+  transform: scale(1.25);
+  padding-right: 5px;
 }
 
 .click {
@@ -79,7 +121,7 @@ iframe {
   color: hsl(0, 0%, 0%);
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 700px) {
   .modal-container {
     display: flex;
     align-items: center;
@@ -95,9 +137,10 @@ iframe {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-color: rgba(255, 255, 255, 0.3);
+    /* background-color: rgba(255, 255, 255, 0.3); */
     border-radius: 5em;
   }
+
 
   .box {
     height: 55vh;
@@ -112,7 +155,7 @@ iframe {
   .album-cover {
     height: 67%;
     width: 82%;
-    align-self: center;
+    margin: 0;
   }
 
   .links {
@@ -124,12 +167,9 @@ iframe {
   }
 
   .modal-text {
-    height: 50%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
+    position: relative;
     font-size: 1.3em;
+    display: flex;
   }
 
   .modal-text > p {
@@ -137,7 +177,20 @@ iframe {
     padding-left: 5px;
   }
 
+  .box.right {
+    margin: 0;
+  }
+
   iframe {
     width: 100%;
+  }
+
+  .close-icon {
+    transform: scale(1.5);
+  }
+
+  .close-container {
+    height: 72vh;
+    /* width: 2.1%; */
   }
 }
