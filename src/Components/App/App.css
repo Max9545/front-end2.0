@@ -8,6 +8,7 @@
 
 .App {
   min-height: 100vh;
+  background: linear-gradient(20deg, var(--primary-color), var(--accent-color));
   text-align: center;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -24,19 +25,16 @@ nav {
   flex-direction: column;
   align-items: flex-end;
   grid-area: nav;
-  background-color: var(--secondary-color);
   color: var(--accent-color);
 }
 
 header {
   grid-area: header;
-  background-color: var(--text-color);
   color: var(--primary-color);
 }
 
 main {
   grid-area: main;
-  background-color: var(--primary-color);
   color: var(--text-color);
 }
 
@@ -50,7 +48,7 @@ a:visited {
 
 .glass {
   background: rgba( 205, 214, 221, 0.25 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  box-shadow: 0 8px 32px 0 #775144;
   backdrop-filter: blur( 1.5px );
   -webkit-backdrop-filter: blur( 1.5px );
   border-radius: 10px;

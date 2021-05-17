@@ -7,7 +7,7 @@ const Navigation = () => {
   }
 
   return (
-    <nav>
+    <nav className="glass">
       <NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink>
       <NavLink to="/liked" activeStyle={activeStyle}>Liked Albums</NavLink>
     </nav>

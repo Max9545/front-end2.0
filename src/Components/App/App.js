@@ -13,10 +13,14 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/">
-            <p>Card Container</p>
+            <section className="glass">
+              <p>Card Container</p>
+            </section>
           </Route>
           <Route path="/liked">
-            <p>Eventual liked album cards Container</p>
+            <section className="glass">
+              <p>Eventual liked album cards Container</p>
+            </section>
           </Route>
           <Route path="*">
             <h1>This page doesn't exist! Please navigate back to home with the sidebar</h1>
