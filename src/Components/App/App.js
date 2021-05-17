@@ -17,7 +17,6 @@ function App() {
     <div className="App">
       <header>
         <h1>Selector</h1>
-        <p>Current screen size { screen }</p>
       </header>
       <Navigation isMobile={ isTabletOrMobile }/>
       <main>
