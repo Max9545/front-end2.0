@@ -41,7 +41,7 @@ body,
   position: absolute;
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
 
 .box {
@@ -49,7 +49,7 @@ body,
 }
 
 .shadow {
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3)
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .box.left {
@@ -62,7 +62,7 @@ body,
   width: 85%;
   border-radius: 9px;
   align-self: center;
-  margin-top: 10px
+  margin-top: 10px;
 }
 
 .links {
@@ -108,6 +108,7 @@ a {
 
 iframe {
   height: 100%;
+  border: none;
   border-radius: 7px;
 }
 
