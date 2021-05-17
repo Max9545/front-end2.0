@@ -144,6 +144,7 @@ iframe {
     justify-content: center;
     background-color: hsla(0, 0%, 0%, 0.4);
     padding: 5%;
+    overflow: scroll;
     /* display: none; */
   }
 
@@ -155,12 +156,6 @@ iframe {
     justify-content: space-around;
     /* background-color: rgba(255, 255, 255, 0.3); */
     border-radius: 5em;
-  }
-
-  .glass-modal {
-    height: 60vh;
-    width: 90vw;
-    border-radius: 5.2em;
   }
 
   .box {
@@ -234,13 +229,7 @@ iframe {
   .modal {
     height: 70vh;
     width: 70vw;
-    min-width: 550px;
-    max-width: 900px;
-  }
-
-  .glass-modal {
-    height: 70vh;
-    width: 70vw;
+    min-height: 558px;
     min-width: 550px;
     max-width: 900px;
   }
@@ -250,7 +239,7 @@ iframe {
   }
 
   .album-cover {
-    height: 500px;
+    height: 309px;
   }
 
   .favorite-button {
