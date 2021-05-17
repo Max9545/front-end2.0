@@ -12,7 +12,7 @@ function AlbumCardsDisplay({ albums }) {
   }, [albums])
 
   const currentAlbumsDisplay = () => {
-   return currentAlbums.map(({ coverImage, title, artists.name, year, genres }) => {
+   return currentAlbums.map(({ coverImage, title, artists, year, genres }) => {
      return <AlbumCard 
               coverImage={coverImage}
               title={title}
