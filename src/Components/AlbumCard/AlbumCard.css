@@ -1,0 +1,44 @@
+.card {
+  margin: 3rem;
+  background-color: #2a0800;
+  color: #ccfbfe;
+  padding: 20px;
+  width: 280px;
+  height: 507px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+ .cover {
+  height: 250px;
+ }
+
+.date {
+  margin: 0;
+}
+
+ .discogs-link {
+  background-color: var(--accent-color);
+  border-radius: 7px;
+  padding:2%;
+  width: 45%;
+  align-self: flex-end;
+ }
+
+ .genre {
+  color: #2a0800;
+  background-color: red;
+  /* padding: 1vh 2vw 1vh 2vw; */
+  padding: 2%;
+  margin: 1%;
+ }
+
+ .genre-container {
+  margin: 2vh 0 2vh 0;
+  display: flex;
+ }
+
+ .title {
+   margin: 0;
+ }
