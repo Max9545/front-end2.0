@@ -18,7 +18,7 @@ const DetailsModal = () => {
           <img className="album-cover shadow" src={albums[0].coverImage} alt={`${albums[0].title} album cover`}/>
           <div className="links">
           <Tooltip title="Add to Favorites" placement="right">
-            <FavoriteBorderIcon aria-label={"Add to Favorites"} className="click"/>
+            <FavoriteBorderIcon aria-label={"Add to Favorites"} className="favorite-button click"/>
           </Tooltip>
             <div className="discogs-link">
               <a href={discogsLink} target="_blnk"/>
