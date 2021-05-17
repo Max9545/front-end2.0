@@ -5,7 +5,7 @@ import AlbumCard from '../AlbumCard/AlbumCard';
 
 function AlbumCardsDisplay({ albums }) {
 
- const [currentAlbums, setCurrentAlbums] = useState()
+ const [currentAlbums, setCurrentAlbums] = useState([])
 
   useEffect(() => {
     setCurrentAlbums(albums)
