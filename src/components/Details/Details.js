@@ -20,7 +20,7 @@ const DetailsModal = () => {
           <Tooltip title="Add to Favorites" placement="right">
             <FavoriteBorderIcon aria-label={"Add to Favorites"} className="favorite-button click"/>
           </Tooltip>
-            <div className="discogs-link">
+            <div className="discogs-link-details">
               <a href={discogsLink} target="_blnk"/>
               <img className="discogs-logo" src={discogsLogo} alt="discogs logo"/>
             </div>
@@ -35,7 +35,7 @@ const DetailsModal = () => {
           <iframe title={`${albums[0].title} album album playlist`} className="shadow" src="https://open.spotify.com/embed/album/49vpRrUcAr2bj6aYQr0Cfl" allowtransparency="true" allow="encrypted-media"></iframe>
         </article>
       </section>
-      <div className="glass"></div>
+      <div className="glass-modal"></div>
       <div className="close-container">
         <Tooltip title="Close">
           <CloseIcon aria-label={"close modal"} className="close-icon click"/>
