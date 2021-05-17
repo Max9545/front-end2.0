@@ -1,9 +1,11 @@
 import AlbumCard from '../AlbumCard/AlbumCard';
 import AlbumCardsDisplay from '../AlbumCardsDisplay/AlbumCardsDisplay'
 import Navigation from '../Navigation/Navigation';
+import DetailsModal from '../Details/Details.js';
 import { Switch, Route } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import './App.css';
+import '../../normalize.css';
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
@@ -19,6 +21,7 @@ function App() {
         <h1>Selector</h1>
       </header>
       <Navigation isMobile={ isTabletOrMobile }/>
+      <DetailsModal />
       <main>
         <Switch>
           <Route exact path="/">
