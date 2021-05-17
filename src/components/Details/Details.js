@@ -35,6 +35,7 @@ const DetailsModal = () => {
           <iframe className="shadow" src="https://open.spotify.com/embed/album/49vpRrUcAr2bj6aYQr0Cfl" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </article>
       </section>
+      <div className="glass"></div>
       <div className="close-container">
         <Tooltip title="Close">
           <CloseIcon aria-label={"close modal"} className="close-icon click"/>
