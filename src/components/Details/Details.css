@@ -49,10 +49,7 @@
 }
 
 .album-cover {
-  height: 85%;
-  width: 85%;
-  max-height: 249px;
-  max-width: 256px;
+  height: 260px;
   border-radius: 9px;
   align-self: center;
   margin-top: 10px;
@@ -131,6 +128,10 @@ iframe {
     margin-top: 12px;
   }
 
+  .album-cover {
+    height: 170px;
+  }
+
   iframe {
     width: 100%;
   }
@@ -173,11 +174,7 @@ iframe {
   }
 
   .album-cover {
-    height: 55%;
-    width: 95%;
-    max-height: 275px;
-    max-width: 276px;
-    margin: 0;
+    height: 300px;
   }
 
   .links {
@@ -253,10 +250,7 @@ iframe {
   }
 
   .album-cover {
-    height: 67%;
-    width: 82%;
-    max-height: 309px;
-    max-width: 310px;
+    height: 500px;
   }
 
   .favorite-button {
