@@ -1,15 +1,20 @@
 import AlbumCard from '../AlbumCard/AlbumCard';
 import AlbumCardsDisplay from '../AlbumCardsDisplay/AlbumCardsDisplay'
 import Navigation from './Navigation';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom';
+import MenuIcon from '@material-ui/icons/Menu';
 import './App.css';
+import { useState } from 'react';
 
 
 function App() {
+  const [screen, setScreen] = useState(window.innerWidth());
+
   return (
     <div className="App">
       <header>
         <h1>Selector</h1>
+        <p>Current screen size {}</p>
       </header>
       <Navigation />
       <main>
