@@ -11,8 +11,9 @@
   background: linear-gradient(20deg, var(--primary-color), var(--accent-color));
   text-align: center;
   display: grid;
+  gap: 1rem;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 100px auto;
+  grid-template-rows: 75px auto;
   grid-template-areas:
     "header header header header header"
     "nav main main main main";
@@ -92,7 +93,9 @@ a:visited {
 
 @media screen and (max-width: 780px) {
   .App {
+    gap: 1rem;
     grid-template-columns: 100vw;
+    grid-template-rows: 75px 75px auto;
     grid-template-areas:
     "header"
     "nav"

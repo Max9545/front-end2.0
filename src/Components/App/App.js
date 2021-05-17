@@ -8,7 +8,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header>Future Header / Branding mark</header>
+      <header>
+        <h1>Selector</h1>
+      </header>
       <Navigation />
       <main>
         <Switch>
