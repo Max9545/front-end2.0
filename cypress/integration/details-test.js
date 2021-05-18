@@ -1,5 +1,3 @@
-import { cyan } from "@material-ui/core/colors"
-
 describe('', () => {
   beforeEach(() => {
     cy
