@@ -17,10 +17,16 @@ context('Album Cards', () => {
     .get('[data-cy=title]').should('exist').should('contain', 'Freak Out')
   })
 
-  it.only('Should have an album artist name', () => {
+  it('Should have an album artist name', () => {
     cy
     .get('[data-cy=artist]').should('exist')
     .should('contain', 'The Mothers')
+  })
+
+  it.only('Should have an album version release date', () => {
+    cy
+    .get('[data-cy=date]').should('exist')
+    .should('contain', '1966')
   })
 
   it('Should have album genres', () => {
