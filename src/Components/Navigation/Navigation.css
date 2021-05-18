@@ -12,8 +12,7 @@ nav {
 .nav__web_view > a {
   position: static;
   justify-self: flex-end;
-  padding-top: 1rem;
-  padding-right: 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 .nav__mobile_view {

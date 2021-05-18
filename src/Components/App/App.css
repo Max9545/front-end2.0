@@ -1,15 +1,16 @@
 :root {
-  --primary-color: hsl(11, 100, 8);
-  --secondary-color: hsl(15, 27, 37);
-  --accent-color: hsl(45, 100, 50);
-  --accent-glow: hsl(45, 90, 65);
-  --text-color: hsl(206, 19, 84);
-  --cyan: hsl(184, 96, 90);
+  --primary-color: hsl(11, 100%, 8%);
+  --secondary-color: hsl(15, 27%, 37%);
+  --accent-color: hsl(45, 100%, 50%);
+  --accent-glow: hsl(45, 90%, 65%);
+  --text-color: hsl(206, 19%, 84%);
+  --cyan: hsl(184, 96%, 90%);
   font-size: 16px;
 }
 
 .App {
   min-height: 100vh;
+  width: 100vw;
   background: linear-gradient(20deg, var(--primary-color), var(--accent-color));
   text-align: center;
   display: grid;
@@ -19,8 +20,6 @@
   grid-template-areas:
     "header header header header header"
     "nav main main main main";
-  width: 100vw;
-   
 }
 
 header {
