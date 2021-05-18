@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
 
 const client = new ApolloClient({
-  uri:'/graphql',
+  uri:'https://tranquil-depths-91575.herokuapp.com/',
   cache: new InMemoryCache()
 })
 

@@ -13,7 +13,11 @@ const Search = () => {
         className="search__input"
         placeholder="Search ..."
         defaultValue=""
+        list="albumTitles"
         />
+        <datalist id="ablumTitles">
+          {  }
+        </datalist>
     </form>
   )
 }
