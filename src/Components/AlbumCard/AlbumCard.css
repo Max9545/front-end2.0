@@ -1,7 +1,6 @@
 .card {
   margin: 3rem;
-  background-color: #2a0800;
-  color: #ccfbfe;
+  border-radius: 1rem;
   padding: 20px;
   width: 280px;
   height: 507px;
@@ -9,10 +8,14 @@
   flex-direction: column;
   justify-content: center;
   align-self: center;
+  background: radial-gradient(ellipse at 13% 0, rgba( 205, 214, 221, 0.35 ) 15%, transparent 45%);
+  backdrop-filter: blur( 1.5px );
+  -webkit-backdrop-filter: blur( 1.5px );
 }
- .cover {
+ 
+.cover {
   height: 250px;
- }
+}
 
 .date {
   margin: 0;
