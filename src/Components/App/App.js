@@ -21,7 +21,7 @@ function App() {
         <h1>Selector</h1>
       </header>
       <Navigation isMobile={ isTabletOrMobile }/>
-      <DetailsModal />
+      {/* <DetailsModal /> */}
       <main>
         <Switch>
           <Route exact path="/">

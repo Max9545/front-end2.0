@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
+import './Navigation.css';
 
 const Navigation = ({ isMobile }) => {
   const activeStyle = {

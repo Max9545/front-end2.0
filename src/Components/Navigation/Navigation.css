@@ -1,0 +1,42 @@
+nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}
+
+.nav__web_view {
+  color: var(--primary-color);
+}
+
+.nav__web_view > a {
+  position: static;
+  justify-self: flex-end;
+  padding-top: 1rem;
+  padding-right: 1rem;
+}
+
+.nav__mobile_view {
+  color: var(--accent-color);
+}
+
+.nav__mobile_view > a {
+
+}
+
+details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: right;
+}
+
+/* Remove details summary block default arrow */
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
