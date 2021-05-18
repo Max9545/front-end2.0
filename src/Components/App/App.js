@@ -12,6 +12,11 @@ import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 
+
+
+
+
+
 function App() {
   const isTabletOrMobile = useMediaQuery({
     query: '(max-width: 780px)'
@@ -23,15 +28,13 @@ function App() {
         <h1 className="header__h1">Selector</h1>
         <Search />
       </header>
-      <Navigation isMobile={ isTabletOrMobile } />
+      <Navigation isMobile={ isTabletOrMobile }/>
       {/* <DetailsModal /> */}
       <main>
         <Switch>
           <Route exact path="/">
             <section className="glass">
-              <AlbumCardsDisplay 
-                albums={ albums }
-              />
+              <AlbumCardsDisplay/>
             </section>
           </Route>
           <Route path="/liked">

@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
 import './normalize.css';
 import './index.css';
-import App from './components/App/App';
+import App from './Components/App/App';
 import reportWebVitals from './reportWebVitals';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri:'https://tranquil-depths-91575.herokuapp.com/',
+  uri:'https://pure-hollows-05817.herokuapp.com/https://tranquil-depths-91575.herokuapp.com/graphql',
   cache: new InMemoryCache()
 })
 
