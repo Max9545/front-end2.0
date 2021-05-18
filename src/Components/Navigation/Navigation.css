@@ -21,7 +21,8 @@ nav {
 }
 
 .nav__mobile_view > a {
-
+  position: static;
+  justify-self: center;
 }
 
 details {
