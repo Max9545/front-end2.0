@@ -67,13 +67,17 @@
   height: 22px;
 }
 
+.discogs-logo:hover {
+  color: hsl(0, 100%, 99%);
+}
+
 .discogs-link-details {
   width: 70px;
   display: flex;
   justify-content: center;
 }
 
-a {
+.direct-link {
   height: 25px;
   width: 70px;
   position: fixed;
@@ -97,7 +101,7 @@ a {
   margin-bottom: 10px;
 }
 
-iframe {
+.spotify-player {
   height: 100%;
   border: none;
   border-radius: 7px;
@@ -132,7 +136,7 @@ iframe {
     height: 170px;
   }
 
-  iframe {
+  .spotify-player {
     width: 100%;
   }
 }
@@ -192,7 +196,7 @@ iframe {
     width: 60px;
   }
   
-  a {
+  .direct-link {
     height: 28px;
     width: 70px;
   }
@@ -212,7 +216,7 @@ iframe {
     margin: 0;
   }
 
-  iframe {
+  .spotify-player {
     width: 100%;
   }
 
@@ -255,7 +259,7 @@ iframe {
     width: 70px;
   }
   
-  a {
+  .direct-link {
     height: 25px;
     width: 60px;
   }

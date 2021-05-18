@@ -46,7 +46,7 @@ const DetailsModal = () => {
             <FavoriteBorderIcon data-cy="favorites-button" aria-label={"Add to Favorites"} className="favorite-button click"/>
           </Tooltip>
             <div data-cy="" className="discogs-link-details">
-              <a data-cy="discogs-link" href={discogsLink} target="_blnk"><img className="discogs-logo" src={discogsLogo} alt="discogs logo"/></a>
+              <a data-cy="discogs-link" className="direct-link" href={discogsLink} target="_blnk"><img className="discogs-logo" src={discogsLogo} alt="discogs logo"/></a>
             </div>
           </div>
           <div className="modal-text">
@@ -56,7 +56,7 @@ const DetailsModal = () => {
           </div>
         </article>
         <article className="box right">
-          <iframe data-cy="web-player" title={`${data.album.title} album album playlist`} className="shadow" src="https://open.spotify.com/embed/album/49vpRrUcAr2bj6aYQr0Cfl" allowtransparency="true" allow="encrypted-media"></iframe>
+          <iframe data-cy="web-player" title={`${data.album.title} album album playlist`} className="shadow spotify-player" src="https://open.spotify.com/embed/album/49vpRrUcAr2bj6aYQr0Cfl" allowtransparency="true" allow="encrypted-media"></iframe>
         </article>
       </section>
       <div className="close-container">
