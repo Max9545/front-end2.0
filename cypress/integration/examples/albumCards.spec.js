@@ -20,7 +20,7 @@ context('Album Cards', () => {
   it.only('Should have an album artist name', () => {
     cy
     .get('[data-cy=artist]').should('exist')
-    .should('contain', 'Frank Zappa')
+    .should('contain', 'The Mothers')
   })
 
   it('Should have album genres', () => {
