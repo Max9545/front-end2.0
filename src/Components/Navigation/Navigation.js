@@ -45,7 +45,10 @@ const Navigation = ({ isMobile }) => {
   }
 
   return (
-    <nav className={isMobile ? "nav__mobile_view glass" : "nav__web_view glass"}>
+    <nav 
+      className={isMobile ? "nav__mobile_view glass" : "nav__web_view glass"}
+      data-cy="navigation"
+    >
       { determineMobile() }
     </nav>
   )

@@ -23,7 +23,7 @@ function App() {
         <h1 className="header__h1">Selector</h1>
         <Search />
       </header>
-      <Navigation isMobile={ isTabletOrMobile }/>
+      <Navigation isMobile={ isTabletOrMobile } />
       {/* <DetailsModal /> */}
       <main>
         <Switch>
