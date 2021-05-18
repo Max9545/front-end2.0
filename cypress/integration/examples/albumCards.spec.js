@@ -3,7 +3,25 @@
 context('Album Cards', () => {
   beforeEach(() => {
     cy
-    // .intercept()
+
+    // .intercept('POST', '/api', (req) => {
+    //   if (req.body.operationName === 'operationName') 
+    //   req.reply({ fixture: 'freakOut.js'})
+    // })
+    
+    // .intercept('https://pure-hollows-05817.herokuapp.com/https://tranquil-depths-91575.herokuapp.com/graphql',{
+    //   method: 'POST',
+    // }, { fixture: 'freakOut'})
+
+    // .fixture('freakOut.js').as('freakOut')
+    // .intercept('POST', '/graphql', (req) => {
+    //   if (req.body.query.includes('Freak Out')) {
+    //     // req.reply({ fixture: 'freakOut' })
+    //     req.alias = 'freakOut'
+    //   }
+    // })
+    // .wait('freakOut')
+
     .visit('http://localhost:3000')
   })
 
@@ -25,7 +43,7 @@ context('Album Cards', () => {
     .should('contain', 'The Mothers')
   })
 
-  it.only('Should have an album version release date', () => {
+  it('Should have an album version release date', () => {
     cy
     .get('[data-cy=date]').should('exist')
     .should('contain', 'This Edition Released in 1966')
