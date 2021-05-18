@@ -8,14 +8,28 @@ const Navigation = ({ isMobile }) => {
     fontSize: "1.5rem"
   }
 
+  const renderNavLinkList = () => {
+    return (
+      <>
+        <NavLink exact to="/"
+          activeStyle={activeStyle}
+          data-cy="link-to-home"
+        >
+          Home
+        </NavLink>
+        <NavLink to="/liked"
+          activeStyle={activeStyle}
+          data-cy="link-to-liked"
+        >
+          Liked Albums
+        </NavLink>
+      </>
+    )
+  }
+
   const determineMobile = () => {
     if (!isMobile) {
-      return (
-        <>
-        <NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink>
-        <NavLink to="/liked" activeStyle={activeStyle}>Liked Albums</NavLink>
-        </>
-      )
+      return renderNavLinkList();
     }
 
     if (isMobile) {
@@ -24,8 +38,7 @@ const Navigation = ({ isMobile }) => {
           <summary>
             <MenuIcon />
           </summary>
-          <NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink>
-          <NavLink to="/liked" activeStyle={activeStyle}>Liked Albums</NavLink>
+            { renderNavLinkList() }
         </details>
       )
     }

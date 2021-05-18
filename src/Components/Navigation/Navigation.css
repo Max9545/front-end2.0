@@ -3,6 +3,7 @@ nav {
   display: flex;
   flex-direction: column;
   text-align: end;
+  width: 100%;
 }
 
 nav > * {
