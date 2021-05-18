@@ -5,7 +5,7 @@ context('Album Cards', () => {
     cy.visit('http://localhost:3000')
   })
 
-  it.only('Should have an album cover', () => {
+  it('Should have an album cover', () => {
     cy
     .get('[data-cy=cover]').should('exist')
     .should('have.attr', 'src', 'https://img.discogs.com/lcaNDTtBOojvbG2a5Fo8xdfzFXI=/fit-in/600x606/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-538636-1435321700-7614.jpeg.jpg')
@@ -15,6 +15,12 @@ context('Album Cards', () => {
     cy
     .get('[data-cy=card]').should('exist')
     .get('[data-cy=title]').should('exist').should('contain', 'Freak Out')
+  })
+
+  it.only('Should have an album artist name', () => {
+    cy
+    .get('[data-cy=artist]').should('exist')
+    .should('contain', 'Frank Zappa')
   })
 
   it('Should have album genres', () => {

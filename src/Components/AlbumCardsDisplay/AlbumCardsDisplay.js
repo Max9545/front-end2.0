@@ -57,7 +57,7 @@ console.log(data)
       {<AlbumCard 
               coverImage={data.album.coverImage}
               title={data.album.title}
-              name={data.album.artists.name}
+              name={data.album.artists[0].name}
               year={data.album.year}
               genres={data.album.genres}
      />}
