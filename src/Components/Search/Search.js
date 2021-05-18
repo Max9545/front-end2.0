@@ -8,7 +8,12 @@ const Search = () => {
   return (
     <form className="search">
       <SearchIcon />
-      <input id="searchField" ></input>
+      <input
+        id="searchField"
+        className="search__input"
+        placeholder="Search ..."
+        defaultValue=""
+        />
     </form>
   )
 }
