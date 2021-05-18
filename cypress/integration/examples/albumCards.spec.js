@@ -2,7 +2,9 @@
 
 context('Album Cards', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000')
+    cy
+    // .intercept()
+    .visit('http://localhost:3000')
   })
 
   it('Should have an album cover', () => {
@@ -11,7 +13,7 @@ context('Album Cards', () => {
     .should('have.attr', 'src', 'https://img.discogs.com/lcaNDTtBOojvbG2a5Fo8xdfzFXI=/fit-in/600x606/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-538636-1435321700-7614.jpeg.jpg')
   })
 
-  it('Should have an album title', () => {
+  it('Should have an album card with a title', () => {
     cy
     .get('[data-cy=card]').should('exist')
     .get('[data-cy=title]').should('exist').should('contain', 'Freak Out')
@@ -23,10 +25,10 @@ context('Album Cards', () => {
     .should('contain', 'The Mothers')
   })
 
-  it('Should have an album version release date', () => {
+  it.only('Should have an album version release date', () => {
     cy
     .get('[data-cy=date]').should('exist')
-    .should('contain', '1966')
+    .should('contain', 'This Edition Released in 1966')
   })
 
   it('Should have album genres', () => {
@@ -36,7 +38,7 @@ context('Album Cards', () => {
     .should('contain', 'Rock')
   })
 
-  it.only('Should have a link to purchase the album on discogs', () => {
+  it('Should have a link to purchase the album on discogs', () => {
     cy
     .get('[data-cy=discogs-link]').should('exist')
     .should('contain', 'Purchase on Discogs')

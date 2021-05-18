@@ -15,7 +15,7 @@ function AlbumCard({ coverImage, title, name, year, genres }) {
       <div className='genre-container' data-cy='genre-container'>
         {displayGenres(genres)}
       </div>
-      <button className='discogs-link' data-cy='discogs-link'>Purchase on Discogs</button>
+      <button className='discogs-link' data-cy='discogs-link' >Purchase on Discogs</button>
     </div>
   )
 }
