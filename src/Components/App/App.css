@@ -1,15 +1,20 @@
 :root {
-  --primary-color: #2a0800;
-  --secondary-color: #775144;
-  --accent-color: #ffbf00;
-  --text-color: #cdd6dd;
+  --primary-color: hsl(11, 100%, 8%);
+  --secondary-color: hsl(15, 27%, 37%);
+  --accent-color: hsl(45, 100%, 50%);
+  --accent-glow: hsl(45, 90%, 65%);
+  --text-color: hsl(206, 19%, 84%);
+  --cyan: hsl(184, 96%, 90%);
   font-size: 16px;
 }
 
+
 .App {
   min-height: 100vh;
+  width: 100vw;
   background: linear-gradient(20deg, var(--primary-color), var(--accent-color));
   text-align: center;
+  overflow-y: overlay;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(5, 1fr);
@@ -17,30 +22,24 @@
   grid-template-areas:
     "header header header header header"
     "nav main main main main";
-  width: 100vw;
-   
-}
-
-.nav__web_view {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  grid-area: nav;
-  color: var(--accent-color);
-}
-
-.nav__mobile_view {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  grid-area: nav;
-  color: var(--accent-color);
 }
 
 header {
   grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "title title search";
   color: var(--primary-color);
+}
+
+.header__h1 {
+  grid-area: title;
+  justify-self: left;
+  padding-left: 1rem;
+}
+
+header.search {
+  grid-area: search;
 }
 
 main {
@@ -50,6 +49,7 @@ main {
 
 a {
   text-decoration: none;
+  width: 100%;
 }
 
 a:visited {
@@ -63,23 +63,6 @@ a:visited {
   -webkit-backdrop-filter: blur( 1.5px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: right;
-}
-
-/* Remove details summary block default arrow */
-
-details > summary {
-  list-style: none;
-}
-
-details > summary::-webkit-details-marker {
-  display: none;
 }
 
 .App-logo {
@@ -120,7 +103,7 @@ details > summary::-webkit-details-marker {
 @media screen and (max-width: 780px) {
   .App {
     gap: 1rem;
-    grid-template-columns: 100vw;
+    grid-template-columns: 1fr;
     grid-template-rows: 75px 75px auto;
     grid-template-areas:
     "header"

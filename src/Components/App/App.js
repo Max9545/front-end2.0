@@ -1,11 +1,13 @@
 import AlbumCard from '../AlbumCard/AlbumCard';
 import AlbumCardsDisplay from '../AlbumCardsDisplay/AlbumCardsDisplay'
 import Navigation from '../Navigation/Navigation';
+import Search from '../Search/Search';
 import DetailsModal from '../Details/Details.js';
 import { Switch, Route } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import './App.css';
 import '../../normalize.css';
+import albums from '../../mockData';
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
@@ -18,15 +20,18 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Selector</h1>
+        <h1 className="header__h1">Selector</h1>
+        <Search />
       </header>
-      <Navigation isMobile={ isTabletOrMobile }/>
-      <DetailsModal />
+      <Navigation isMobile={ isTabletOrMobile } />
+      {/* <DetailsModal /> */}
       <main>
         <Switch>
           <Route exact path="/">
             <section className="glass">
-              <p>Card Container</p>
+              <AlbumCardsDisplay 
+                albums={ albums }
+              />
             </section>
           </Route>
           <Route path="/liked">

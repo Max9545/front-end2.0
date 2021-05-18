@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
+import './normalize.css';
 import './index.css';
-import App from './Components/App/App';
+import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri:'/graphql',
+  uri:'https://tranquil-depths-91575.herokuapp.com/',
   cache: new InMemoryCache()
 })
-
 
 ReactDOM.render(
   <React.StrictMode>
