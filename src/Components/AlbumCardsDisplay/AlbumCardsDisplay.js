@@ -49,10 +49,8 @@ console.log(data)
 
   return (
     <div className='card-container' data-cy='card-container'>
-<<<<<<< HEAD
       <h2>Albums</h2>
-      {currentAlbums && currentAlbumsDisplay()}
-=======
+      {/* {currentAlbums && currentAlbumsDisplay()} */}
       {/* {data && currentAlbumsDisplay()} */}
       {<AlbumCard 
               coverImage={data.album.coverImage}
@@ -61,7 +59,6 @@ console.log(data)
               year={data.album.year}
               genres={data.album.genres}
      />}
->>>>>>> 3021b09... Make card appera from API call
     </div>
   )
 }
