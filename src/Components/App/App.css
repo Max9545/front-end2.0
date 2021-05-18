@@ -30,15 +30,14 @@ header {
   color: var(--primary-color);
 }
 
-header > h1 {
+.header__h1 {
   grid-area: title;
   justify-self: left;
   padding-left: 1rem;
 }
 
-header > form {
+header.search {
   grid-area: search;
-
 }
 
 main {

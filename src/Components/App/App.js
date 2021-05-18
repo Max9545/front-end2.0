@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Selector</h1>
+        <h1 className="header__h1">Selector</h1>
         <Search />
       </header>
       <Navigation isMobile={ isTabletOrMobile }/>
