@@ -23,7 +23,7 @@ context('Album Cards', () => {
     .should('contain', 'The Mothers')
   })
 
-  it.only('Should have an album version release date', () => {
+  it('Should have an album version release date', () => {
     cy
     .get('[data-cy=date]').should('exist')
     .should('contain', '1966')
@@ -34,6 +34,12 @@ context('Album Cards', () => {
     .get('[data-cy=genre]').should('exist')
     .should('contain', 'Electronic')
     .should('contain', 'Rock')
+  })
+
+  it.only('Should have a link to purchase the album on discogs', () => {
+    cy
+    .get('[data-cy=discogs-link]').should('exist')
+    .should('contain', 'Purchase on Discogs')
   })
   
 })
