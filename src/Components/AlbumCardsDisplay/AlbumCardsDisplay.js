@@ -5,7 +5,7 @@ import { useQuery, gql}  from '@apollo/client'
 
 const GET_ALBUMS = gql`
   query {
-    album(title: "The Wall") {
+    album(title: "Freak Out") {
       id
           title
           artists {
