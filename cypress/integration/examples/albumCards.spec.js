@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 context('Album Cards', () => {
   beforeEach(() => {
     cy

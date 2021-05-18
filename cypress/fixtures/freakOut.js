@@ -3,11 +3,11 @@
     album: {
       "__typename": "Album",
       "id": "36466",
-      "title": "Freak Out the bobo!",
+      "title": "Freak Out!",
       "artists": [
           {
               "__typename": "Artist",
-              "name": "The Mothers and Papas"
+              "name": "The Mothers"
           }
       ],
       "year": 1966,
