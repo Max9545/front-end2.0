@@ -1,7 +1,6 @@
 context('Album Cards', () => {
   beforeEach(() => {
     cy
-    // .fixture('freakOut.js').as('freakOut')
     .intercept('POST', 'https://pure-hollows-05817.herokuapp.com/https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
       if (req.body.query.includes('Freak Out')) {
         req.reply({ fixture: 'freakOut.js' })
