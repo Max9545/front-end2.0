@@ -24,7 +24,21 @@
 
 header {
   grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "title search";
   color: var(--primary-color);
+}
+
+header > h1 {
+  grid-area: title;
+  justify-self: left;
+  padding-left: 1rem;
+}
+
+header > form {
+  grid-area: search;
+
 }
 
 main {

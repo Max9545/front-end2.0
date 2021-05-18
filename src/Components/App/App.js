@@ -1,6 +1,7 @@
 import AlbumCard from '../AlbumCard/AlbumCard';
 import AlbumCardsDisplay from '../AlbumCardsDisplay/AlbumCardsDisplay'
 import Navigation from '../Navigation/Navigation';
+import Search from '../Search/Search';
 import DetailsModal from '../Details/Details.js';
 import { Switch, Route } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -19,6 +20,7 @@ function App() {
     <div className="App">
       <header>
         <h1>Selector</h1>
+        <Search />
       </header>
       <Navigation isMobile={ isTabletOrMobile }/>
       {/* <DetailsModal /> */}
