@@ -35,7 +35,7 @@ const Search = () => {
         list="albumTitles"
         />
         <datalist id="ablumTitles">
-          { determineOptionStatus() }
+          {/* { determineOptionStatus() } */}
         </datalist>
     </form>
   )

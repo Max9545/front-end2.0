@@ -7,6 +7,7 @@ import { Switch, Route } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import './App.css';
 import '../../normalize.css';
+import albums from '../../mockData';
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
@@ -28,7 +29,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <section className="glass">
-              <p>Card Container</p>
+              <AlbumCardsDisplay 
+                albums={ albums }
+              />
             </section>
           </Route>
           <Route path="/liked">
