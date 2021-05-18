@@ -1,0 +1,22 @@
+{
+  "data": {
+    "album": {
+      "__typename": "Album",
+      "id": "33990",
+      "title": "The Payback",
+      "artists": [
+          {
+              "__typename": "Artist",
+              "name": "James Brown"
+          }
+      ],
+      "year": 1973,
+      "genres": [
+          "Funk",
+          "Soul"
+      ],
+      "coverImage": "https://img.discogs.com/MUELn9ObTL-ZpxyUgF5M9D_Kumc=/fit-in/600x591/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-719877-1247870750.jpeg.jpg"
+    }
+  }
+}
+

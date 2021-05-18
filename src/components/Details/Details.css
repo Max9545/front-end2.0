@@ -67,13 +67,17 @@
   height: 22px;
 }
 
+.discogs-logo:hover {
+  color: hsl(0, 100%, 99%);
+}
+
 .discogs-link-details {
   width: 70px;
   display: flex;
   justify-content: center;
 }
 
-a {
+.direct-link {
   height: 25px;
   width: 70px;
   position: fixed;
@@ -97,7 +101,7 @@ a {
   margin-bottom: 10px;
 }
 
-iframe {
+.spotify-player {
   height: 100%;
   border: none;
   border-radius: 7px;
@@ -132,7 +136,7 @@ iframe {
     height: 170px;
   }
 
-  iframe {
+  .spotify-player {
     width: 100%;
   }
 }
@@ -144,6 +148,7 @@ iframe {
     justify-content: center;
     background-color: hsla(0, 0%, 0%, 0.4);
     padding: 5%;
+    overflow: scroll;
     /* display: none; */
   }
 
@@ -155,12 +160,6 @@ iframe {
     justify-content: space-around;
     /* background-color: rgba(255, 255, 255, 0.3); */
     border-radius: 5em;
-  }
-
-  .glass-modal {
-    height: 60vh;
-    width: 90vw;
-    border-radius: 5.2em;
   }
 
   .box {
@@ -197,7 +196,7 @@ iframe {
     width: 60px;
   }
   
-  a {
+  .direct-link {
     height: 28px;
     width: 70px;
   }
@@ -217,7 +216,7 @@ iframe {
     margin: 0;
   }
 
-  iframe {
+  .spotify-player {
     width: 100%;
   }
 
@@ -234,13 +233,7 @@ iframe {
   .modal {
     height: 70vh;
     width: 70vw;
-    min-width: 550px;
-    max-width: 900px;
-  }
-
-  .glass-modal {
-    height: 70vh;
-    width: 70vw;
+    min-height: 558px;
     min-width: 550px;
     max-width: 900px;
   }
@@ -250,7 +243,7 @@ iframe {
   }
 
   .album-cover {
-    height: 500px;
+    height: 309px;
   }
 
   .favorite-button {
@@ -266,7 +259,7 @@ iframe {
     width: 70px;
   }
   
-  a {
+  .direct-link {
     height: 25px;
     width: 60px;
   }
