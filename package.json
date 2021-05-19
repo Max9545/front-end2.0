@@ -1,6 +1,9 @@
 {
   "name": "selector-fe",
   "version": "0.1.0",
+  "engines": {
+    "node": "15.x"
+  },
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.3.18",
