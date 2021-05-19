@@ -1,11 +1,26 @@
-import { GET_SINGLE_ALBUM }from '../../queries';
-import { useQuery } from '@apollo/client';
+// import { GET_SINGLE_ALBUM }from '../../queries';
+import { useQuery, gql } from '@apollo/client';
 import './AlbumCard.css'
 import { ArtTrackOutlined } from '@material-ui/icons';
 
-function AlbumCard({ title }) {
+const GET_SINGLE_ALBUM = gql`
+query ($title: String!) {
+  album(title: $title) {
+    id
+    title
+    artists {
+      name @include(if: $title)
+    }
+    year
+    genres
+    coverImage
+  }
+}
+`
+
+function AlbumCard ({ title }) {
   const { loading, error, data } = useQuery(GET_SINGLE_ALBUM, {
-    variables: { title }
+    variables: { title: title }
   })
   
   if (loading) return 'Loading...'
@@ -39,7 +54,7 @@ function AlbumCard({ title }) {
 
   return (
     <div className='card' data-cy='card'>
-      { deconstruct() }
+      { deconstruct(data) }
     </div>
   )
 }
