@@ -19,23 +19,25 @@ function AlbumCard ({ title }) {
     return list.map(name => <p>{ name }</p>)
    }
 
-  const deconstruct = ({ coverImage, title, year, artists, genres }) => {
+  const deconstruct = ({ album }) => {
     return (
       <>
-        <img className='cover' data-cy='cover'src={coverImage}/>
-        <h2 className='title' data-cy='title'>{title}</h2>
+        <img className='cover' data-cy='cover'src={album.coverImage}/>
+        <h2 className='title' data-cy='title'>{album.title}</h2>
         <div className='artist-container' data-cy='artist-container'>
-          {displayArtists(artists)}
+          { album.artists[0].name }
         </div>
         <h3 className='artist' data-cy='artist'>{}</h3>
-        <p className='date' data-cy='date'>This Edition Released in {year}</p>
+        <p className='date' data-cy='date'>This Edition Released in {album.year}</p>
         <div className='genre-container' data-cy='genre-container'>
-          {displayGenres(genres)}
+          { displayGenres(album.genres) }
         </div>
         <button className='discogs-link' data-cy='discogs-link' >Purchase on Discogs</button>
       </>
     )
   }
+
+  console.log(data)
 
   return (
     <div className='card' data-cy='card'>

@@ -6,7 +6,7 @@ query ($title: String!) {
     id
     title
     artists {
-      name @include(if: $title)
+      name
     }
     year
     genres
