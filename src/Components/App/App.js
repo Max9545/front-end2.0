@@ -9,7 +9,10 @@ import './App.css';
 import '../../normalize.css';
 
 function App() {
-  const [titles, setTitles] = useState(["The Payback"]);
+
+  // const [titles, setTitles] = useState(["The Payback"]);
+  const [titles, setTitles] = useState("The Payback");
+  const [search, setSearch] = useState()
   const [liked, setLiked] = useState([]);
 
   const isTabletOrMobile = useMediaQuery({
@@ -20,7 +23,7 @@ function App() {
     <div className="App">
       <header>
         <h1 className="header__h1">Selector</h1>
-        <Search />
+        <Search setSearch={setSearch} search={search}/>
       </header>
       <Navigation isMobile={ isTabletOrMobile }/>
       {/* <DetailsModal /> */}
@@ -28,7 +31,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <section className="glass">
-              <AlbumCardsDisplay titles={ titles }/>
+              {/* {search ? <AlbumCardsDisplay titles={ search }/> : <AlbumCardsDisplay titles={ titles }/> } */}
+              {!search && <AlbumCardsDisplay title={ titles }/>}
+              {search && <AlbumCardsDisplay title={ search }/>}
             </section>
           </Route>
           <Route path="/liked">

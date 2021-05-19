@@ -37,8 +37,6 @@ function AlbumCard ({ title }) {
     )
   }
 
-  console.log(data)
-
   return (
     <div className='card' data-cy='card'>
       { deconstruct(data) }

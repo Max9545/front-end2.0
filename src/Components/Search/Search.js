@@ -11,17 +11,25 @@ const ALBUM_TITLES = gql`
   }
 `
 
-const Search = () => {
+const Search = ({ setSearch }) => {
+
   const [userQuery, setUserQuery] = useState('');
   const { loading, error, data } = useQuery(ALBUM_TITLES);
 
-  const determineOptionStatus = () => {
-    if (loading) return <option value="Loading options..." />
-    if (error) return <option value="Problem loading options!" />
+  // const determineOptionStatus = () => {
 
-    return data.map(title => {
-      return <option value={ title } />
-    })
+  //   if (loading) return <option value="Loading options..." />
+  //   if (error) return <option value="Problem loading options!" />
+
+  //   return data.map(title => {
+  //     return <option value={ title } />
+  //   })
+  // }
+
+  const helpSet = (event) => {
+    event.preventDefault()
+    console.log(userQuery)
+    setSearch(userQuery)
   }
 
   return (
@@ -33,10 +41,12 @@ const Search = () => {
         placeholder="Search ..."
         defaultValue=""
         list="albumTitles"
+        onChange={(e) => setUserQuery(e.target.value)}
         />
         <datalist id="ablumTitles">
           {/* { determineOptionStatus() } */}
         </datalist>
+        <button onClick={(e) => helpSet(e)}>Search</button>
     </form>
   )
 }
