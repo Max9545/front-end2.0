@@ -19,9 +19,11 @@ const GET_ALBUMS = gql`
 `
 
 
-function AlbumCardsDisplay() {
+function AlbumCardsDisplay (title) {
 
-  const { loading, error, data } = useQuery(GET_ALBUMS)
+  const { loading, error, data } = useQuery(GET_ALBUMS, {
+    variables: { title }
+  })
   
   if (loading) return 'Loading...'
   if (error) return `Error! ${error.message}`
