@@ -43,7 +43,7 @@ const Search = ({ setSearch }) => {
         list="albumTitles"
         onChange={(e) => setUserQuery(e.target.value)}
         />
-        <datalist id="ablumTitles">
+        <datalist id="albumTitles">
           {/* { determineOptionStatus() } */}
         </datalist>
         <button onClick={(e) => helpSet(e)}>Search</button>
