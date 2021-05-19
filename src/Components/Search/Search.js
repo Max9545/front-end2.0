@@ -26,10 +26,9 @@ const Search = ({ setSearch }) => {
   //   })
   // }
 
-  const helpSet = (event) => {
+  const helpSetSearch = (event) => {
     event.preventDefault()
-    console.log(userQuery)
-    setSearch(userQuery)
+    setSearch([userQuery])
   }
 
   return (
@@ -46,7 +45,7 @@ const Search = ({ setSearch }) => {
         <datalist id="albumTitles">
           {/* { determineOptionStatus() } */}
         </datalist>
-        <button onClick={(e) => helpSet(e)}>Search</button>
+        <button onClick={(e) => helpSetSearch(e)}>Search</button>
     </form>
   )
 }

@@ -11,8 +11,8 @@ import '../../normalize.css';
 function App() {
 
   // const [titles, setTitles] = useState(["The Payback"]);
-  const [titles, setTitles] = useState("The Payback");
-  const [search, setSearch] = useState()
+  const [titles, setTitles] = useState(["The Payback"]);
+  const [search, setSearch] = useState([])
   const [liked, setLiked] = useState([]);
 
   const isTabletOrMobile = useMediaQuery({
@@ -31,9 +31,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <section className="glass">
-              {/* {search ? <AlbumCardsDisplay titles={ search }/> : <AlbumCardsDisplay titles={ titles }/> } */}
-              {!search && <AlbumCardsDisplay title={ titles }/>}
-              {search && <AlbumCardsDisplay title={ search }/>}
+              {search.length ? <AlbumCardsDisplay titles={ search }/> : <AlbumCardsDisplay titles={ titles }/> }
             </section>
           </Route>
           <Route path="/liked">
