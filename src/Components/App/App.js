@@ -12,7 +12,8 @@ import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 function App() {
-  const [titles, setTitles] = useState(["The Payback"])
+  const [titles, setTitles] = useState(["The Payback"]);
+  const [liked, setLiked] = useState([]);
 
   const isTabletOrMobile = useMediaQuery({
     query: '(max-width: 780px)'
