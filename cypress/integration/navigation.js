@@ -1,6 +1,6 @@
 describe('User navigation capabilities', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+    cy.visit('https://turing-selector.herokuapp.com/')
   })
 
   it('The nav bar should exist', () => {
@@ -27,7 +27,7 @@ describe('User navigation capabilities', () => {
   })
 
   it('Should accurately navigate to the home page', () => {
-    cy.visit('http://localhost:3000/liked');
+    cy.visit('https://turing-selector.herokuapp.com/liked');
     cy.get('[data-cy="link-to-home"]').click();
     cy.location().should((loc) => {
       expect(loc.pathname).to.eq('/')

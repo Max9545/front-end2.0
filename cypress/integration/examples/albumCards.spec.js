@@ -6,7 +6,7 @@ context('Album Cards', () => {
         req.reply({ fixture: 'freakOut.js' })
       }
     })
-    .visit('http://localhost:3000')
+    .visit('https://turing-selector.herokuapp.com/')
   })
 
   it('Should have an album cover', () => {
