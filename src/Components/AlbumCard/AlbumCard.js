@@ -1,6 +1,12 @@
 import './AlbumCard.css'
 
 function AlbumCard({ coverImage, title, name, year, genres }) {
+  const { loading, error, data } = useQuery(GET_SINGLE_ALBUM, {
+    variables: { title }
+  })
+  
+  if (loading) return 'Loading...'
+  if (error) return `Error! ${error.message}`
 
   const displayGenres = (list) => {
    return list.map(genre => <p className='genre' data-cy='genre'>{genre}</p>)

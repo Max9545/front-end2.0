@@ -11,13 +11,9 @@ import albums from '../../mockData';
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-
-
-
-
-
-
 function App() {
+  const [titles, setTitles] = useState(["The Payback"])
+
   const isTabletOrMobile = useMediaQuery({
     query: '(max-width: 780px)'
   });
@@ -34,7 +30,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <section className="glass">
-              <AlbumCardsDisplay/>
+              <AlbumCardsDisplay titles={ titles }/>
             </section>
           </Route>
           <Route path="/liked">
