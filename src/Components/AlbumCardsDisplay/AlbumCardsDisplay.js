@@ -1,23 +1,22 @@
 import { useEffect, useState } from 'react'
 import './AlbumCardsDisplay.css'
 import AlbumCard from '../AlbumCard/AlbumCard';
-import GET_SINGLE_ALBUM from '../../queries';
 import { useQuery, gql}  from '@apollo/client'
 
-const GET_ALBUMS = gql`
-  query {
-    album(title: "Freak Out") {
-      id
-          title
-          artists {
-              name
-          }
-          year
-          genres
-          coverImage
-  }
-}
-`
+// const GET_ALBUMS = gql`
+//   query {
+//     album(title: "Freak Out") {
+//       id
+//           title
+//           artists {
+//               name
+//           }
+//           year
+//           genres
+//           coverImage
+//   }
+// }
+// `
 
 
 function AlbumCardsDisplay ({ titles }) {
