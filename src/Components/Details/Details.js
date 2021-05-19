@@ -7,40 +7,47 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 // import FavoriteIcon from '@material-ui/icons/Favorite';
 import { Tooltip } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
-import { useQuery, gql } from '@apollo/client';
+import { useQuery, useApolloClient, gql } from '@apollo/client';
+import { GET_SINGLE_ALBUM } from '../../queries';
 
-const ALBUMS = gql`
+  const SPOTIFY = gql`
   query {
-    album(title: "The Payback") {
-      id
-        title
-        artists {
-          name
-        }
-        year
-        genres
-        coverImage
-    }
-  }`;
+   spotifyAlbumID(title: $title){
+     id
+   }
+  }`
 
-  // const SPOTIFY = gql`
-  // query {
-  //  
-  // }`
 
-const DetailsModal = () => {
-
+const DetailsModal = ({ title, id }) => {
+  const client = useApolloClient();
   const discogsLink = 'https://www.discogs.com/James-Brown-The-Payback/master/33990';
-  const { loading, error, data } = useQuery(ALBUMS);
+  // const { albumLoading, albumError, albumData } = readQuery();
+  // const { albumData } = client.readQuery({ 
+  //   query: GET_SINGLE_ALBUM,
+  //   variables: {
+  //     title: title
+  //   }
+  // });
+  console.log(title)
+  const { loading, error, data } = useQuery(GET_SINGLE_ALBUM, {
+    variables: { title: title }
+  })
+  // const { spotifyLoading, spotifyError, spotifyData } = useQuery(SPOTIFY, {
+  //   variables: { title: title }
+  // });
 
+console.log(data)
   if (loading) return <p>Loading...</p>;
+  // if (spotifyLoading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
+  // if (spotifyError) return <p>Error :(</p>;
+
   
   return (
     <div className="modal-container">
       <section className="modal" data-cy="modal">
         <article className="box left">
-          <img data-cy="album-cover" className="album-cover shadow" src={data.album.coverImage} alt={`${data.album.title} album cover`}/>
+          <img data-cy="album-cover" className="album-cover shadow" src={data.album.coverImage} alt={`${data.title} album cover`}/>
           <div className="links">
           <Tooltip title="Add to Favorites" placement="right">
             <FavoriteBorderIcon data-cy="favorites-button" aria-label={"Add to Favorites"} className="favorite-button click"/>
@@ -56,7 +63,7 @@ const DetailsModal = () => {
           </div>
         </article>
         <article className="box right">
-          <iframe data-cy="web-player" title={`${data.album.title} album album playlist`} className="shadow spotify-player" src="https://open.spotify.com/embed/album/49vpRrUcAr2bj6aYQr0Cfl" allowtransparency="true" allow="encrypted-media"></iframe>
+          {/* <iframe data-cy="web-player" title={`${albumData.title} album album playlist`} className="shadow spotify-player" src={`https://open.spotify.com/embed/album/${spotifyData.id}`} allowtransparency="true" allow="encrypted-media"></iframe> */}
         </article>
       </section>
       <div className="close-container">
