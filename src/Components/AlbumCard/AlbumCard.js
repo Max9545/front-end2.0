@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { displayGenres } from '../../scripts';
 
 function AlbumCard ({ title }) {
+  
   const { loading, error, data } = useQuery(GET_SINGLE_ALBUM, {
     variables: { title: title }
   })

@@ -20,6 +20,11 @@ function App() {
     query: '(max-width: 780px)'
   });
 
+
+  useEffect(() => {
+    
+  })
+
   return (
     <div className="App">
       <header>

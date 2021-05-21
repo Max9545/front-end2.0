@@ -22,4 +22,30 @@ query ($title: String!) {
       id
     }
   }
+}
+`
+
+
+export const GET_RANDOM_ALBUMS = gql`
+query {
+  randomAlbum {
+          id
+          title
+          artists {
+            name
+           }
+          year
+          genres
+          coverImage
+          resourceUrl
+          styles
+          year
+          tracklist {
+            position
+            title
+            duration
+           }
+          uri
+          }
+        }
 `
