@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import './AlbumCard.css'
 import { ArtTrackOutlined } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
+import { displayGenres } from '../../scripts';
 
 function AlbumCard ({ title }) {
   const { loading, error, data } = useQuery(GET_SINGLE_ALBUM, {
@@ -11,10 +12,6 @@ function AlbumCard ({ title }) {
   
   if (loading) return 'Loading...'
   if (error) return `Error! ${error.message}`
-
-  const displayGenres = (list) => {
-   return list.map(genre => <p className='genre' data-cy='genre'>{genre}</p>)
-  }
 
   const displayArtists = (list) => {
     return list.map(name => <p>{ name }</p>)
