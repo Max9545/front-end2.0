@@ -65,12 +65,15 @@ color: var(--primary-color);
 }
 
 .card_genre {
-color: var(--text-color);
+color: var(--accent-glow);
 background-color: var(--secondary-color);
 /* padding: 1vh 2vw 1vh 2vw; */
-padding: 2%;
+padding: 5%;
 margin: 1%;
 font-weight: bolder;
+border-radius: 5px;
+background: radial-gradient(ellipse at 83% 0, var(--secondary-color) 45%, transparent 100%, var(--primary-color));
+  backdrop-filter: blur( 8px );
 }
 
 .card_genre-container {
