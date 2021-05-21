@@ -52,9 +52,9 @@ a {
   width: 100%;
 }
 
-a:visited {
+/* a:visited {
   color: var(--accent-color);
-}
+} */
 
 .glass {
   background: rgba( 205, 214, 221, 0.25 );

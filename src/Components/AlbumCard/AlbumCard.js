@@ -36,7 +36,7 @@ function AlbumCard ({ title }) {
         <div className='card_genre-container' data-cy='card_genre-container'>
           { displayGenres(album.genres) }
         </div>
-        <a href={album.uri}className='card_discogs-link' data-cy='card_discogs-link' >Purchase on Discogs</a>
+        <a href={album.uri} className='card_discogs-link' data-cy='card_discogs-link' >Purchase on Discogs</a>
       </>
     )
   }
