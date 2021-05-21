@@ -11,7 +11,7 @@ const client = new ApolloClient({
   uri:'https://pure-hollows-05817.herokuapp.com/https://tranquil-depths-91575.herokuapp.com/graphql',
   cache: new InMemoryCache()
 })
-
+https://pure-hollows-05817.herokuapp.com/
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
