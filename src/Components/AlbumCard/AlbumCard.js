@@ -30,7 +30,7 @@ function AlbumCard ({ title }) {
           <div className='card_artist-container' data-cy='card_artist-container'>
             { album.artists[0].name }
           </div>
-          <h3 className='card_artist' data-cy='card_artist'>{}</h3>
+          {/* <h3 className='card_artist' data-cy='card_artist'>{}</h3> */}
           <p className='card_date' data-cy='card_date'>This Edition Released in {album.year}</p>
         </Link>
         <div className='card_genre-container' data-cy='card_genre-container'>
