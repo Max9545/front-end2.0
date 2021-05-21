@@ -32,7 +32,7 @@ const Search = ({ setSearch }) => {
   }
 
   return (
-    <form className="search">
+    <form className="search" data-cy='search'>
       <SearchIcon />
       <input
         id="searchField"
