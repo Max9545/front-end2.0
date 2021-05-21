@@ -13,21 +13,6 @@ import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
 
 const DetailsModal = ({ title, id }) => {
   const client = useApolloClient();
-  // const discogsLink = 'https://www.discogs.com/James-Brown-The-Payback/master/33990';
-  // const { albumLoading, albumError, albumData } = readQuery();
-  // const { albumData } = client.readQuery({ 
-  //   query: GET_SINGLE_ALBUM,
-  //   variables: {
-  //     title: title
-  //   }
-  // });
-  // console.log(title)
-  // const { loading, error, data } = useQuery(GET_SINGLE_ALBUM, {
-  //   variables: { title: title }
-  // })
-  // const { loading, error, data } = useQuery(SPOTIFY, {
-  //     variables: { title: title}
-  //   });
 
   const QueryMultiple = () => {
     const res1 = useQuery(GET_SINGLE_ALBUM, {
@@ -36,17 +21,18 @@ const DetailsModal = ({ title, id }) => {
     const res2 = useQuery(GET_SPOTIFY, {
         variables: { title: title }
     });
+
     return [res1, res2];
   }
 
   const [
     { loading: loading1, error: error1, data: data1 },
-    { loading: loading2, error: error2, data: data3 }
+    { loading: loading2, error: error2, data: data2 }
   ] = QueryMultiple()
 
   if (loading1) return <p>Loading...</p>; 
   if (error1) return <p>Error :(</p>;
-    
+
   return (
     <div className="modal-container">
       <section className="modal" data-cy="modal">
@@ -67,7 +53,7 @@ const DetailsModal = ({ title, id }) => {
           </div>
         </article>
         <article className="box right">
-          {/* <iframe data-cy="web-player" title={`${data1.title} album album playlist`} className="shadow spotify-player" src={`https://open.spotify.com/embed/album/${data3.id}`} allowtransparency="true" allow="encrypted-media"></iframe> */}
+          <iframe data-cy="web-player" title={`${data1.title} album album playlist`} className="shadow spotify-player" src={`https://open.spotify.com/embed/album/${data2.spotifyAlbumId.id}`} allowtransparency="true" allow="encrypted-media"></iframe>
         </article>
       </section>
       <div className="close-container">
