@@ -16,7 +16,6 @@
   display: flex;
   width: 100%;
   backdrop-filter: blur(10px);
-  position: absolute;
   align-items: center;
   justify-content: center;
   background-color: hsla(0, 0%, 0%, 0.4);
@@ -63,10 +62,12 @@
 }
 
 .details_links {
+  height: 90vh;
   width: 65%;
   display: flex;
   align-self: center;
   justify-content: space-between;
+  /* text-align: end; */
   margin: 10px 0px;
 }
 
@@ -87,7 +88,6 @@
 .details_discogs-link {
   height: 25px;
   width: 70px;
-  position: fixed;
   justify-self: center;
 }
 
