@@ -45,7 +45,8 @@ const Search = ({ setSearch }) => {
         <datalist id="albumTitles">
           {/* { determineOptionStatus() } */}
         </datalist>
-        <button onClick={(e) => helpSetSearch(e)}>Search</button>
+        <button onClick={(e) => helpSetSearch(e)}
+        data-cy='search-submit'>Search</button>
     </form>
   )
 }

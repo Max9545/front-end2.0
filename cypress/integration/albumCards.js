@@ -1,16 +1,24 @@
 context('Album Cards', () => {
   beforeEach(() => {
     cy
+    // .intercept('POST', 'https://pure-hollows-05817.herokuapp.com/https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
+    //   if (req.body.query.includes('The Payback')) {
+    //     req.reply({ fixture: 'details-fixture.json' })
+    //   }
+    // })
     .intercept('POST', 'https://pure-hollows-05817.herokuapp.com/https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
       if (req.body.query.includes('Freak Out')) {
         req.reply({ fixture: 'freakOut.js' })
       }
     })
     .visit('http://localhost:3000')
-    .get('[data-cy=]')
+    .get('.search__input')
+    .type('Freak Out')  
+    .get('[data-cy=search-submit]')
+    .click()
   })
 
-  it.only('Should have an album cover', () => {
+  it('Should have an album cover', () => {
     cy
     .get('[data-cy=card_cover]').should('exist')
     .should('have.attr', 'src', 'https://img.discogs.com/lcaNDTtBOojvbG2a5Fo8xdfzFXI=/fit-in/600x606/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-538636-1435321700-7614.jpeg.jpg')
