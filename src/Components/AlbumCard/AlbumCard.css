@@ -1,4 +1,4 @@
-.card {
+.card_card {
   margin: 3rem;
   border-radius: 1rem;
   padding: 20px;
@@ -14,7 +14,7 @@
   -webkit-backdrop-filter: blur( 1px );
 }
  
-.details-link-container {
+.card_details-link-container {
   color: var(--text-color);
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
   /* text-decoration: none; */
 }
 
-.details-link-container:hover {
+.card_details-link-container:hover {
   cursor: pointer;
   width: 100%;
   text-decoration: underline;
@@ -37,42 +37,42 @@
 } */
 
 
-.cover {
+.card_cover {
   height: 250px;
   border: 1px black
 }
 
-.date {
+.card_date {
   margin: 0;
  
 }
 
- .discogs-link {
-  background-color: var(--accent-color);
-  border-radius: 7px;
-  padding:2%;
-  width: 45%;
-  align-self: flex-end;
- }
+.card_discogs-link {
+background-color: var(--accent-color);
+border-radius: 7px;
+padding:2%;
+width: 45%;
+align-self: flex-end;
+}
 
- .discogs-link:hover {
-   cursor: pointer;
- }
+.card_discogs-link:hover {
+  cursor: pointer;
+}
 
- .genre {
-  color: var(--text-color);
-  background-color: var(--secondary-color);
-  /* padding: 1vh 2vw 1vh 2vw; */
-  padding: 2%;
-  margin: 1%;
-  font-weight: bolder;
- }
+.card_genre {
+color: var(--text-color);
+background-color: var(--secondary-color);
+/* padding: 1vh 2vw 1vh 2vw; */
+padding: 2%;
+margin: 1%;
+font-weight: bolder;
+}
 
- .genre-container {
-  margin: 2vh 0 2vh 0;
-  display: flex;
- }
+.card_genre-container {
+margin: 2vh 0 2vh 0;
+display: flex;
+}
 
- .title {
-   margin: 0;
- }
+.card_title {
+  margin: 0;
+}
