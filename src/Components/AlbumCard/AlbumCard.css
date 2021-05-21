@@ -8,17 +8,43 @@
   flex-direction: column;
   justify-content: center;
   align-self: center;
+  
   background: radial-gradient(ellipse at 13% 0, rgba( 205, 214, 221, 0.25 ) 25%, transparent 45%, rgba( 205, 214, 221, 0.25 ));
   backdrop-filter: blur( 1px );
   -webkit-backdrop-filter: blur( 1px );
 }
  
+.details-link-container {
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  padding-bottom: 1vh;
+  /* text-decoration: none; */
+}
+
+.details-link-container:hover {
+  cursor: pointer;
+  width: 100%;
+  text-decoration: underline;
+}
+
+/* 
+.title:hover, .artist:hover, .date:hover {
+  text-decoration: underline;
+} */
+
+
 .cover {
   height: 250px;
+  border: 1px black
 }
 
 .date {
   margin: 0;
+ 
 }
 
  .discogs-link {
@@ -29,12 +55,17 @@
   align-self: flex-end;
  }
 
+ .discogs-link:hover {
+   cursor: pointer;
+ }
+
  .genre {
-  color: #2a0800;
-  background-color: red;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
   /* padding: 1vh 2vw 1vh 2vw; */
   padding: 2%;
   margin: 1%;
+  font-weight: bolder;
  }
 
  .genre-container {
