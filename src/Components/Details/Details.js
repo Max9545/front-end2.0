@@ -9,6 +9,7 @@ import { Tooltip } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 import { useQuery, useApolloClient } from '@apollo/client';
 import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
+import { displayGenres } from '../../scripts';
 
 
 const DetailsModal = ({ title, id }) => {
@@ -41,9 +42,9 @@ const DetailsModal = ({ title, id }) => {
         <article className="details_box left">
           <img data-cy="album-cover" className="details_album-cover shadow" src={data1.album.coverImage} alt={`${data1.album.title} album cover`}/>
           <div className="details_links">
-          <Tooltip title="Add to Favorites" placement="right">
-            <FavoriteBorderIcon data-cy="favorites-button" aria-label={"Add to Favorites"} className="details_favorite-button click"/>
-          </Tooltip>
+            <Tooltip title="Add to Favorites" placement="right">
+              <FavoriteBorderIcon data-cy="favorites-button" aria-label={"Add to Favorites"} className="details_favorite-button click"/>
+            </Tooltip>
             {/* <div data-cy="" className="details_discogs-link"> */}
               <a data-cy="details_discogs-link" className="details_discogs-link" href={data1.album.uri} target="_blnk">
                 <img className="details_discogs-logo" src={discogsLogo} alt="discogs logo"/>
@@ -54,6 +55,9 @@ const DetailsModal = ({ title, id }) => {
             <p data-cy="artist-name">{data1.album.artists[0].name}</p>
             <p data-cy="album-title">{data1.album.title}</p>
             <p data-cy="release-year">Released: {data1.album.year}</p>
+          </div>
+          <div className='genre-container' data-cy='genre-container'>
+            { displayGenres(data1.album.genres) }
           </div>
         </article>
         <article className="details_box right">
