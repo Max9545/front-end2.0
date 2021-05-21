@@ -13,30 +13,36 @@ function AlbumCard ({ title }) {
   if (loading) return 'Loading...'
   if (error) return `Error! ${error.message}`
 
+  const displayGenres = (list) => {
+   return list.map(genre => <p className='card_genre' data-cy='card_genre'>{genre}</p>)
+  }
+
   const displayArtists = (list) => {
     return list.map(name => <p>{ name }</p>)
    }
 
   const deconstruct = ({ album }) => {
     return (
-      <Link to={`/${album.title}`}>
-        <img className='cover' data-cy='cover'src={album.coverImage}/>
-        <h2 className='title' data-cy='title'>{album.title}</h2>
-        <div className='artist-container' data-cy='artist-container'>
-          { album.artists[0].name }
-        </div>
-        <h3 className='artist' data-cy='artist'>{}</h3>
-        <p className='date' data-cy='date'>This Edition Released in {album.year}</p>
-        <div className='genre-container' data-cy='genre-container'>
+      <>
+        <Link  to={`/${album.title}`} className='card_details-link-container' clame='card_details-link-container'>
+          <img className='card_cover' data-cy='card_cover'src={album.coverImage}/>
+          <h2 className='card_title' data-cy='card_title'>{album.title}</h2>
+          <div className='card_artist-container' data-cy='card_artist-container'>
+            { album.artists[0].name }
+          </div>
+          <h3 className='card_artist' data-cy='card_artist'>{}</h3>
+          <p className='card_date' data-cy='card_date'>This Edition Released in {album.year}</p>
+        </Link>
+        <div className='card_genre-container' data-cy='card_genre-container'>
           { displayGenres(album.genres) }
         </div>
-        <button className='discogs-link' data-cy='discogs-link' >Purchase on Discogs</button>
-      </Link>
+        <button className='card_discogs-link' data-cy='card_discogs-link' >Purchase on Discogs</button>
+      </>
     )
   }
 
   return (
-    <div className='card' data-cy='card'>
+    <div className='card_card' data-cy='card_card'>
       { deconstruct(data) }
     </div>
   )
