@@ -1,12 +1,13 @@
 * {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 .modal-container,
-.modal {
+.modal, 
+.details_main{
   height: 100%;
   width: 100%;
 }
@@ -22,20 +23,26 @@
   padding: 10px 10px 0px;
 }
 
-.modal {
+/* main {
+  display: flex;
+} */
+
+.details_main {
   height: 89%;
   width: 92%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
   border-radius: 1em;
   z-index: 1;
 }
 
 
-.box {
+.details_box {
   height: 50%;
 }
 
@@ -43,19 +50,19 @@
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.box.left {
+.details_box.left {
   display: flex;
   flex-direction: column;
 }
 
-.album-cover {
+.details_album-cover {
   height: 260px;
   border-radius: 9px;
   align-self: center;
   margin-top: 10px;
 }
 
-.links {
+.details_links {
   width: 65%;
   display: flex;
   align-self: center;
@@ -63,28 +70,28 @@
   margin: 10px 0px;
 }
 
-.discogs-logo {
+.details_discogs-logo {
   height: 22px;
 }
 
-.discogs-logo:hover {
+.details_discogs-logo:hover {
   color: hsl(0, 100%, 99%);
 }
-
-.discogs-link-details {
+/* 
+.details_discogs-link {
   width: 70px;
   display: flex;
   justify-content: center;
-}
+} */
 
-.direct-link {
+.details_discogs-link {
   height: 25px;
   width: 70px;
   position: fixed;
   justify-self: center;
 }
 
-.modal-text {
+.details_main-text {
   height: 50%;
   width: 85%;
   display: flex;
@@ -96,18 +103,18 @@
   display: none;
 }
 
-.box.right {
+.details_box.right {
   margin-top: 5px;
   margin-bottom: 10px;
 }
 
-.spotify-player {
+.details_spotify-player {
   height: 100%;
   border: none;
   border-radius: 7px;
 }
 
-.close-container {
+/* .close-container {
   height: 94vh;
   width: 0;
 }
@@ -115,7 +122,7 @@
 .close-icon {
   transform: scale(1.25);
   padding-right: 5px;
-}
+} */
 
 .click {
   color: hsl(0, 100%, 99%);
@@ -127,16 +134,16 @@
 }
 
 @media only screen and (max-width: 320px) {
-  .box.right {
+  .details_box.right {
     width: 85%;
     margin-top: 12px;
   }
 
-  .album-cover {
+  .details_album-cover {
     height: 170px;
   }
 
-  .spotify-player {
+  .details_spotify-player {
     width: 100%;
   }
 }
@@ -152,7 +159,7 @@
     /* display: none; */
   }
 
-  .modal {
+  .details_main {
     height: 60vh;
     width: 95vw;
     flex-direction: row;
@@ -162,21 +169,21 @@
     border-radius: 5em;
   }
 
-  .box {
+  .details_box {
     height: 50vh;
     width: 42%;
   }
 
-  .box.left {
+  .details_box.left {
     display: flex;
     flex-direction: column;
   }
 
-  .album-cover {
+  .details_album-cover {
     height: 300px;
   }
 
-  .links {
+  .details_links {
     width: 80%;
     display: flex;
     align-self: center;
@@ -184,39 +191,39 @@
     margin: 15px 0px 7px;
   }
 
-  .favorite-button {
+  .details_favorite-button {
     transform: scale(1.5);
   }
 
-  .discogs-logo {
+  .details_discogs-logo {
     height: 28px;
   }
   
-  .discogs-link-details {
+  /* .details_discogs-link {
     width: 60px;
-  }
+  } */
   
-  .direct-link {
+  .details_discogs-link{
     height: 28px;
     width: 70px;
   }
 
-  .modal-text {
+  .details_main-text {
     position: relative;
     font-size: 1.3em;
     display: flex;
   }
 
-  .modal-text > p {
+  .details_main-text > p {
     margin: 7px 0px;
     padding-left: 5px;
   }
 
-  .box.right {
+  .details_box.right {
     margin: 0;
   }
 
-  .spotify-player {
+  .details_spotify-player {
     width: 100%;
   }
 
@@ -230,7 +237,7 @@
 }
 
 @media only screen and (min-width: 1025px) {
-  .modal {
+  .details_main {
     height: 70vh;
     width: 70vw;
     min-height: 558px;
@@ -238,28 +245,28 @@
     max-width: 900px;
   }
 
-  .box {
+  .details_box {
     height: 55vh;
   }
 
-  .album-cover {
+  .details_album-cover {
     height: 309px;
   }
 
-  .favorite-button {
+  .details_favorite-button {
     transform: scale(1);
     margin-left: 5px;
   }
 
-  .discogs-logo {
+  .details_discogs-logo {
     height: 22px;
   }
   
-  .discogs-link-details {
+  /* .details_discogs-link {
     width: 70px;
-  }
+  } */
   
-  .direct-link {
+  .details_discogs-link{
     height: 25px;
     width: 60px;
   }
