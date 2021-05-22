@@ -11,7 +11,7 @@ context('Album Cards', () => {
         req.reply({ fixture: 'freakOut.js' })
       }
     })
-    .visit('http://localhost:3000')
+    .visit('https://turing-selector.herokuapp.com/')
     .get('.search__input')
     .type('Freak Out')  
     .get('[data-cy=search-submit]')
