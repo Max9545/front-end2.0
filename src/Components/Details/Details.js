@@ -25,6 +25,10 @@ const DetailsModal = ({ title, id, addFavorite, removeFavorite }) => {
     return <FavoriteBorderIcon fontSize="large" />
   }
 
+  const toggleFav = () => {
+    return setIsFav(!isFav);
+  }
+
   const QueryMultiple = () => {
     const res1 = useQuery(GET_SINGLE_ALBUM, {
         variables: { title: title }
@@ -56,7 +60,7 @@ const DetailsModal = ({ title, id, addFavorite, removeFavorite }) => {
               <IconButton
                 className="details_favorite-button click" data-cy="favorites-button"
                 aria-label={"Add to Favorites"}
-                // onClick={ () =>  }
+                onClick={ () => toggleFav() }
                 >
                 { determineFavorite() }
               </IconButton>
