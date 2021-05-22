@@ -27,9 +27,9 @@ function AlbumCard ({ title }) {
         <Link  to={`/${album.title}`} className='card_details-link-container' data-cy='card_details-link-container'>
           <img className='card_cover' data-cy='card_cover'src={album.coverImage} alt={`Cover for ${album.title}`}/>
           <h2 className='card_title' data-cy='card_title'>{album.title}</h2>
-          <div className='card_artist-container' data-cy='card_artist-container'>
+          <p className='card_artist-container' data-cy='card_artist-container'>
             { album.artists[0].name }
-          </div>
+          </p>
           {/* <h3 className='card_artist' data-cy='card_artist'>{}</h3> */}
           <p className='card_date' data-cy='card_date'>This Edition Released in {album.year}</p>
         </Link>
@@ -37,9 +37,9 @@ function AlbumCard ({ title }) {
           { displayGenres(album.genres) }
         </div>
         
-        <div>
+       
         <a href={album.uri} target='_blank' className='card_discogs-link' data-cy='card_discogs-link' >Purchase on Discogs</a>
-        </div>
+     
       </>
     )
   }
