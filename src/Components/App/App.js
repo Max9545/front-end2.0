@@ -10,7 +10,6 @@ import './App.css';
 import '../../normalize.css';
 
 function App() {
-  // const [titles, setTitles] = useState(["The Payback"]);
   const [titles, setTitles] = useState(["The Payback"]);
   const [search, setSearch] = useState([]);
   const [favorites, setFavorites] = useState([]);

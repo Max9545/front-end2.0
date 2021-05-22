@@ -1,11 +1,11 @@
-import React from 'react';
+import { React, useState } from 'react';
 import './Details.css';
 import '../Details/assets/discogs_logo.svg'
 import discogsLogo from '../Details/assets/discogs_logo.svg';
 import { IconButton } from '@material-ui/core';
 // import { FavoriteIcon, FavoriteBorderIcon } from '@material-ui/icons';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-// import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import { Tooltip } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 import { useQuery, useApolloClient } from '@apollo/client';
@@ -13,8 +13,17 @@ import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
 import { displayGenres } from '../../scripts';
 
 
-const DetailsModal = ({ title, id }) => {
+const DetailsModal = ({ title, id, addFavorite, removeFavorite }) => {
+  const [isFav, setIsFav] = useState(false);
+
   const client = useApolloClient();
+
+  const determineFavorite = () => {
+    if (isFav) {
+      return <FavoriteIcon fontSize="large" />
+    }
+    return <FavoriteBorderIcon fontSize="large" />
+  }
 
   const QueryMultiple = () => {
     const res1 = useQuery(GET_SINGLE_ALBUM, {
@@ -46,9 +55,10 @@ const DetailsModal = ({ title, id }) => {
             <Tooltip title="Add to Favorites" placement="right">
               <IconButton
                 className="details_favorite-button click" data-cy="favorites-button"
-                aria-label={"Add to Favorites"}>
-                <FavoriteBorderIcon
-                  fontSize="large" />
+                aria-label={"Add to Favorites"}
+                // onClick={ () =>  }
+                >
+                { determineFavorite() }
               </IconButton>
             </Tooltip>
             <a data-cy="details_discogs-link" className="details_discogs-link" href={data1.album.uri} target="_blnk">
