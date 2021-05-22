@@ -15,6 +15,14 @@ function App() {
   const [search, setSearch] = useState([]);
   const [favorites, setFavorites] = useState([]);
 
+  const addFavorite = (toAdd) => {
+    return setFavorites(favorites.push(toAdd));
+  }
+
+  const removeFavorite = (toRemove) => {
+    return setFavorites([...favorites.filter(album => album.title !== toRemove)]);
+  }
+
   const isTabletOrMobile = useMediaQuery({
     query: '(max-width: 780px)'
   });
