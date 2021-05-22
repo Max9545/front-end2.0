@@ -16,6 +16,9 @@ function App() {
   const [favorites, setFavorites] = useState([]);
 
   const addFavorite = (toAdd) => {
+    if (favorites.includes(toAdd)) {
+      return;
+    }
     return setFavorites(favorites.push(toAdd));
   }
 
@@ -38,7 +41,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <section className="glass">
-              {search.length ? <AlbumCardsDisplay titles={ search } setFavorites={ setFavorites }/> : <AlbumCardsDisplay  titles={ titles } setFavorites={ setFavorites }/> }
+              {search.length ? <AlbumCardsDisplay titles={ search } addFavorite={ addFavorite } removeFavorite={ removeFavorite }/> : <AlbumCardsDisplay  titles={ titles } addFavorite={ addFavorite } removeFavorite={ removeFavorite }/> }
             </section>
           </Route>
           <Route path="/liked">
@@ -48,7 +51,7 @@ function App() {
           </Route>
           <Route exact path="/:title" render={({ match }) => {
             const { title } = match.params;
-            return <DetailsModal title={ title } setFavorites={ setFavorites }/>
+            return <DetailsModal title={ title } addFavorite={ addFavorite } removeFavorite={ removeFavorite }/>
             }
           }
           />
