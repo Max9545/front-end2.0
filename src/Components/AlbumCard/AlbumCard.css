@@ -27,19 +27,12 @@
   align-items: center;
   border-radius: 7px;
   padding-bottom: 1vh;
-  /* text-decoration: none; */
 }
 
 .card_details-link-container:hover {
   cursor: pointer;
   width: 100%;
 }
-
-/* 
-.title:hover, .artist:hover, .date:hover {
-  text-decoration: underline;
-} */
-
 
 .card_cover {
   height: 250px;
