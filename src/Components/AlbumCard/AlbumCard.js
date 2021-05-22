@@ -27,7 +27,7 @@ function AlbumCard ({ title }) {
     return (
       <>
         <Link  to={`/${album.title}`} className='card_details-link-container' data-cy='card_details-link-container'>
-          <img className='card_cover' data-cy='card_cover'src={album.coverImage}/>
+          <img className='card_cover' data-cy='card_cover'src={album.coverImage} alt={`Cover for ${album.title}`}/>
           <h2 className='card_title' data-cy='card_title'>{album.title}</h2>
           <div className='card_artist-container' data-cy='card_artist-container'>
             { album.artists[0].name }
