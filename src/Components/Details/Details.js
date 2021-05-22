@@ -45,19 +45,17 @@ const DetailsModal = ({ title, id }) => {
             <Tooltip title="Add to Favorites" placement="right">
               <FavoriteBorderIcon data-cy="favorites-button" aria-label={"Add to Favorites"} className="details_favorite-button click"/>
             </Tooltip>
-            {/* <div data-cy="" className="details_discogs-link"> */}
-              <a data-cy="details_discogs-link" className="details_discogs-link" href={data1.album.uri} target="_blnk">
-                <img className="details_discogs-logo" src={discogsLogo} alt="discogs logo"/>
-              </a>
-            {/* </div> */}
+            <a data-cy="details_discogs-link" className="details_discogs-link" href={data1.album.uri} target="_blnk">
+              <img className="details_discogs-logo" src={discogsLogo} alt="discogs logo"/>
+            </a>
           </div>
           <div className="details_main-text">
-            <p data-cy="artist-name">{data1.album.artists[0].name}</p>
-            <p data-cy="album-title">{data1.album.title}</p>
+            <p data-cy="artist-name">Artist: {data1.album.artists[0].name}</p>
+            <p data-cy="album-title">Album: {data1.album.title}</p>
             <p data-cy="release-year">Released: {data1.album.year}</p>
-          </div>
-          <div className='genre-container' data-cy='genre-container'>
-            { displayGenres(data1.album.genres) }
+            <div className='genre-container' data-cy='genre-container'>
+              { displayGenres(data1.album.genres) }
+            </div>
           </div>
         </article>
         <article className="details_box right">
