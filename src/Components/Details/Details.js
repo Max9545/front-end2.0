@@ -18,17 +18,6 @@ const DetailsModal = ({ title, id, addFavorite, removeFavorite }) => {
 
   const client = useApolloClient();
 
-  const determineFavorite = () => {
-    if (isFav) {
-      return <FavoriteIcon fontSize="large" />
-    }
-    return <FavoriteBorderIcon fontSize="large" />
-  }
-
-  const toggleFav = () => {
-    return setIsFav(!isFav);
-  }
-
   const QueryMultiple = () => {
     const res1 = useQuery(GET_SINGLE_ALBUM, {
         variables: { title: title }

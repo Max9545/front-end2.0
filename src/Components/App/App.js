@@ -25,6 +25,40 @@ function App() {
     return setFavorites([...favorites.filter(album => album.title !== toRemove)]);
   }
 
+  const determineFav = () => {
+    if (isFav) {
+      return <FavoriteIcon fontSize="large" />
+    }
+    return <FavoriteBorderIcon fontSize="large" />
+  }
+
+  const toggleFav = () => {
+    return setIsFav(!isFav);
+  }
+
+  const isLandingPage = () => {
+    if (search.length) {
+      return (
+        <AlbumCardsDisplay
+          titles={ search }
+          addFavorite={ addFavorite }
+          removeFavorite={ removeFavorite }
+          toggleFav={ toggleFav }
+          determineFav={ determineFav }
+        />
+      )
+    }
+    return (
+      <AlbumCardsDisplay
+        titles={ titles }
+        addFavorite={ addFavorite }
+        removeFavorite={ removeFavorite }
+        toggleFav={ toggleFav }
+        determineFav={ determineFav }
+      />
+    )
+  }
+
   const isTabletOrMobile = useMediaQuery({
     query: '(max-width: 780px)'
   });
@@ -40,7 +74,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <section className="glass">
-              {search.length ? <AlbumCardsDisplay titles={ search } addFavorite={ addFavorite } removeFavorite={ removeFavorite }/> : <AlbumCardsDisplay  titles={ titles } addFavorite={ addFavorite } removeFavorite={ removeFavorite }/> }
+              { isLandingPage() }
             </section>
           </Route>
           <Route path="/liked">
@@ -50,7 +84,15 @@ function App() {
           </Route>
           <Route exact path="/:title" render={({ match }) => {
             const { title } = match.params;
-            return <DetailsModal title={ title } addFavorite={ addFavorite } removeFavorite={ removeFavorite }/>
+            return (
+              <DetailsModal
+                title={ title }
+                addFavorite={ addFavorite }
+                removeFavorite={ removeFavorite }
+                toggleFav={ toggleFav }
+                determineFav={ determineFav }
+              />
+            )
             }
           }
           />
