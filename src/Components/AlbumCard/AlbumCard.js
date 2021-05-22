@@ -2,8 +2,9 @@ import { GET_SINGLE_ALBUM }from '../../queries';
 import { useQuery } from '@apollo/client';
 import './AlbumCard.css'
 import { ArtTrackOutlined } from '@material-ui/icons';
-import { Link } from 'react-router-dom';
-import { displayGenres } from '../../scripts';
+import { Link } from 'react-router-dom'
+// import { ReactComponent as FavoriteIcon } from './assets/favoriteIcon.svg'
+
 
 function AlbumCard ({ title }) {
   
@@ -37,7 +38,11 @@ function AlbumCard ({ title }) {
         <div className='card_genre-container' data-cy='card_genre-container'>
           { displayGenres(album.genres) }
         </div>
+        
+        <div>
+        {/* <FavoriteIcon/> */}
         <a href={album.uri} className='card_discogs-link' data-cy='card_discogs-link' >Purchase on Discogs</a>
+        </div>
       </>
     )
   }
