@@ -21,7 +21,6 @@ query ($title: String!) {
   spotifyAlbumId(title: $title) {
       id
     }
-  }
 }
 `
 
@@ -48,4 +47,5 @@ query {
           uri
           }
         }
+        
 `
