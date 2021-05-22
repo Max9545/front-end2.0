@@ -11,7 +11,7 @@
   background: radial-gradient(ellipse at 13% 0, rgba( 205, 214, 221, 0.25 ) 25%, transparent 45%, rgba( 205, 214, 221, 0.25 ));
   backdrop-filter: blur( 1px );
   -webkit-backdrop-filter: blur( 1px );
-  transition: transform 2s;
+  transition: transform .6s;
 }
  
 .card_card:hover {
