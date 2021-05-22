@@ -18,7 +18,6 @@
   transform: scale(1.1);
 }
 
-
 .card_details-link-container {
   color: var(--text-color);
   display: flex;
@@ -45,12 +44,12 @@
 
 .card_discogs-link {
 border-radius: 7px;
-padding:2%;
-width: 25%;
-/* align-self: flex-end; */
+padding: 2%;
+width: 45%;
+font-weight: bold;
+align-self: flex-end;
 color: var(--primary-color);
-background: radial-gradient(ellipse at 13% 0, rgba( 205, 214, 221, 0.25 ) 5%, transparent 25%, var(--accent-color));
-backdrop-filter: blur( 15px );
+background-color: hsla(45, 100%, 50%, .7) ;
 }
 
 .card_discogs-link:hover {
