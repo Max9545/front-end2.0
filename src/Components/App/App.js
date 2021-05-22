@@ -12,8 +12,8 @@ import '../../normalize.css';
 function App() {
   // const [titles, setTitles] = useState(["The Payback"]);
   const [titles, setTitles] = useState(["The Payback"]);
-  const [search, setSearch] = useState([])
-  const [liked, setLiked] = useState([]);
+  const [search, setSearch] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
   const isTabletOrMobile = useMediaQuery({
     query: '(max-width: 780px)'
@@ -30,7 +30,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <section className="glass">
-              {search.length ? <AlbumCardsDisplay titles={ search }/> : <AlbumCardsDisplay  titles={ titles }/> }
+              {search.length ? <AlbumCardsDisplay titles={ search } setFavorites={ setFavorites }/> : <AlbumCardsDisplay  titles={ titles } setFavorites={ setFavorites }/> }
             </section>
           </Route>
           <Route path="/liked">
@@ -39,8 +39,8 @@ function App() {
             </section>
           </Route>
           <Route exact path="/:title" render={({ match }) => {
-            const { title, id } = match.params;
-            return <DetailsModal title={ title } id={ id } />
+            const { title } = match.params;
+            return <DetailsModal title={ title } setFavorites={ setFavorites }/>
             }
           }
           />
