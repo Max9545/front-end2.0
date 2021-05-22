@@ -6,6 +6,8 @@ import { Switch, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Dialog } from '@material-ui/core';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import './App.css';
 import '../../normalize.css';
 
@@ -25,15 +27,23 @@ function App() {
     return setFavorites([...favorites.filter(album => album.title !== toRemove)]);
   }
 
-  const determineFav = () => {
+  const determineFav = (isFav) => {
     if (isFav) {
       return <FavoriteIcon fontSize="large" />
     }
     return <FavoriteBorderIcon fontSize="large" />
   }
 
-  const toggleFav = () => {
-    return setIsFav(!isFav);
+  const isFavorite = (title) => {
+    if (favorites.includes(title)) return true;
+    return false;
+  }
+
+  const toggleFav = (title) => {
+    if (isFavorite(title)) {
+      return removeFavorite(title);
+    }
+    return addFavorite(title);
   }
 
   const isLandingPage = () => {

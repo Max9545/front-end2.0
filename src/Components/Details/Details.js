@@ -13,7 +13,7 @@ import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
 import { displayGenres } from '../../scripts';
 
 
-const DetailsModal = ({ title, id, addFavorite, removeFavorite }) => {
+const DetailsModal = ({ title, id, addFavorite, removeFavorite, toggleFav, determineFav }) => {
   const [isFav, setIsFav] = useState(false);
 
   const client = useApolloClient();
@@ -51,7 +51,7 @@ const DetailsModal = ({ title, id, addFavorite, removeFavorite }) => {
                 aria-label={"Add to Favorites"}
                 onClick={ () => toggleFav() }
                 >
-                { determineFavorite() }
+                { determineFav() }
               </IconButton>
             </Tooltip>
             <a data-cy="details_discogs-link" className="details_discogs-link" href={data1.album.uri} target="_blnk">
