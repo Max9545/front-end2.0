@@ -10,7 +10,6 @@ import './App.css';
 import '../../normalize.css';
 
 function App() {
-
   // const [titles, setTitles] = useState(["The Payback"]);
   const [titles, setTitles] = useState(["The Payback"]);
   const [search, setSearch] = useState([])
@@ -42,8 +41,8 @@ function App() {
           <Route exact path="/:title" render={({ match }) => {
             const { title, id } = match.params;
             return <DetailsModal title={ title } id={ id } />
-              }
             }
+          }
           />
           <Route path="*">
             <h1>This page doesn't exist! Please navigate back to home with the sidebar</h1>

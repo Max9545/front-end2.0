@@ -1,8 +1,8 @@
 import React from 'react';
 import './Details.css';
 import '../Details/assets/discogs_logo.svg'
-// import albums from '../../mockData';
 import discogsLogo from '../Details/assets/discogs_logo.svg';
+// import { FavoriteIcon, FavoriteBorderIcon } from '@material-ui/icons';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 // import FavoriteIcon from '@material-ui/icons/Favorite';
 import { Tooltip } from '@material-ui/core';
