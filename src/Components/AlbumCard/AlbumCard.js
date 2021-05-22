@@ -41,7 +41,7 @@ function AlbumCard ({ title }) {
         
         <div>
         {/* <FavoriteIcon/> */}
-        <a href={album.uri} className='card_discogs-link' data-cy='card_discogs-link' >Purchase on Discogs</a>
+        <a href={album.uri} target='_blank' className='card_discogs-link' data-cy='card_discogs-link' >Purchase on Discogs</a>
         </div>
       </>
     )
