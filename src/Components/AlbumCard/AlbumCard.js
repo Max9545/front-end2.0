@@ -2,6 +2,8 @@ import { GET_SINGLE_ALBUM }from '../../queries';
 import { useQuery } from '@apollo/client';
 import './AlbumCard.css'
 import { ArtTrackOutlined } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
+import { displayGenres } from '../../scripts';
 
 function AlbumCard ({ title }) {
   const { loading, error, data } = useQuery(GET_SINGLE_ALBUM, {
@@ -11,17 +13,13 @@ function AlbumCard ({ title }) {
   if (loading) return 'Loading...'
   if (error) return `Error! ${error.message}`
 
-  const displayGenres = (list) => {
-   return list.map(genre => <p className='genre' data-cy='genre'>{genre}</p>)
-  }
-
   const displayArtists = (list) => {
     return list.map(name => <p>{ name }</p>)
    }
 
   const deconstruct = ({ album }) => {
     return (
-      <>
+      <Link to={`/${album.title}`}>
         <img className='cover' data-cy='cover'src={album.coverImage}/>
         <h2 className='title' data-cy='title'>{album.title}</h2>
         <div className='artist-container' data-cy='artist-container'>
@@ -33,7 +31,7 @@ function AlbumCard ({ title }) {
           { displayGenres(album.genres) }
         </div>
         <button className='discogs-link' data-cy='discogs-link' >Purchase on Discogs</button>
-      </>
+      </Link>
     )
   }
 

@@ -6,115 +6,99 @@
 }
 
 .modal-container,
-.modal {
+.modal, 
+.details_main{
   height: 100%;
   width: 100%;
 }
 
-.modal-container {
-  display: flex;
-  width: 100%;
-  backdrop-filter: blur(10px);
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  background-color: hsla(0, 0%, 0%, 0.4);
-  padding: 10px 10px 0px;
-}
-
-.modal {
-  height: 89%;
-  width: 92%;
+.details_main {
+  height: 100vh;
+  width: 98%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding-top: 5%;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  background: rgba( 205, 214, 221, 0.25 );
+  box-shadow: 0 8px 32px 0 #775144;
+  /* background-color: rgba(255, 255, 255, 0.25); */
+  margin: 0 auto;
   border-radius: 1em;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 35px;
   z-index: 1;
 }
 
 
-.box {
-  height: 50%;
+.details_box {
+  height: 90%;
 }
 
 .shadow {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.box.left {
+.details_box.left {
   display: flex;
   flex-direction: column;
 }
 
-.album-cover {
-  height: 260px;
+.details_album-cover {
+  height: 293px;
+  width: 294px;
   border-radius: 9px;
   align-self: center;
   margin-top: 10px;
 }
 
-.links {
-  width: 65%;
+.details_links {
+  width: 294px;
   display: flex;
   align-self: center;
   justify-content: space-between;
   margin: 10px 0px;
+  padding: 0px 5px;
 }
 
-.discogs-logo {
+.details_discogs-logo {
   height: 22px;
 }
 
-.discogs-logo:hover {
+.details_discogs-logo:hover {
   color: hsl(0, 100%, 99%);
 }
 
-.discogs-link-details {
-  width: 70px;
-  display: flex;
-  justify-content: center;
-}
-
-.direct-link {
+.details_discogs-link {
   height: 25px;
   width: 70px;
-  position: fixed;
   justify-self: center;
 }
 
-.modal-text {
+.details_main-text {
   height: 50%;
-  width: 85%;
-  display: flex;
-  flex-direction: column;
+  width: 294px;
   align-self: center;
-  justify-self: end;
-  position: fixed;
   text-align: start;
-  display: none;
 }
 
-.box.right {
+.details_main-text > p {
+  margin: 5px 0px;
+  font-size: 1.5rem;
+}
+
+.details_genre-container {
+  width: 15%;
+}
+
+.details_box.right {
   margin-top: 5px;
   margin-bottom: 10px;
 }
 
-.spotify-player {
+.details_spotify-player {
   height: 100%;
   border: none;
   border-radius: 7px;
-}
-
-.close-container {
-  height: 94vh;
-  width: 0;
-}
-
-.close-icon {
-  transform: scale(1.25);
-  padding-right: 5px;
 }
 
 .click {
@@ -126,19 +110,21 @@
   color: hsl(0, 0%, 0%);
 }
 
-@media only screen and (max-width: 320px) {
-  .box.right {
-    width: 85%;
-    margin-top: 12px;
+@media only screen and (max-width: 385px) {
+  .details_album-cover {
+    height: 260px;
+    width: 261px;
   }
 
-  .album-cover {
-    height: 170px;
+  .details_links {
+    width: 261px;
   }
 
-  .spotify-player {
-    width: 100%;
+  .details_main-text {
+    width: 261px;
   }
+
+  
 }
 
 @media only screen and (min-width: 700px) {
@@ -149,74 +135,58 @@
     background-color: hsla(0, 0%, 0%, 0.4);
     padding: 5%;
     overflow: scroll;
-    /* display: none; */
   }
 
-  .modal {
-    height: 60vh;
+  .details_main {
     width: 95vw;
     flex-direction: row;
-    align-items: center;
     justify-content: space-around;
-    /* background-color: rgba(255, 255, 255, 0.3); */
     border-radius: 5em;
   }
 
-  .box {
-    height: 50vh;
+  .details_box {
     width: 42%;
   }
 
-  .box.left {
+  .details_box.left {
     display: flex;
     flex-direction: column;
   }
 
-  .album-cover {
+  .details_album-cover {
     height: 300px;
   }
 
-  .links {
-    width: 80%;
+  .details_links {
     display: flex;
     align-self: center;
     justify-content: space-between;
     margin: 15px 0px 7px;
   }
 
-  .favorite-button {
+  .details_favorite-button {
     transform: scale(1.5);
   }
 
-  .discogs-logo {
+  .details_discogs-logo {
     height: 28px;
   }
   
-  .discogs-link-details {
-    width: 60px;
-  }
-  
-  .direct-link {
+  .details_discogs-link{
     height: 28px;
     width: 70px;
   }
 
-  .modal-text {
-    position: relative;
-    font-size: 1.3em;
-    display: flex;
-  }
-
-  .modal-text > p {
+  .details_main-text > p {
     margin: 7px 0px;
     padding-left: 5px;
   }
 
-  .box.right {
+  .details_box.right {
     margin: 0;
   }
 
-  .spotify-player {
+  .details_spotify-player {
     width: 100%;
   }
 
@@ -230,36 +200,28 @@
 }
 
 @media only screen and (min-width: 1025px) {
-  .modal {
-    height: 70vh;
+  .details_main {
+    height: 90vh;
     width: 70vw;
     min-height: 558px;
     min-width: 550px;
     max-width: 900px;
   }
 
-  .box {
-    height: 55vh;
-  }
-
-  .album-cover {
+  .details_album-cover {
     height: 309px;
   }
 
-  .favorite-button {
+  .details_favorite-button {
     transform: scale(1);
     margin-left: 5px;
   }
 
-  .discogs-logo {
+  .details_discogs-logo {
     height: 22px;
   }
   
-  .discogs-link-details {
-    width: 70px;
-  }
-  
-  .direct-link {
+  .details_discogs-link{
     height: 25px;
     width: 60px;
   }

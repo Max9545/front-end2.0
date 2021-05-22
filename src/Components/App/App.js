@@ -5,6 +5,7 @@ import DetailsModal from '../Details/Details.js';
 import { Switch, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { Dialog } from '@material-ui/core';
 import './App.css';
 import '../../normalize.css';
 
@@ -26,12 +27,11 @@ function App() {
         <Search setSearch={setSearch} search={search}/>
       </header>
       <Navigation isMobile={ isTabletOrMobile }/>
-      {/* <DetailsModal /> */}
       <main>
         <Switch>
           <Route exact path="/">
             <section className="glass">
-              {search.length ? <AlbumCardsDisplay titles={ search }/> : <AlbumCardsDisplay titles={ titles }/> }
+              {search.length ? <AlbumCardsDisplay titles={ search }/> : <AlbumCardsDisplay  titles={ titles }/> }
             </section>
           </Route>
           <Route path="/liked">
@@ -39,6 +39,12 @@ function App() {
               <p>Eventual liked album cards Container</p>
             </section>
           </Route>
+          <Route exact path="/:title" render={({ match }) => {
+            const { title, id } = match.params;
+            return <DetailsModal title={ title } id={ id } />
+              }
+            }
+          />
           <Route path="*">
             <h1>This page doesn't exist! Please navigate back to home with the sidebar</h1>
           </Route>

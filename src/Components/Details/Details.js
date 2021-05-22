@@ -7,64 +7,67 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 // import FavoriteIcon from '@material-ui/icons/Favorite';
 import { Tooltip } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
-import { useQuery, gql } from '@apollo/client';
+import { useQuery, useApolloClient } from '@apollo/client';
+import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
+import { displayGenres } from '../../scripts';
 
-const ALBUMS = gql`
-  query {
-    album(title: "The Payback") {
-      id
-        title
-        artists {
-          name
-        }
-        year
-        genres
-        coverImage
-    }
-  }`;
 
-  // const SPOTIFY = gql`
-  // query {
-  //  
-  // }`
+const DetailsModal = ({ title, id }) => {
+  const client = useApolloClient();
 
-const DetailsModal = () => {
+  const QueryMultiple = () => {
+    const res1 = useQuery(GET_SINGLE_ALBUM, {
+        variables: { title: title }
+    });
+    const res2 = useQuery(GET_SPOTIFY, {
+        variables: { title: title }
+    });
 
-  const discogsLink = 'https://www.discogs.com/James-Brown-The-Payback/master/33990';
-  const { loading, error, data } = useQuery(ALBUMS);
+    return [res1, res2];
+  }
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  const [
+    { loading: loading1, error: error1, data: data1 },
+    { loading: loading2, error: error2, data: data2 }
+  ] = QueryMultiple()
+
+  if (loading1) return <p>Loading...</p>; 
+  if (error1) return <p>Error :(</p>;
+  if (loading2) return <p>Loading...</p>; 
+  if (error2) return <p>Error :(</p>;
   
   return (
-    <div className="modal-container">
-      <section className="modal" data-cy="modal">
-        <article className="box left">
-          <img data-cy="album-cover" className="album-cover shadow" src={data.album.coverImage} alt={`${data.album.title} album cover`}/>
-          <div className="links">
-          <Tooltip title="Add to Favorites" placement="right">
-            <FavoriteBorderIcon data-cy="favorites-button" aria-label={"Add to Favorites"} className="favorite-button click"/>
-          </Tooltip>
-            <div data-cy="" className="discogs-link-details">
-              <a data-cy="discogs-link" className="direct-link" href={discogsLink} target="_blnk"><img className="discogs-logo" src={discogsLogo} alt="discogs logo"/></a>
+    <>
+      <section className="details_main" data-cy="modal">
+        <article className="details_box left">
+          <img data-cy="album-cover" className="details_album-cover shadow" src={data1.album.coverImage} alt={`${data1.album.title} album cover`}/>
+          <div className="details_links">
+            <Tooltip title="Add to Favorites" placement="right">
+              <FavoriteBorderIcon data-cy="favorites-button" aria-label={"Add to Favorites"} className="details_favorite-button click"/>
+            </Tooltip>
+            <a data-cy="details_discogs-link" className="details_discogs-link" href={data1.album.uri} target="_blnk">
+              <img className="details_discogs-logo" src={discogsLogo} alt="discogs logo"/>
+            </a>
+          </div>
+          <div className="details_main-text">
+            <p data-cy="artist-name">Artist: {data1.album.artists[0].name}</p>
+            <p data-cy="album-title">Album: {data1.album.title}</p>
+            <p data-cy="release-year">Released: {data1.album.year}</p>
+            <div className='genre-container' data-cy='genre-container'>
+              { displayGenres(data1.album.genres) }
             </div>
           </div>
-          <div className="modal-text">
-            <p data-cy="artist-name">{data.album.artists[0].name}</p>
-            <p data-cy="album-title">{data.album.title}</p>
-            <p data-cy="release-year">Released: {data.album.year}</p>
-          </div>
         </article>
-        <article className="box right">
-          <iframe data-cy="web-player" title={`${data.album.title} album album playlist`} className="shadow spotify-player" src="https://open.spotify.com/embed/album/49vpRrUcAr2bj6aYQr0Cfl" allowtransparency="true" allow="encrypted-media"></iframe>
+        <article className="details_box right">
+          <iframe data-cy="web-player" title={`${data1.title} album album playlist`} className="shadow details_spotify-player" src={`https://open.spotify.com/embed/album/${data2.spotifyAlbumId.id}`} allowtransparency="true" allow="encrypted-media"></iframe>
         </article>
       </section>
-      <div className="close-container">
+      {/* <div className="close-container">
         <Tooltip title="Close">
           <CloseIcon data-cy="close-button" aria-label={"close modal"} className="close-icon click"/>
         </Tooltip>
-      </div>
-    </div>
+      </div> */}
+    </>
   )
 }
 
