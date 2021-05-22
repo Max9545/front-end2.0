@@ -102,6 +102,10 @@
   border-radius: 7px;
 }
 
+.details__FavoriteBorderIcon {
+  
+}
+
 .click {
   color: hsl(0, 100%, 99%);
   cursor: pointer;
@@ -166,7 +170,7 @@
   }
 
   .details_favorite-button {
-    transform: scale(1.5);
+    font-size: 5rem;
   }
 
   .details_discogs-logo {

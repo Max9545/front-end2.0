@@ -2,6 +2,7 @@ import React from 'react';
 import './Details.css';
 import '../Details/assets/discogs_logo.svg'
 import discogsLogo from '../Details/assets/discogs_logo.svg';
+import { IconButton } from '@material-ui/core';
 // import { FavoriteIcon, FavoriteBorderIcon } from '@material-ui/icons';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 // import FavoriteIcon from '@material-ui/icons/Favorite';
@@ -43,7 +44,12 @@ const DetailsModal = ({ title, id }) => {
           <img data-cy="album-cover" className="details_album-cover shadow" src={data1.album.coverImage} alt={`${data1.album.title} album cover`}/>
           <div className="details_links">
             <Tooltip title="Add to Favorites" placement="right">
-              <FavoriteBorderIcon data-cy="favorites-button" aria-label={"Add to Favorites"} className="details_favorite-button click"/>
+              <IconButton
+                className="details_favorite-button click" data-cy="favorites-button"
+                aria-label={"Add to Favorites"}>
+                <FavoriteBorderIcon
+                  fontSize="large" />
+              </IconButton>
             </Tooltip>
             <a data-cy="details_discogs-link" className="details_discogs-link" href={data1.album.uri} target="_blnk">
               <img className="details_discogs-logo" src={discogsLogo} alt="discogs logo"/>
