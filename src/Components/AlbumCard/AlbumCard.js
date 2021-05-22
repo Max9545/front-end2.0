@@ -3,8 +3,6 @@ import { useQuery } from '@apollo/client';
 import './AlbumCard.css'
 import { ArtTrackOutlined } from '@material-ui/icons';
 import { Link } from 'react-router-dom'
-// import { ReactComponent as FavoriteIcon } from './assets/favoriteIcon.svg'
-
 
 function AlbumCard ({ title }) {
   
@@ -40,7 +38,6 @@ function AlbumCard ({ title }) {
         </div>
         
         <div>
-        {/* <FavoriteIcon/> */}
         <a href={album.uri} target='_blank' className='card_discogs-link' data-cy='card_discogs-link' >Purchase on Discogs</a>
         </div>
       </>
