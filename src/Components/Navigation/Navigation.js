@@ -17,11 +17,11 @@ const Navigation = ({ isMobile }) => {
         >
           Home
         </NavLink>
-        <NavLink to="/liked"
+        <NavLink to="/your-favorites"
           activeStyle={activeStyle}
           data-cy="link-to-liked"
         >
-          Liked Albums
+          Your Favorite Albums
         </NavLink>
       </>
     )

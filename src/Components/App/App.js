@@ -68,7 +68,6 @@ function App() {
         toggleFav={ toggleFav }
         determineFav={ determineFav }
         isFavorite={ isFavorite }
-
       />
     )
   }
@@ -91,9 +90,16 @@ function App() {
               { isLandingPage() }
             </section>
           </Route>
-          <Route path="/liked">
+          <Route exact path="/your-favorites">
             <section className="glass">
-              <p>Eventual liked album cards Container</p>
+              <AlbumCardsDisplay
+                titles={ favorites }
+                addFavorite={ addFavorite }
+                removeFavorite={ removeFavorite }
+                toggleFav={ toggleFav }
+                determineFav={ determineFav }
+                isFavorite={ isFavorite }
+              />
             </section>
           </Route>
           <Route exact path="/:title" render={({ match }) => {
