@@ -20,11 +20,11 @@ function App() {
     if (favorites.includes(toAdd)) {
       return;
     }
-    return setFavorites(favorites.push(toAdd));
+    return setFavorites([...favorites, toAdd]);
   }
 
   const removeFavorite = (toRemove) => {
-    return setFavorites([...favorites.filter(album => album.title !== toRemove)]);
+    return setFavorites(favorites.filter(title => title !== toRemove));
   }
 
   const determineFav = (isFav) => {
@@ -35,7 +35,9 @@ function App() {
   }
 
   const isFavorite = (title) => {
-    if (favorites.includes(title)) return true;
+    if (favorites.includes(title)) {
+      return true;
+    }
     return false;
   }
 
@@ -55,6 +57,7 @@ function App() {
           removeFavorite={ removeFavorite }
           toggleFav={ toggleFav }
           determineFav={ determineFav }
+          isFavorite={ isFavorite }
         />
       )
     }
@@ -65,6 +68,8 @@ function App() {
         removeFavorite={ removeFavorite }
         toggleFav={ toggleFav }
         determineFav={ determineFav }
+        isFavorite={ isFavorite }
+
       />
     )
   }
@@ -101,6 +106,7 @@ function App() {
                 removeFavorite={ removeFavorite }
                 toggleFav={ toggleFav }
                 determineFav={ determineFav }
+                isFavorite={ isFavorite }
               />
             )
             }

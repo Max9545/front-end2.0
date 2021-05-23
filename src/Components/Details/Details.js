@@ -13,8 +13,8 @@ import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
 import { displayGenres } from '../../scripts';
 
 
-const DetailsModal = ({ title, id, addFavorite, removeFavorite, toggleFav, determineFav }) => {
-  const [isFav, setIsFav] = useState(false);
+const DetailsModal = ({ title, id, addFavorite, removeFavorite, determineFav, toggleFav, isFavorite }) => {
+  const [isFav, setIsFav] = useState(isFavorite(title));
 
   const client = useApolloClient();
 
@@ -49,9 +49,12 @@ const DetailsModal = ({ title, id, addFavorite, removeFavorite, toggleFav, deter
               <IconButton
                 className="details_favorite-button click" data-cy="favorites-button"
                 aria-label={"Add to Favorites"}
-                onClick={ () => toggleFav() }
+                onClick={ () => {
+                  toggleFav(data1.album.title);
+                  setIsFav(isFavorite(data1.album.title));
+                } }
                 >
-                { determineFav() }
+                { determineFav(isFav) }
               </IconButton>
             </Tooltip>
             <a data-cy="details_discogs-link" className="details_discogs-link" href={data1.album.uri} target="_blnk">
