@@ -51,7 +51,7 @@ const DetailsModal = ({ title, id, addFavorite, removeFavorite, determineFav, to
                 aria-label={"Add to Favorites"}
                 onClick={ () => {
                   toggleFav(data1.album.title);
-                  setIsFav(isFavorite(data1.album.title));
+                  setIsFav(!isFav);
                 } }
                 >
                 { determineFav(isFav) }

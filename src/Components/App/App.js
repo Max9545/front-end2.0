@@ -5,7 +5,6 @@ import DetailsModal from '../Details/Details.js';
 import { Switch, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { Dialog } from '@material-ui/core';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import './App.css';
