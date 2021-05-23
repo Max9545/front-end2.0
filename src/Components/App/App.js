@@ -90,8 +90,6 @@ function App() {
             <section className="glass">
               <AlbumCardsDisplay
                 titles={ favorites }
-                addFavorite={ addFavorite }
-                removeFavorite={ removeFavorite }
                 toggleFav={ toggleFav }
                 determineFav={ determineFav }
                 isFavorite={ isFavorite }
@@ -103,8 +101,6 @@ function App() {
             return (
               <DetailsModal
                 title={ title }
-                addFavorite={ addFavorite }
-                removeFavorite={ removeFavorite }
                 toggleFav={ toggleFav }
                 determineFav={ determineFav }
                 isFavorite={ isFavorite }
