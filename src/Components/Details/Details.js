@@ -3,11 +3,7 @@ import './Details.css';
 import '../Details/assets/discogs_logo.svg'
 import discogsLogo from '../Details/assets/discogs_logo.svg';
 import { IconButton } from '@material-ui/core';
-// import { FavoriteIcon, FavoriteBorderIcon } from '@material-ui/icons';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import { Tooltip } from '@material-ui/core';
-import CloseIcon from '@material-ui/icons/Close';
 import { useQuery, useApolloClient } from '@apollo/client';
 import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
 import { displayGenres } from '../../scripts';
@@ -15,6 +11,11 @@ import { displayGenres } from '../../scripts';
 
 const DetailsModal = ({ title, id, addFavorite, removeFavorite, determineFav, toggleFav, isFavorite }) => {
   const [isFav, setIsFav] = useState(isFavorite(title));
+
+  const handleFavoriteClick = () => {
+    toggleFav(data1.album.title);
+    setIsFav(!isFav);
+  }
 
   const client = useApolloClient();
 
@@ -49,10 +50,7 @@ const DetailsModal = ({ title, id, addFavorite, removeFavorite, determineFav, to
               <IconButton
                 className="details_favorite-button click" data-cy="favorites-button"
                 aria-label={"Add to Favorites"}
-                onClick={ () => {
-                  toggleFav(data1.album.title);
-                  setIsFav(!isFav);
-                } }
+                onClick={ () => handleFavoriteClick() }
                 >
                 { determineFav(isFav) }
               </IconButton>
