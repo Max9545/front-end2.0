@@ -52,8 +52,6 @@ function App() {
       return (
         <AlbumCardsDisplay
           titles={ search }
-          addFavorite={ addFavorite }
-          removeFavorite={ removeFavorite }
           toggleFav={ toggleFav }
           determineFav={ determineFav }
           isFavorite={ isFavorite }
@@ -63,8 +61,6 @@ function App() {
     return (
       <AlbumCardsDisplay
         titles={ titles }
-        addFavorite={ addFavorite }
-        removeFavorite={ removeFavorite }
         toggleFav={ toggleFav }
         determineFav={ determineFav }
         isFavorite={ isFavorite }

@@ -9,7 +9,8 @@ import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
 import { displayGenres } from '../../scripts';
 
 
-const DetailsModal = ({ title, id, addFavorite, removeFavorite, determineFav, toggleFav, isFavorite }) => {
+const DetailsModal = ({ title, determineFav, toggleFav, isFavorite }) => {
+  
   const [isFav, setIsFav] = useState(isFavorite(title));
 
   const handleFavoriteClick = () => {
@@ -17,7 +18,7 @@ const DetailsModal = ({ title, id, addFavorite, removeFavorite, determineFav, to
     setIsFav(!isFav);
   }
 
-  const client = useApolloClient();
+  // const client = useApolloClient();
 
   const QueryMultiple = () => {
     const res1 = useQuery(GET_SINGLE_ALBUM, {

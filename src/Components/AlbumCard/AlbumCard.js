@@ -1,10 +1,19 @@
+import { useState } from 'react';
 import { GET_SINGLE_ALBUM }from '../../queries';
 import { useQuery } from '@apollo/client';
+import { IconButton } from '@material-ui/core';
 import './AlbumCard.css'
-import { ArtTrackOutlined } from '@material-ui/icons';
 import { Link } from 'react-router-dom'
+// import { ArtTrackOutlined } from '@material-ui/icons';
 
-function AlbumCard ({ title }) {
+function AlbumCard ({ title, determineFav, toggleFav, isFavorite }) {
+
+  const [isFav, setIsFav] = useState(isFavorite(title));
+
+  const handleFavoriteClick = () => {
+    toggleFav(data.album.title);
+    setIsFav(!isFav);
+  }
   
   const { loading, error, data } = useQuery(GET_SINGLE_ALBUM, {
     variables: { title: title }
@@ -37,7 +46,6 @@ function AlbumCard ({ title }) {
           { displayGenres(album.genres) }
         </div>
         <a href={album.uri} target='_blank' className='card_discogs-link' data-cy='card_discogs-link' >Purchase on Discogs</a>
-     
       </>
     )
   }
@@ -45,6 +53,13 @@ function AlbumCard ({ title }) {
   return (
     <div className='card_card' data-cy='card_card'>
       { deconstruct(data) }
+      <IconButton
+        onClick={ () => handleFavoriteClick() } 
+        className="card__favorite-btn"
+        data-cy="card__favorite-btn"
+      >
+        { determineFav(isFav)}
+      </IconButton>
     </div>
   )
 }
