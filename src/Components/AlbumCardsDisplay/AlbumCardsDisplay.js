@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react'
 import './AlbumCardsDisplay.css'
 import AlbumCard from '../AlbumCard/AlbumCard';
-import { useQuery } from '@apollo/client';
 
 function AlbumCardsDisplay ({ titles }) {
 
@@ -10,9 +8,6 @@ function AlbumCardsDisplay ({ titles }) {
       return (
       <AlbumCard
         title={ title }
-        toggleFav={ toggleFav }
-        determineFav={ determineFav }
-        isFavorite={ isFavorite }
       />
       )
     })
