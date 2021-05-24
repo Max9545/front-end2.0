@@ -6,6 +6,8 @@ import './AlbumCard.css'
 import { Link } from 'react-router-dom'
 // import { ArtTrackOutlined } from '@material-ui/icons';
 
+client.writeQ
+
 function AlbumCard ({ title, determineFav, toggleFav, isFavorite }) {
 
   const [isFav, setIsFav] = useState(isFavorite(title));
