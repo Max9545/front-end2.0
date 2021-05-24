@@ -23,7 +23,19 @@ query ($title: String!) {
     }
 }
 `
-
+export const GET_ALBUMS_BY_ARTIST = gqp`
+query ($title: String) {
+  artistAlbums(artist: "Frank Zappa") {
+    artist
+    title
+    id
+    coverImage
+    format
+    year
+    label
+  }
+}
+`
 
 export const GET_RANDOM_ALBUMS = gql`
 query {
