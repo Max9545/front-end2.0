@@ -4,11 +4,7 @@ import { Skeleton } from '@material-ui/lab';
 import './AlbumCard.css'
 import { Link } from 'react-router-dom'
 
-function AlbumCard ({ title }) {
-  
-  const { loading, error, data } = useQuery(GET_SINGLE_ALBUM, {
-    variables: { title: title }
-  })
+function AlbumCard ({  album }) {
   
   if (loading) return (
     <div className='card_card' data-cy='card_card'>
