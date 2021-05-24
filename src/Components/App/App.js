@@ -12,7 +12,7 @@ import '../../normalize.css';
 
 function App() {
   const [titles, setTitles] = useState(["The Payback"]);
-  const [search, setSearch] = useState([]);
+  // const [search, setSearch] = useState([]);
   const [favorites, setFavorites] = useState([]);
 
   const addFavorite = (toAdd) => {
@@ -34,10 +34,7 @@ function App() {
   }
 
   const isFavorite = (title) => {
-    if (favorites.includes(title)) {
-      return true;
-    }
-    return false;
+    return favorites.includes(title);
   }
 
   const toggleFav = (title) => {
@@ -45,27 +42,6 @@ function App() {
       return removeFavorite(title);
     }
     return addFavorite(title);
-  }
-
-  const isLandingPage = () => {
-    if (search.length) {
-      return (
-        <AlbumCardsDisplay
-          titles={ search }
-          toggleFav={ toggleFav }
-          determineFav={ determineFav }
-          isFavorite={ isFavorite }
-        />
-      )
-    }
-    return (
-      <AlbumCardsDisplay
-        titles={ titles }
-        toggleFav={ toggleFav }
-        determineFav={ determineFav }
-        isFavorite={ isFavorite }
-      />
-    )
   }
 
   const isTabletOrMobile = useMediaQuery({
@@ -76,20 +52,29 @@ function App() {
     <div className="App">
       <header>
         <h1 className="header__h1">Selector</h1>
-        <Search setSearch={setSearch} search={search}/>
+        <Search
+          setTitles={ setTitles }
+        />
       </header>
       <Navigation isMobile={ isTabletOrMobile }/>
       <main>
         <Switch>
           <Route exact path="/">
             <section className="glass">
-              { isLandingPage() }
+            <AlbumCardsDisplay
+              titles={ titles }
+              favorites={ favorites }
+              toggleFav={ toggleFav }
+              determineFav={ determineFav }
+              isFavorite={ isFavorite }
+            />
             </section>
           </Route>
           <Route exact path="/your-favorites">
             <section className="glass">
               <AlbumCardsDisplay
                 titles={ favorites }
+                favorites={ favorites }
                 toggleFav={ toggleFav }
                 determineFav={ determineFav }
                 isFavorite={ isFavorite }
