@@ -29,13 +29,13 @@ function App() {
   const determineFav = (isFav) => {
     if (isFav) {
       return (
-      <Tooltip title="Remove from Favorites" placement="right">
+      <Tooltip title="Remove from Favorites" placement="left">
         <FavoriteIcon fontSize="large" />
       </Tooltip>
       )
     }
     return (
-      <Tooltip title="Add to Favorites" placement="right">
+      <Tooltip title="Add to Favorites" placement="left">
         <FavoriteBorderIcon fontSize="large" />
       </Tooltip>
     )
