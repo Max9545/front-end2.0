@@ -15,13 +15,13 @@
 .details_main {
   height: 100vh;
   width: 98%;
+  max-height: 650px;
   display: flex;
   flex-direction: column;
   padding-top: 5%;
   justify-content: center;
   background: rgba( 205, 214, 221, 0.25 );
   box-shadow: 0 8px 32px 0 #775144;
-  /* background-color: rgba(255, 255, 255, 0.25); */
   margin: 0 auto;
   border-radius: 1em;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -52,16 +52,19 @@
 }
 
 .details_links {
+  max-height: 35px;
   width: 294px;
   display: flex;
+  flex-direction: row-reverse;
   align-self: center;
+  align-items: center;
   justify-content: space-between;
-  margin: 10px 0px;
+  margin: 10px 0px 0px;
   padding: 0px 5px;
 }
 
 .details_discogs-logo {
-  height: 22px;
+  height: 28px;
 }
 
 .details_discogs-logo:hover {
@@ -100,10 +103,6 @@
   height: 100%;
   border: none;
   border-radius: 7px;
-}
-
-.details__FavoriteBorderIcon {
-  
 }
 
 .click {
@@ -165,16 +164,11 @@
   .details_links {
     display: flex;
     align-self: center;
-    justify-content: space-between;
     margin: 15px 0px 7px;
   }
 
   .details_favorite-button {
     font-size: 5rem;
-  }
-
-  .details_discogs-logo {
-    height: 28px;
   }
   
   .details_discogs-link{
@@ -219,10 +213,6 @@
   .details_favorite-button {
     transform: scale(1);
     margin-left: 5px;
-  }
-
-  .details_discogs-logo {
-    height: 22px;
   }
   
   .details_discogs-link{
