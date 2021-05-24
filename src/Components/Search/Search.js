@@ -6,9 +6,15 @@ const Search = ({ setTitles }) => {
 
   const [userQuery, setUserQuery] = useState('');
 
-  const helpSetSearch = (event) => {
-    event.preventDefault();
-    setTitles([userQuery]);
+  const helpSetSearch = (event, type) => {
+
+    if(type === 'artist') {
+      event.preventDefault()
+      setArtist([userQuery])
+    } else {
+      event.preventDefault()
+      setSearch([userQuery])
+    }
   }
 
   return (
@@ -22,11 +28,11 @@ const Search = ({ setTitles }) => {
         list="albumTitles"
         onChange={(e) => setUserQuery(e.target.value)}
         />
-      <button
-        onClick={(e) => helpSetSearch(e)}
-        data-cy='search-submit'>
-          Search
-      </button>
+        <datalist id="albumTitles">
+          {/* { determineOptionStatus() } */}
+        </datalist>
+        <button onClick={(e) => helpSetSearch(e, 'artist')}
+        data-cy='search-submit'>Search</button>
     </form>
   )
 }
