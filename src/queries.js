@@ -18,7 +18,6 @@ export const GET_SINGLE_ALBUM = gql`
       genres
       coverImage
       uri
-      isFavorite @client
     }
   }
 `

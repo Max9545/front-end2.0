@@ -5,27 +5,39 @@ import './normalize.css';
 import './index.css';
 import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
-import {typeDefs} from './queries';
+import {typeDefs, GET_SINGLE_ALBUM} from './queries';
+import {favoritesVar} from './cache';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+
+const cache = new InMemoryCache();
 
 const client = new ApolloClient({
   uri:'https://pure-hollows-05817.herokuapp.com/https://tranquil-depths-91575.herokuapp.com/graphql',
-  cache: new InMemoryCache(),
+  cache: cache,
   connectToDevTools: true,
-  typeDefs,
-  typePolicies: {
-    Album: {
-      fields: {
-        isFavorite: {
-          read(isFavorite = false) {
-            return isFavorite;
-          }
-        }
-      }
-    }
-  }
+  typeDefs
+  // typePolicies: {
+  //   Album: {
+  //     fields: {
+  //       isFavorite() {
+  //         return false;
+  //       }
+  //       isFavorite: {
+  //         read(isFavorite = false) {
+  //           return isFavorite;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 })
 
+cache.writeQuery({
+  query: GET_SINGLE_ALBUM,
+  data: {
+    isFavorite: false
+  }
+})
 
 ReactDOM.render(
   <React.StrictMode>

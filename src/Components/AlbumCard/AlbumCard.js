@@ -8,9 +8,9 @@ import { Link } from 'react-router-dom'
 
 // client.writeQ
 
-function AlbumCard ({ title, determineFav, toggleFav, isFavorite }) {
+function AlbumCard ({ title, determineFav, toggleFav }) {
 
-  const [isFav, setIsFav] = useState(isFavorite(title));
+  const [isFav, setIsFav] = useState();
 
   const handleFavoriteClick = () => {
     toggleFav(data.album.title);
