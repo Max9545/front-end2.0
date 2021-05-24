@@ -11,6 +11,7 @@ import { Tooltip } from '@material-ui/core';
 import './App.css';
 import '../../normalize.css';
 
+
 function App() {
   const [titles, setTitles] = useState(["The Payback"]);
   const [favorites, setFavorites] = useState([]);

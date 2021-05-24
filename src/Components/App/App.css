@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Open+Sans:ital@0;1&family=Racing+Sans+One&display=swap');
+
 :root {
   --primary-color: hsl(11, 100%, 8%);
   --secondary-color: hsl(15, 27%, 37%);
@@ -5,9 +9,17 @@
   --accent-glow: hsl(45, 90%, 65%);
   --text-color: hsl(206, 19%, 84%);
   --cyan: hsl(184, 96%, 90%);
+  --deco-font: 'Monoton', cursive;
+  --header-font: 'Racing Sans One', cursive;
+  --body-font: 'Open Sans', sans-serif;
   font-size: 16px;
+
 }
 
+h1 {
+  font-family: var(--deco-font);
+  /* font-size: 3rem; */
+}
 
 .App {
   position: relative;
