@@ -24,7 +24,7 @@ query ($title: String!) {
 }
 `
 export const GET_ALBUMS_BY_ARTIST = gql`
-query ($title: String) {
+query ($artist: String!) {
   artistAlbums(artist: $artist) {
     artist
     title
