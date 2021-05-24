@@ -1,5 +1,11 @@
 import { gql } from '@apollo/client';
 
+export const typeDefs = gql`
+  extend type Album {
+    isFavorite: Boolean!
+  }
+`
+
 export const GET_SINGLE_ALBUM = gql`
   query ($title: String!) {
     album(title: $title) {
@@ -12,6 +18,7 @@ export const GET_SINGLE_ALBUM = gql`
       genres
       coverImage
       uri
+      isFavorite @client
     }
   }
 `
