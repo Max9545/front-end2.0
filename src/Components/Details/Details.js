@@ -3,6 +3,7 @@ import './Details.css';
 import '../Details/assets/discogs_logo.svg'
 import discogsLogo from '../Details/assets/discogs_logo.svg';
 import { IconButton } from '@material-ui/core';
+import { Tooltip } from '@material-ui/core';
 import { useQuery } from '@apollo/client';
 import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
 import { displayGenres } from '../../scripts';
@@ -51,9 +52,11 @@ const DetailsModal = ({ title, determineFav, toggleFav, isFavorite }) => {
               >
               { determineFav(isFav) }
             </IconButton>
-            <a data-cy="details_discogs-link" className="details_discogs-link" href={data1.album.uri} target="_blnk">
-              <img className="details_discogs-logo" src={discogsLogo} alt="discogs logo"/>
-            </a>
+            <Tooltip title="View on Discogs" placement="right">
+              <a data-cy="details_discogs-link" className="details_discogs-link" href={data1.album.uri} target="_blnk">
+                <img className="details_discogs-logo" src={discogsLogo} alt="discogs logo"/>
+              </a>
+            </Tooltip>
           </div>
           <div className="details_main-text">
             <p data-cy="artist-name">Artist: {data1.album.artists[0].name}</p>
