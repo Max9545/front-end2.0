@@ -3,8 +3,7 @@ import './Details.css';
 import '../Details/assets/discogs_logo.svg'
 import discogsLogo from '../Details/assets/discogs_logo.svg';
 import { IconButton } from '@material-ui/core';
-import { Tooltip } from '@material-ui/core';
-import { useQuery, useApolloClient } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
 import { displayGenres } from '../../scripts';
 
@@ -17,8 +16,6 @@ const DetailsModal = ({ title, determineFav, toggleFav, isFavorite }) => {
     toggleFav(data1.album.title);
     setIsFav(!isFav);
   }
-
-  // const client = useApolloClient();
 
   const QueryMultiple = () => {
     const res1 = useQuery(GET_SINGLE_ALBUM, {
@@ -47,15 +44,13 @@ const DetailsModal = ({ title, determineFav, toggleFav, isFavorite }) => {
         <article className="details_box left">
           <img data-cy="album-cover" className="details_album-cover shadow" src={data1.album.coverImage} alt={`${data1.album.title} album cover`}/>
           <div className="details_links">
-            <Tooltip title="Add to Favorites" placement="right">
-              <IconButton
-                className="details_favorite-button click" data-cy="favorites-button"
-                aria-label={"Add to Favorites"}
-                onClick={ () => handleFavoriteClick() }
-                >
-                { determineFav(isFav) }
-              </IconButton>
-            </Tooltip>
+            <IconButton
+              className="details_favorite-button click" data-cy="favorites-button"
+              aria-label={"Add to Favorites"}
+              onClick={ () => handleFavoriteClick() }
+              >
+              { determineFav(isFav) }
+            </IconButton>
             <a data-cy="details_discogs-link" className="details_discogs-link" href={data1.album.uri} target="_blnk">
               <img className="details_discogs-logo" src={discogsLogo} alt="discogs logo"/>
             </a>
@@ -73,11 +68,6 @@ const DetailsModal = ({ title, determineFav, toggleFav, isFavorite }) => {
           <iframe data-cy="web-player" title={`${data1.title} album album playlist`} className="shadow details_spotify-player" src={`https://open.spotify.com/embed/album/${data2.spotifyAlbumId.id}`} allowtransparency="true" allow="encrypted-media"></iframe>
         </article>
       </section>
-      {/* <div className="close-container">
-        <Tooltip title="Close">
-          <CloseIcon data-cy="close-button" aria-label={"close modal"} className="close-icon click"/>
-        </Tooltip>
-      </div> */}
     </>
   )
 }

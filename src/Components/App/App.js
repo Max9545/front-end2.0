@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import { Tooltip } from '@material-ui/core';
 import './App.css';
 import '../../normalize.css';
 
@@ -27,9 +28,17 @@ function App() {
 
   const determineFav = (isFav) => {
     if (isFav) {
-      return <FavoriteIcon fontSize="large" />
+      return (
+      <Tooltip title="Remove from Favorites" placement="right">
+        <FavoriteIcon fontSize="large" />
+      </Tooltip>
+      )
     }
-    return <FavoriteBorderIcon fontSize="large" />
+    return (
+      <Tooltip title="Add to Favorites" placement="right">
+        <FavoriteBorderIcon fontSize="large" />
+      </Tooltip>
+    )
   }
 
   const isFavorite = (title) => {
