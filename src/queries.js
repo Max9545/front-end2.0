@@ -23,9 +23,9 @@ query ($title: String!) {
     }
 }
 `
-export const GET_ALBUMS_BY_ARTIST = gqp`
+export const GET_ALBUMS_BY_ARTIST = gql`
 query ($title: String) {
-  artistAlbums(artist: "Frank Zappa") {
+  artistAlbums(artist: $artist) {
     artist
     title
     id
