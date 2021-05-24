@@ -3,7 +3,7 @@ import './AlbumCardsDisplay.css'
 import AlbumCard from '../AlbumCard/AlbumCard';
 import { useQuery } from '@apollo/client';
 
-function AlbumCardsDisplay ({ titles, determineFav, toggleFav, isFavorite }) {
+function AlbumCardsDisplay ({ titles }) {
 
   const renderGivenAlbums = (titles) => {
     return titles.map(title => {
@@ -13,7 +13,6 @@ function AlbumCardsDisplay ({ titles, determineFav, toggleFav, isFavorite }) {
         toggleFav={ toggleFav }
         determineFav={ determineFav }
         isFavorite={ isFavorite }
-        // status={ isFavorite(title) }
       />
       )
     })

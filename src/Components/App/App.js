@@ -3,7 +3,7 @@ import Navigation from '../Navigation/Navigation';
 import Search from '../Search/Search';
 import DetailsModal from '../Details/Details.js';
 import { Switch, Route } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
