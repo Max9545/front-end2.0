@@ -1,7 +1,6 @@
 import { GET_SINGLE_ALBUM }from '../../queries';
 import { useQuery } from '@apollo/client';
 import './AlbumCard.css'
-import { ArtTrackOutlined } from '@material-ui/icons';
 import { Link } from 'react-router-dom'
 
 function AlbumCard ({ title }) {
@@ -37,7 +36,6 @@ function AlbumCard ({ title }) {
           { displayGenres(album.genres) }
         </div>
         <a href={album.uri} target='_blank' className='card_discogs-link' data-cy='card_discogs-link' >Purchase on Discogs</a>
-     
       </>
     )
   }

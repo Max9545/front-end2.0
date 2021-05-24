@@ -82,6 +82,7 @@
 }
 
 .details_main-text > p {
+  padding: 0px;
   margin: 5px 0px;
   font-size: 1.5rem;
 }
@@ -99,6 +100,10 @@
   height: 100%;
   border: none;
   border-radius: 7px;
+}
+
+.details__FavoriteBorderIcon {
+  
 }
 
 .click {
@@ -165,7 +170,7 @@
   }
 
   .details_favorite-button {
-    transform: scale(1.5);
+    font-size: 5rem;
   }
 
   .details_discogs-logo {
@@ -179,7 +184,6 @@
 
   .details_main-text > p {
     margin: 7px 0px;
-    padding-left: 5px;
   }
 
   .details_box.right {

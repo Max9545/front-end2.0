@@ -1,14 +1,15 @@
-import { useEffect, useState } from 'react'
 import './AlbumCardsDisplay.css'
 import AlbumCard from '../AlbumCard/AlbumCard';
-import { useQuery } from '@apollo/client';
 
 function AlbumCardsDisplay ({ titles }) {
 
-  
   const renderGivenAlbums = (titles) => {
     return titles.map(title => {
-      return <AlbumCard title={ title } />
+      return (
+      <AlbumCard
+        title={ title }
+      />
+      )
     })
   }
 
