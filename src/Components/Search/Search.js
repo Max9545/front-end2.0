@@ -10,7 +10,7 @@ const Search = ({ setTitles }) => {
 
     if(type === 'artist') {
       event.preventDefault()
-      setArtist([userQuery])
+      setArtist(userQuery)
     } else {
       event.preventDefault()
       setSearch([userQuery])
