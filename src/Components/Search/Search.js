@@ -31,6 +31,8 @@ const Search = ({ setSearchArtist }) => {
     } 
   
     if (type === 'album') {
+      setArtist(userQuery)
+    } else {
       event.preventDefault()
       history.push(`/${userQuery}`)
     }
