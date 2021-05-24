@@ -12,7 +12,6 @@ import '../../normalize.css';
 
 function App() {
   const [titles, setTitles] = useState(["The Payback"]);
-  // const [search, setSearch] = useState([]);
   const [favorites, setFavorites] = useState([]);
 
   const addFavorite = (toAdd) => {
@@ -91,9 +90,7 @@ function App() {
                 isFavorite={ isFavorite }
               />
             )
-            }
-          }
-          />
+          }} />
           <Route path="*">
             <h1>This page doesn't exist! Please navigate back to home with the sidebar</h1>
           </Route>

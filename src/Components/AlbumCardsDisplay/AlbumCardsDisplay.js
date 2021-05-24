@@ -13,6 +13,7 @@ function AlbumCardsDisplay ({ titles, determineFav, toggleFav, isFavorite }) {
         toggleFav={ toggleFav }
         determineFav={ determineFav }
         isFavorite={ isFavorite }
+        // status={ isFavorite(title) }
       />
       )
     })
