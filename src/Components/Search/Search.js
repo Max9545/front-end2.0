@@ -2,14 +2,38 @@ import SearchIcon from '@material-ui/icons/Search';
 import { style } from '../../scripts';
 import './Search.css';
 import { useState } from 'react';
+import { useQuery, gql } from '@apollo/client';
+import { useHistory } from 'react-router-dom';
 
-const Search = ({ setTitles }) => {
+const ALBUM_TITLES = gql`
+  query GetAlbumTitles {
+    album(title: "The Payback") {
+      title
+    }
+  }
+`
 
+
+
+const Search = ({ setSearchArtist }) => {
+
+  const history = useHistory()
   const [userQuery, setUserQuery] = useState('');
+  const [type, setType] = useState('artist');
 
-  const helpSetSearch = (event) => {
-    event.preventDefault();
-    setTitles([userQuery]);
+
+  const determineSearchType = (event) => {
+
+    if(type === 'artist') {
+      event.preventDefault()
+      setSearchArtist(userQuery)
+      history.push(`/`) 
+    } 
+  
+    if (type === 'album') {
+      event.preventDefault()
+      history.push(`/${userQuery}`)
+    }
   }
 
   return (
@@ -18,17 +42,22 @@ const Search = ({ setTitles }) => {
       <input
         id="searchField"
         className="search__input"
+        data-cy="search__input"
         placeholder="Search ..."
         defaultValue=""
         list="albumTitles"
         onChange={(e) => setUserQuery(e.target.value)}
         />
-      <button
-        onClick={(e) => helpSetSearch(e)}
-        className="search-submit"
-        data-cy='search-submit'>
+        <datalist id="albumTitles">
+        </datalist>
+        <select value={type} onChange={(e) => setType(e.target.value)}>
+          <option selected value="artist">Artist</option>
+          <option value="album">Album</option>
+        </select>
+        <button onClick={(e) => determineSearchType(e, type)}
+        className="search-submit" data-cy='search-submit'>
           Search
-      </button>
+        </button>
     </form>
   )
 }
