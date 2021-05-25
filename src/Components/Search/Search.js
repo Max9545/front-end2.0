@@ -2,7 +2,15 @@ import SearchIcon from '@material-ui/icons/Search';
 import './Search.css';
 import { useState } from 'react';
 
-const Search = ({ setTitles }) => {
+const ALBUM_TITLES = gql`
+  query GetAlbumTitles {
+    album(title: "The Payback") {
+      title
+    }
+  }
+`
+
+const Search = ({ setSearch, setSearchArtist }) => {
 
   const [userQuery, setUserQuery] = useState('');
 
@@ -10,7 +18,7 @@ const Search = ({ setTitles }) => {
 
     if(type === 'artist') {
       event.preventDefault()
-      setArtist(userQuery)
+      setSearchArtist(userQuery)
     } else {
       event.preventDefault()
       setSearch([userQuery])
