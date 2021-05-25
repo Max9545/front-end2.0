@@ -76,12 +76,3 @@ display: flex;
   margin: 0;
 }
 
-.card__favorite-btn {
-  position: absolute;
-  padding: 0;
-  margin: 0;
-  width: 3.75rem;
-  bottom: 31rem;
-  left: 14rem;
-  background-color: var(--accent-color);
-}

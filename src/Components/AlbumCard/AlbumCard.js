@@ -10,7 +10,15 @@ function AlbumCard ({ title }) {
     variables: { title: title }
   })
   
-  if (loading) return 'Loading...'
+  if (loading) return (
+    <div className='card_card' data-cy='card_card'>
+      <Skeleton animation="wave" variant="rect" width={250} height={250} />
+      <Skeleton animation="wave" variant="text" height={32} />
+      <Skeleton animation="wave" variant="text" />
+      <Skeleton animation="wave" variant="text" />
+      <Skeleton animation="wave" variant="text" />
+    </div>
+  )
   if (error) return `Error! ${error.message}`
 
   const displayGenres = (list) => {
