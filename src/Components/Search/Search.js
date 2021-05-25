@@ -18,6 +18,7 @@ const Search = ({ setAlbumSearch, setSearchArtist }) => {
 
   const history = useHistory()
   const [userQuery, setUserQuery] = useState('');
+  const [type, setType] = useState('artist');
   const { loading, error, data } = useQuery(ALBUM_TITLES);
 
 
@@ -31,11 +32,12 @@ const Search = ({ setAlbumSearch, setSearchArtist }) => {
   //   })
   // }
 
-  const helpSetSearch = (event, type) => {
+  const helpSetSearch = (event) => {
 
     if(type === 'artist') {
       event.preventDefault()
       setSearchArtist(userQuery)
+      history.push(`/`) 
     } else if (type === 'album') {
       event.preventDefault()
       history.push(`/${userQuery}`)
@@ -58,7 +60,11 @@ const Search = ({ setAlbumSearch, setSearchArtist }) => {
         <datalist id="albumTitles">
           {/* { determineOptionStatus() } */}
         </datalist>
-        <button onClick={(e) => helpSetSearch(e, 'album')}
+        <select value={type} onChange={(e) => setType(e.target.value)}>
+          <option selected value="artist">Artist</option>
+          <option value="album">Album</option>
+        </select>
+        <button onClick={(e) => helpSetSearch(e, type)}
         data-cy='search-submit'>Search</button>
     </form>
   )
