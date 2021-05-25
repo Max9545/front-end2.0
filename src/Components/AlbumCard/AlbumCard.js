@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 function AlbumCard ({  album }) {
 
-  console.log(album)
+
   // const [currentAlbum, setCurrentAlbum] = useState()
 
 
