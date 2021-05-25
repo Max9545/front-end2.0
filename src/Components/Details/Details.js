@@ -1,9 +1,11 @@
 import { React, useState } from 'react';
+import { Link } from 'react-router-dom'
 import './Details.css';
 import '../Details/assets/discogs_logo.svg'
 import discogsLogo from '../Details/assets/discogs_logo.svg';
 import { IconButton } from '@material-ui/core';
 import { Tooltip } from '@material-ui/core';
+import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
 import { useQuery } from '@apollo/client';
 import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
 import { displayGenres } from '../../scripts';
@@ -41,35 +43,41 @@ const DetailsModal = ({ title, determineFav, toggleFav, isFavorite }) => {
   
   return (
     <>
-      <section className="details_main" data-cy="modal">
-        <article className="details_box left">
-          <img data-cy="album-cover" className="details_album-cover shadow" src={data1.album.coverImage} alt={`${data1.album.title} album cover`}/>
-          <div className="details_links">
-            <IconButton
-              className="details_favorite-button click" data-cy="favorites-button"
-              aria-label={"Add to Favorites"}
-              onClick={ () => handleFavoriteClick() }
-              >
-              { determineFav(isFav) }
-            </IconButton>
-            <Tooltip title="View on Discogs" placement="right">
-              <a data-cy="details_discogs-link" className="details_discogs-link" href={data1.album.uri} target="_blnk">
-                <img className="details_discogs-logo" src={discogsLogo} alt="discogs logo"/>
-              </a>
-            </Tooltip>
-          </div>
-          <div className="details_main-text">
-            <p data-cy="artist-name">Artist: {data1.album.artists[0].name}</p>
-            <p data-cy="album-title">Album: {data1.album.title}</p>
-            <p data-cy="release-year">Released: {data1.album.year}</p>
-            <div className='genre-container' data-cy='genre-container'>
-              { displayGenres(data1.album.genres) }
+      <section className="details_main" data-cy="modal"> 
+        <Link to="/" className="details_back-button click">
+          <KeyboardReturnIcon className="details_return-arrow"/>
+            Back
+        </Link> 
+        <div className="details_content">
+          <article className="details_box left">
+            <img data-cy="album-cover" className="details_album-cover shadow" src={data1.album.coverImage} alt={`${data1.album.title} album cover`}/>
+            <div className="details_links">
+              <IconButton
+                className="details_favorite-button click" data-cy="favorites-button"
+                aria-label={"Add to Favorites"}
+                onClick={ () => handleFavoriteClick() }
+                >
+                { determineFav(isFav) }
+              </IconButton>
+              <Tooltip title="View on Discogs" placement="right">
+                <a data-cy="details_discogs-link" className="details_discogs-link" href={data1.album.uri} target="_blnk">
+                  <img className="details_discogs-logo" src={discogsLogo} alt="discogs logo"/>
+                </a>
+              </Tooltip>
             </div>
-          </div>
-        </article>
-        <article className="details_box right">
-          <iframe data-cy="web-player" title={`${data1.title} album album playlist`} className="shadow details_spotify-player" src={`https://open.spotify.com/embed/album/${data2.spotifyAlbumId.id}`} allowtransparency="true" allow="encrypted-media"></iframe>
-        </article>
+            <div className="details_main-text">
+              <p data-cy="artist-name">Artist: {data1.album.artists[0].name}</p>
+              <p data-cy="album-title">Album: {data1.album.title}</p>
+              <p data-cy="release-year">Released: {data1.album.year}</p>
+              <div className='card_genre-container' data-cy='genre-container'>
+                { displayGenres(data1.album.genres) }
+              </div>
+            </div>
+          </article>
+          <article className="details_box right">
+            <iframe data-cy="web-player" title={`${data1.title} album album playlist`} className="shadow details_spotify-player" src={`https://open.spotify.com/embed/album/${data2.spotifyAlbumId.id}`} allowtransparency="true" allow="encrypted-media"></iframe>
+          </article>
+        </div>        
       </section>
     </>
   )
