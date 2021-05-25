@@ -20,7 +20,7 @@
   background: rgba( 205, 214, 221, 0.25 );
   margin: 0 auto;
   box-shadow: 0 8px 32px 0 #775144;
-  border-radius: 1em;
+  border-radius: 7px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
   padding-top: 5%;
   padding: 35px;
@@ -143,7 +143,6 @@
     width: 95vw;
     flex-direction: column;
     justify-content: center;
-    border-radius: 5em;
   }
 
   .details_content {
@@ -184,10 +183,17 @@
 
 @media only screen and (min-width: 1025px) {
   .details_main {
-    height: 90vh;
-    min-height: 558px;
-    width: 70vw;
+    height: 90%;
+    min-height: 600px;
     max-width: 950px;
+  }
+
+  .details_back-button {
+    margin-top: 10px;
+  }
+
+  .details_content {
+    min-height: 565px;
   }
 
   .details_box {
@@ -201,5 +207,9 @@
   .details_favorite-button {
     transform: scale(1);
     margin-left: 5px;
+  }
+
+  .details_spotify-player {
+    max-height: 540px;
   }
 }
