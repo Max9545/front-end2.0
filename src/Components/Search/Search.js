@@ -13,6 +13,18 @@ const ALBUM_TITLES = gql`
   }
 `
 
+<<<<<<< HEAD
+=======
+const ALBUM_TITLES = gql`
+  query GetAlbumTitles {
+    album(title: "The Payback") {
+      title
+    }
+  }
+`
+
+const Search = ({ setSearch, setSearchArtist }) => {
+>>>>>>> da9aa4e... Change name of state to searchArtist
 
 
 const Search = ({ setSearchArtist }) => {
