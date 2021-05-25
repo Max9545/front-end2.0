@@ -44,6 +44,11 @@ const Details = ({
   if (error1) return <p>Error :(</p>;
   if (loading2) return <p>Loading...</p>; 
   if (error2) return <p>Error :(</p>;
+
+  const style = {
+   color: 'snow'
+
+  }
   
   return (
     <>
@@ -57,8 +62,9 @@ const Details = ({
             <img className="details_album-cover shadow" data-cy="details_album-cover" src={data1.album.coverImage} alt={`${data1.album.title} album cover`}/>
             <div className="details_links">
               <IconButton
-                className="details_favorite-button click" data-cy="details_favorites-button"
+                className="details_favorite-button" data-cy="details_favorites-button"
                 aria-label={"Add to Favorites"}
+                style={style}
                 onClick={ () => handleFavoriteClick() }
                 >
                 { determineFav(isFav) }
