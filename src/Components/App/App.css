@@ -17,7 +17,7 @@
 }
 
 h1 {
-  font-family: var(--deco-font);
+  font-family: var(--header-font);
   /* font-size: 3rem; */
 }
 
