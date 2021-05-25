@@ -15,7 +15,7 @@ import '../../normalize.css';
 function App() {
   const [titles, setTitles] = useState(["The Payback", "Positions", "The Wall"]);
   const [favorites, setFavorites] = useState([]);
-  const [search, setSearch] = useState([])
+  const [search, setAlbumSearch] = useState()
   const [liked, setLiked] = useState([]);
   const [artist, setSearchArtist] = useState("The Residents");
 
@@ -64,7 +64,7 @@ function App() {
     <div className="App">
       <header>
         <h1 className="header__h1">Selector</h1>
-        <Search setSearch={setSearch} search={search} setSearchArtist={setSearchArtist}/>
+        <Search setAlbumSearch={setAlbumSearch} search={search} setSearchArtist={setSearchArtist}/>
       </header>
       <Navigation isMobile={ isTabletOrMobile }/>
       <main>
