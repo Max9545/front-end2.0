@@ -1,8 +1,7 @@
 import { React, useState } from 'react';
 import { Link } from 'react-router-dom'
 import './Details.css';
-import '../Details/assets/discogs_logo.svg'
-import discogsLogo from '../Details/assets/discogs_logo.svg';
+import discogsLogo from '../Details/assets/discogs_white.svg';
 import { IconButton } from '@material-ui/core';
 import { Tooltip } from '@material-ui/core';
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
