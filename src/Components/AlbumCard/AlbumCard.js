@@ -1,5 +1,6 @@
 import { GET_SINGLE_ALBUM }from '../../queries';
 import { useQuery } from '@apollo/client';
+import { Skeleton } from '@material-ui/lab';
 import './AlbumCard.css'
 import { Link } from 'react-router-dom'
 
