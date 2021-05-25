@@ -15,9 +15,9 @@ import '../../normalize.css';
 function App() {
   const [titles, setTitles] = useState(["The Payback", "Positions", "The Wall"]);
   const [favorites, setFavorites] = useState([]);
-  const [search, setAlbumSearch] = useState()
+  const [searchAlbum, setAlbumSearch] = useState([])
   const [liked, setLiked] = useState([]);
-  const [artist, setSearchArtist] = useState("Miles Davis");
+  const [artist, setSearchArtist] = useState("Micheal Jackson");
 
   const addFavorite = (toAdd) => {
     if (favorites.includes(toAdd)) {
@@ -64,19 +64,16 @@ function App() {
     <div className="App">
       <header>
         <h1 className="header__h1">Selector</h1>
-        <Search setAlbumSearch={setAlbumSearch} search={search} setSearchArtist={setSearchArtist}/>
+        <Search setSearchArtist={setSearchArtist}/>
       </header>
       <Navigation isMobile={ isTabletOrMobile }/>
       <main>
         <Switch>
           <Route exact path="/">
-            <AlbumCardsDisplay
-              titles={ titles }
-              favorites={ favorites }
-              toggleFav={ toggleFav }
-              determineFav={ determineFav }
-              isFavorite={ isFavorite }
-            />
+            <section className="glass">
+              {/* {artist.length ? <AlbumCardsDisplay titles={ search } artist={artist}/> : <AlbumCardsDisplay  titles={ titles }/> } */}
+              <AlbumCardsDisplay titles={ searchAlbum } artist={artist}/>
+            </section>
           </Route>
           <Route exact path="/your-favorites">
               <AlbumCardsDisplay

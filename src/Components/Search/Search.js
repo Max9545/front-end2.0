@@ -14,24 +14,13 @@ const ALBUM_TITLES = gql`
 
 
 
-const Search = ({ setAlbumSearch, setSearchArtist }) => {
+const Search = ({ setSearchArtist }) => {
 
   const history = useHistory()
   const [userQuery, setUserQuery] = useState('');
   const [type, setType] = useState('artist');
-  const { loading, error, data } = useQuery(ALBUM_TITLES);
 
 
-  // const determineOptionStatus = () => {
-
-  //   if (loading) return <option value="Loading options..." />
-  //   if (error) return <option value="Problem loading options!" />
-
-  //   return data.map(title => {
-  //     return <option value={ title } />
-  //   })
-  // }
-  console.log()
   const determineSearchType = (event) => {
 
     if(type === 'artist') {
