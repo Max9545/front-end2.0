@@ -43,39 +43,39 @@ const DetailsModal = ({ title, determineFav, toggleFav, isFavorite }) => {
   
   return (
     <>
-      <section className="details_main" data-cy="modal"> 
-        <Link to="/" className="details_back-button click">
+      <section className="details_main" data-cy="details_main"> 
+        <Link to="/" className="details_back-button click" data-cy="details_back-button">
           <KeyboardReturnIcon className="details_return-arrow"/>
             Back
         </Link> 
-        <div className="details_content">
+        <div className="details_content" data-cy="details_content">
           <article className="details_box left">
-            <img data-cy="album-cover" className="details_album-cover shadow" src={data1.album.coverImage} alt={`${data1.album.title} album cover`}/>
+            <img className="details_album-cover shadow" data-cy="details_album-cover" src={data1.album.coverImage} alt={`${data1.album.title} album cover`}/>
             <div className="details_links">
               <IconButton
-                className="details_favorite-button click" data-cy="favorites-button"
+                className="details_favorite-button click" data-cy="details_favorites-button"
                 aria-label={"Add to Favorites"}
                 onClick={ () => handleFavoriteClick() }
                 >
                 { determineFav(isFav) }
               </IconButton>
               <Tooltip title="View on Discogs" placement="right">
-                <a data-cy="details_discogs-link" className="details_discogs-link" href={data1.album.uri} target="_blnk">
-                  <img className="details_discogs-logo" src={discogsLogo} alt="discogs logo"/>
+                <a className="details_discogs-link" data-cy="details_discogs-link" href={data1.album.uri} target="_blnk">
+                  <img className="details_discogs-logo" data-cy="details_discogs-logo" src={discogsLogo} alt="discogs logo"/>
                 </a>
               </Tooltip>
             </div>
             <div className="details_main-text">
-              <p data-cy="artist-name">Artist: {data1.album.artists[0].name}</p>
-              <p data-cy="album-title">Album: {data1.album.title}</p>
-              <p data-cy="release-year">Released: {data1.album.year}</p>
-              <div className='card_genre-container' data-cy='genre-container'>
+              <p data-cy="details_artist-name">Artist: {data1.album.artists[0].name}</p>
+              <p data-cy="details_album-title">Album: {data1.album.title}</p>
+              <p data-cy="details_release-year">Released: {data1.album.year}</p>
+              <div className='card_genre-container' data-cy='details_genre-container'>
                 { displayGenres(data1.album.genres) }
               </div>
             </div>
           </article>
           <article className="details_box right">
-            <iframe data-cy="web-player" title={`${data1.title} album album playlist`} className="shadow details_spotify-player" src={`https://open.spotify.com/embed/album/${data2.spotifyAlbumId.id}`} allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe className="shadow details_spotify-player" data-cy="details_web-player" title={`${data1.title} album album playlist`} src={`https://open.spotify.com/embed/album/${data2.spotifyAlbumId.id}`} allowtransparency="true" allow="encrypted-media"></iframe>
           </article>
         </div>        
       </section>
