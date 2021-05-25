@@ -11,8 +11,9 @@ import { Tooltip } from '@material-ui/core';
 import './App.css';
 import '../../normalize.css';
 
+
 function App() {
-  const [titles, setTitles] = useState(["The Payback"]);
+  const [titles, setTitles] = useState(["The Payback", "Positions", "The Wall"]);
   const [favorites, setFavorites] = useState([]);
 
   const addFavorite = (toAdd) => {
@@ -68,7 +69,6 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/">
-            <section className="glass">
             <AlbumCardsDisplay
               titles={ titles }
               favorites={ favorites }
@@ -76,10 +76,8 @@ function App() {
               determineFav={ determineFav }
               isFavorite={ isFavorite }
             />
-            </section>
           </Route>
           <Route exact path="/your-favorites">
-            <section className="glass">
               <AlbumCardsDisplay
                 titles={ favorites }
                 favorites={ favorites }
@@ -87,7 +85,6 @@ function App() {
                 determineFav={ determineFav }
                 isFavorite={ isFavorite }
               />
-            </section>
           </Route>
           <Route exact path="/:title" render={({ match }) => {
             const { title } = match.params;
@@ -105,6 +102,9 @@ function App() {
           </Route>
         </Switch>
       </main>
+      <video muted autoPlay loop>
+        <source src='/red-with-needle.mp4' type="video/mp4" />
+      </video>
     </div>
   );
 }
