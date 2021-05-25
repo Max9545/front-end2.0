@@ -32,7 +32,7 @@ const Search = ({ setAlbumSearch, setSearchArtist }) => {
   //   })
   // }
 
-  const helpSetSearch = (event) => {
+  const determineSearchType = (event) => {
 
     if(type === 'artist') {
       event.preventDefault()
@@ -64,7 +64,7 @@ const Search = ({ setAlbumSearch, setSearchArtist }) => {
           <option selected value="artist">Artist</option>
           <option value="album">Album</option>
         </select>
-        <button onClick={(e) => helpSetSearch(e, type)}
+        <button onClick={(e) => determineSearchType(e, type)}
         data-cy='search-submit'>Search</button>
     </form>
   )

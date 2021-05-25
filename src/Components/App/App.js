@@ -17,7 +17,7 @@ function App() {
   const [favorites, setFavorites] = useState([]);
   const [search, setAlbumSearch] = useState()
   const [liked, setLiked] = useState([]);
-  const [artist, setSearchArtist] = useState("The Residents");
+  const [artist, setSearchArtist] = useState("Miles Davis");
 
   const addFavorite = (toAdd) => {
     if (favorites.includes(toAdd)) {
