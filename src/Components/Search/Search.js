@@ -13,26 +13,11 @@ const ALBUM_TITLES = gql`
   }
 `
 
-<<<<<<< HEAD
-=======
-const ALBUM_TITLES = gql`
-  query GetAlbumTitles {
-    album(title: "The Payback") {
-      title
-    }
-  }
-`
-
-const Search = ({ setSearch, setSearchArtist }) => {
->>>>>>> da9aa4e... Change name of state to searchArtist
-
-
 const Search = ({ setSearchArtist }) => {
 
   const history = useHistory()
   const [userQuery, setUserQuery] = useState('');
   const [type, setType] = useState('artist');
-
   const determineSearchType = (event) => {
 
     if(type === 'artist') {
@@ -42,8 +27,6 @@ const Search = ({ setSearchArtist }) => {
     } 
   
     if (type === 'album') {
-      setArtist(userQuery)
-    } else {
       event.preventDefault()
       history.push(`/${userQuery}`)
     }
