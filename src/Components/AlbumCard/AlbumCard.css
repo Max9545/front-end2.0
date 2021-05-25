@@ -59,8 +59,8 @@ background-color: hsla(45, 100%, 50%, .7) ;
 }
 
 .card_genre {
-color: var(--accent-glow);
-background-color: var(--secondary-color);
+color: hsl(0, 100%, 99%);
+background-color: var(--primary-color);
 padding: 5%;
 margin: 1%;
 font-weight: bolder;

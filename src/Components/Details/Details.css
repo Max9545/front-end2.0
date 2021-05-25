@@ -81,7 +81,7 @@
 }
 
 .details_discogs-logo:hover {
-  color: hsl(0, 100%, 99%);
+  color: var(--text-color);
 }
 
 .details_discogs-link {
@@ -99,6 +99,7 @@
 }
 
 .details_main-text > p {
+  color: var(--text-color);
   margin: 5px 0px;
   padding: 0px;
   font-size: 1.5rem;
@@ -115,7 +116,7 @@
 }
 
 .click {
-  color: hsl(0, 100%, 99%);
+  color: var(--text-color);
   cursor: pointer;
 }
 
