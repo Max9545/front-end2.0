@@ -140,7 +140,7 @@
 
 @media only screen and (min-width: 700px) {
   .details_main {
-    width: 95vw;
+    width: 95%;
     flex-direction: column;
     justify-content: center;
   }
