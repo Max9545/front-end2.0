@@ -13,7 +13,7 @@ import '../../normalize.css';
 
 
 function App() {
-  const [titles, setTitles] = useState(["The Payback"]);
+  const [titles, setTitles] = useState(["The Payback", "Positions", "The Wall"]);
   const [favorites, setFavorites] = useState([]);
 
   const addFavorite = (toAdd) => {
