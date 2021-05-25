@@ -69,7 +69,6 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/">
-            <section className="glass">
             <AlbumCardsDisplay
               titles={ titles }
               favorites={ favorites }
@@ -77,10 +76,8 @@ function App() {
               determineFav={ determineFav }
               isFavorite={ isFavorite }
             />
-            </section>
           </Route>
           <Route exact path="/your-favorites">
-            <section className="glass">
               <AlbumCardsDisplay
                 titles={ favorites }
                 favorites={ favorites }
@@ -88,7 +85,6 @@ function App() {
                 determineFav={ determineFav }
                 isFavorite={ isFavorite }
               />
-            </section>
           </Route>
           <Route exact path="/:title" render={({ match }) => {
             const { title } = match.params;

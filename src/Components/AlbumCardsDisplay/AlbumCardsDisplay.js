@@ -14,7 +14,7 @@ function AlbumCardsDisplay ({ titles }) {
   }
 
   return (
-    <div className='card-container' data-cy='card-container'>
+    <div className='card-container glass' data-cy='card-container'>
       {renderGivenAlbums(titles) }
     </div>
   )
