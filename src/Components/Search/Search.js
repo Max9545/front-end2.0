@@ -31,14 +31,16 @@ const Search = ({ setAlbumSearch, setSearchArtist }) => {
   //     return <option value={ title } />
   //   })
   // }
-
+  console.log()
   const determineSearchType = (event) => {
 
     if(type === 'artist') {
       event.preventDefault()
       setSearchArtist(userQuery)
       history.push(`/`) 
-    } else if (type === 'album') {
+    } 
+  
+    if (type === 'album') {
       event.preventDefault()
       history.push(`/${userQuery}`)
       // setAlbumSearch(userQuery)
