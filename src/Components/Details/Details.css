@@ -13,22 +13,35 @@
 }
 
 .details_main {
-  height: 100vh;
+  max-height: 750px;
   width: 98%;
-  max-height: 650px;
   display: flex;
   flex-direction: column;
-  padding-top: 5%;
-  justify-content: center;
   background: rgba( 205, 214, 221, 0.25 );
-  box-shadow: 0 8px 32px 0 #775144;
   margin: 0 auto;
+  box-shadow: 0 8px 32px 0 #775144;
   border-radius: 1em;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding-top: 5%;
   padding: 35px;
-  z-index: 1;
 }
 
+.details_back-button {
+  height: 25px;
+  width: 65px;
+  display: flex;
+}
+
+.details_return-arrow {
+  margin: 0px;
+}
+
+.details_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .details_box {
   height: 90%;
@@ -79,25 +92,20 @@
 }
 
 .details_main-text {
-  height: 50%;
+  height: 30%;
   width: 294px;
   align-self: center;
   text-align: start;
 }
 
 .details_main-text > p {
-  padding: 0px;
   margin: 5px 0px;
+  padding: 0px;
   font-size: 1.5rem;
 }
 
 .details_genre-container {
   width: 15%;
-}
-
-.details_box.right {
-  margin-top: 5px;
-  margin-bottom: 10px;
 }
 
 .details_spotify-player {
@@ -128,25 +136,18 @@
   .details_main-text {
     width: 261px;
   }
-
-  
 }
 
 @media only screen and (min-width: 700px) {
-  .modal-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: hsla(0, 0%, 0%, 0.4);
-    padding: 5%;
-    overflow: scroll;
-  }
-
   .details_main {
     width: 95vw;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     border-radius: 5em;
+  }
+
+  .details_content {
+    flex-direction: row;
   }
 
   .details_box {
@@ -176,30 +177,21 @@
     margin: 7px 0px;
   }
 
-  .details_box.right {
-    margin: 0;
-  }
-
   .details_spotify-player {
     width: 100%;
-  }
-
-  .close-icon {
-    transform: scale(2);
-  }
-
-  .close-container {
-    height: 65vh;
   }
 }
 
 @media only screen and (min-width: 1025px) {
   .details_main {
     height: 90vh;
-    width: 70vw;
     min-height: 558px;
-    min-width: 550px;
-    max-width: 900px;
+    width: 70vw;
+    max-width: 950px;
+  }
+
+  .details_box {
+    height: 100%;
   }
 
   .details_album-cover {
@@ -209,13 +201,5 @@
   .details_favorite-button {
     transform: scale(1);
     margin-left: 5px;
-  }
-
-  .close-container {
-    height: 72vh;
-  }
-
-  .close-icon {
-    transform: scale(1.5);
   }
 }
