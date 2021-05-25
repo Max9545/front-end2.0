@@ -13,10 +13,9 @@ import '../../normalize.css';
 
 
 function App() {
-  const [titles, setTitles] = useState(["The Payback", "Positions", "The Wall"]);
-  const [favorites, setFavorites] = useState([]);
+  // const [titles, setTitles] = useState(["The Payback"]);
+  const [favorites, setFavorites] = useState(["Ben", "The Wall", "The Payback"]);
   const [searchAlbum, setAlbumSearch] = useState([])
-  const [liked, setLiked] = useState([]);
   const [artist, setSearchArtist] = useState("Micheal Jackson");
 
   const addFavorite = (toAdd) => {
@@ -79,9 +78,10 @@ function App() {
               <AlbumCardsDisplay
                 titles={ favorites }
                 favorites={ favorites }
-                toggleFav={ toggleFav }
-                determineFav={ determineFav }
-                isFavorite={ isFavorite }
+                artist={ artist }
+                // toggleFav={ toggleFav }
+                // determineFav={ determineFav }
+                // isFavorite={ isFavorite }
               />
           </Route>
           <Route exact path="/:title" render={({ match }) => {
