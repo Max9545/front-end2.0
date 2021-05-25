@@ -9,6 +9,18 @@ nav {
 nav > * {
   height: auto;
 }
+
+.navLink {
+  color: var(--accent-color);
+  transition: all .2s ease-in-out;
+}
+
+.navLink:hover {
+  text-shadow: 
+    0 0 10px var(--accent-glow),
+    0 0 20px var(--accent-glow);
+  transform:  translateX(-2rem);
+}
  
 .nav__web_view {
   color: var(--primary-color);

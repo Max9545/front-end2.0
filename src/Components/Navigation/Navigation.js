@@ -13,12 +13,14 @@ const Navigation = ({ isMobile }) => {
       <>
         <NavLink exact to="/"
           activeStyle={activeStyle}
+          className="navLink"
           data-cy="link-to-home"
         >
           Home
         </NavLink>
         <NavLink to="/your-favorites"
           activeStyle={activeStyle}
+          className="navLink"
           data-cy="link-to-liked"
         >
           Your Favorite Albums
