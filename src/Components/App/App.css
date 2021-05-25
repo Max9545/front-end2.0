@@ -19,21 +19,20 @@
 h1 {
   font-family: var(--deco-font);
   color: var(--accent-color);
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 .App {
   position: relative;
   min-height: 100vh;
   width: 100vw;
-  /* background: linear-gradient(20deg, var(--primary-color), var(--accent-color)); */
   background: transparent;
   text-align: center;
   overflow-y: overlay;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 75px auto;
+  grid-template-rows: 100px auto;
   grid-template-areas:
     "header header header header header"
     "nav main main main main";
@@ -45,15 +44,16 @@ header {
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "title title search";
   color: var(--primary-color);
+  padding: 0px 3rem;
 }
 
 .header__h1 {
   grid-area: title;
   justify-self: left;
-  padding-left: 1rem;
+  /* padding-left: 3rem; */
 }
 
-header.search {
+.search {
   grid-area: search;
 }
 

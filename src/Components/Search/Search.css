@@ -3,11 +3,12 @@
   justify-content: flex-end;
   align-items: flex-end;
   margin-right: 1rem;
+  height: 100px;
 }
 
 .search__input {
   width: 100%;
   background-color: transparent;
   border-width: 0px 0px 2px 0px;
-  border-color: var(--primary-color);
+  border-color: var(--accent-color);
 }
