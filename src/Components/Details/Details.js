@@ -11,7 +11,12 @@ import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
 import { displayGenres } from '../../scripts';
 
 
-const DetailsModal = ({ title, determineFav, toggleFav, isFavorite }) => {
+const Details = ({ 
+  title, 
+  determineFav, 
+  toggleFav, 
+  isFavorite 
+}) => {
   
   const [isFav, setIsFav] = useState(isFavorite(title));
 
@@ -83,4 +88,4 @@ const DetailsModal = ({ title, determineFav, toggleFav, isFavorite }) => {
   )
 }
 
-export default DetailsModal;
+export default Details;

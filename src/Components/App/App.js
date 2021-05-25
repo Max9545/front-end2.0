@@ -1,7 +1,7 @@
 import AlbumCardsDisplay from '../AlbumCardsDisplay/AlbumCardsDisplay'
 import Navigation from '../Navigation/Navigation';
 import Search from '../Search/Search';
-import DetailsModal from '../Details/Details.js';
+import Details from '../Details/Details.js';
 import { Switch, Route } from 'react-router-dom';
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
@@ -92,7 +92,7 @@ function App() {
           <Route exact path="/:title" render={({ match }) => {
             const { title } = match.params;
             return (
-              <DetailsModal
+              <Details
                 title={ title }
                 toggleFav={ toggleFav }
                 determineFav={ determineFav }
