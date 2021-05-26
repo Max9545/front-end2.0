@@ -32,8 +32,6 @@ const Search = ({ setSearchArtist }) => {
     if (type === 'album') {
       event.preventDefault()
       history.push(`/${userQuery}`)
-      // setAlbumSearch(userQuery)
-      console.log('album')
     }
   }
 
@@ -49,7 +47,6 @@ const Search = ({ setSearchArtist }) => {
         onChange={(e) => setUserQuery(e.target.value)}
         />
         <datalist id="albumTitles">
-          {/* { determineOptionStatus() } */}
         </datalist>
         <select value={type} onChange={(e) => setType(e.target.value)}>
           <option selected value="artist">Artist</option>
