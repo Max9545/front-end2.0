@@ -1,7 +1,4 @@
 {
-  "engines": {
-    "node": "15.x"
-  },
   "name": "selector-fe",
   "version": "0.1.0",
   "private": true,
