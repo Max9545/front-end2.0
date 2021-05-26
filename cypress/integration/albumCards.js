@@ -51,10 +51,4 @@ context('Album Cards', () => {
     .should('contain', 'Electronic')
     .should('contain', 'Rock')
   })
-
-  it('Should have a link to purchase the album on discogs', () => {
-    cy
-    .get('[data-cy=card_discogs-link]').should('exist')
-    .should('contain', 'Purchase on Discogs')
-  })
 })
