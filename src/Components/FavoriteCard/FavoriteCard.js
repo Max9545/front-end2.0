@@ -31,7 +31,7 @@ function FavoriteCard ({ title }) {
   }
 
   const deconstruct = ( album ) => {
-    console.log(album.album)
+  
     return (
       <>
         <Link  to={`/${album.album.title}`} className='card_details-link-container' data-cy='card_details-link-container'>

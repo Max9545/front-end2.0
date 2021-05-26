@@ -5,7 +5,7 @@ function FavoriteAlbumsDisplay ({ favorites }) {
 
 
   const renderGivenAlbums = (list) => {
-    console.log(list)
+
     return list.map(title => {
       return <FavoriteCard  title={title}/>
     })
