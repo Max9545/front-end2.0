@@ -15,7 +15,7 @@ console.log(artist)
 
   const renderGivenAlbums = (list) => {
     return list.map(album => {
-      return <AlbumCard  artist={artist} album={album}/>
+      return <AlbumCard  album={album}/>
     })
   }
 
