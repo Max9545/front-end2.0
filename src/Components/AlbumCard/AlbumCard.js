@@ -4,43 +4,15 @@ import { useQuery } from '@apollo/client';
 import './AlbumCard.css'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react';
-// import CoverStandIn from '../../../public'
+
 
 
 function AlbumCard ({ album }) {
 
-  // const [currentAlbum, setCurrentAlbum] = useState()
-
-
-  // useEffect()
-  // const { loading, error, data } = useQuery//(GET_SINGLE_ALBUM, {
-  //   variables: { title: title }
-  // })
   
-  // if (loading) return (
-  //   <div className='card_card' data-cy='card_card'>
-  //     <Skeleton animation="wave" variant="rect" width={250} height={250} />
-  //     <Skeleton animation="wave" variant="text" height={32} />
-  //     <Skeleton animation="wave" variant="text" />
-  //     <Skeleton animation="wave" variant="text" />
-  //     <Skeleton animation="wave" variant="text" />
-  //   </div>
-  // )
-  // if (error) return `Error! ${error.message}`
-
-  // const displayGenres = (list) => {
-  //   console.log(list)
-  //  return list.map(genre => <p className='card_genre' data-cy='card_genre'>{genre}</p>)
-  // }
-
-  // const displayArtists = (list) => {
-  //   return list.map(name => <p>{ name }</p>)
-  //  }
-
-
    const displayImage = (image) => {
 
-    if(image && !image.includes('gif')) {
+    if(image && !image.includes('.gif')) {
       return (<img className='card_cover' data-cy='card_cover'src={album.coverImage} alt={`Cover for ${album.title}`}/>)
     } else {
       return (<img className='card_cover' data-cy='card_cover' src='/CoverFillStandIn.png' alt={`Cover for ${album.title}`}/>)
