@@ -1,6 +1,6 @@
 {
-  data: {
-    album: {
+  "data": {
+   "album": {
       "__typename": "Album",
       "id": "36466",
       "title": "Freak Out!",

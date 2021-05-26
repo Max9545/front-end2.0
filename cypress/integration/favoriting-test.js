@@ -28,5 +28,5 @@ describe('User can favorite or unfavorite any single album with the favoriting b
       .and('be.visible')
   })
 
-  it('User should be able to see the same al')
+  // it('User should be able to see the same al')
 })
