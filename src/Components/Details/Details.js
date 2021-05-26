@@ -51,11 +51,6 @@ const Details = ({
   if (error1) return <p>Error :(</p>;
   if (loading2) return <p>Loading...</p>; 
   if (error2) return <p>Error :(</p>;
-
-  const style = {
-   color: 'snow'
-
-  }
   
   return (
     <>
