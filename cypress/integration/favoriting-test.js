@@ -1,8 +1,12 @@
 describe('User can favorite or unfavorite any single album with the favoriting button that will result in an accurate render on the /your-favorites route', () => {
   
   beforeEach(() => {
-    cy.visit('https://turing-selector.herokuapp.com/')
+    cy.visit('http://localhost:3000/The%20Wall')
   })
   
-  it()
+  it('Should have a favoriting button', () => {
+    cy.get('[data-cy=details_favorites-button_unfilled]')
+      .should('exist')
+      .and('be.visible')
+  })
 })
