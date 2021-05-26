@@ -19,7 +19,7 @@ const Details = ({
 }) => {
   
   const [isFav, setIsFav] = useState(isFavorite(title));
-console.log(title)
+
 
 
   useEffect(() => {
