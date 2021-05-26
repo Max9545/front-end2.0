@@ -1,6 +1,6 @@
 import { GET_SINGLE_ALBUM }from '../../queries';
 import { useQuery } from '@apollo/client';
-import { Skeleton } from '@material-ui/lab';
+
 import './AlbumCard.css'
 import { Link } from 'react-router-dom'
 
@@ -45,7 +45,6 @@ function AlbumCard ({  album }) {
           <p className='card_artist-container' data-cy='card_artist-container'>
             { album.artists[0].name }
           </p>
-          
           <p className='card_date' data-cy='card_date'>This Edition Released in {album.year}</p>
         </Link>
         {album.label && 
