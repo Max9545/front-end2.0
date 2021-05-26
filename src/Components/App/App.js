@@ -71,7 +71,6 @@ function App() {
         <Switch>
           <Route exact path="/">
             <section className="glass">
-              {/* {artist.length ? <AlbumCardsDisplay titles={ search } artist={artist}/> : <AlbumCardsDisplay  titles={ titles }/> } */}
               <AlbumCardsDisplay titles={ searchAlbum } artist={artist}/>
             </section>
           </Route>
