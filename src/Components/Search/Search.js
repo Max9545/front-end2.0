@@ -1,4 +1,5 @@
 import SearchIcon from '@material-ui/icons/Search';
+import { style } from '../../scripts';
 import './Search.css';
 import { useState } from 'react';
 
@@ -13,7 +14,7 @@ const Search = ({ setTitles }) => {
 
   return (
     <form className="search" data-cy='search'>
-      <SearchIcon />
+      <SearchIcon style={style}/>
       <input
         id="searchField"
         className="search__input"
@@ -24,6 +25,7 @@ const Search = ({ setTitles }) => {
         />
       <button
         onClick={(e) => helpSetSearch(e)}
+        className="search-submit"
         data-cy='search-submit'>
           Search
       </button>

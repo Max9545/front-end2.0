@@ -5,6 +5,7 @@ import discogsLogo from '../Details/assets/discogs_white.svg';
 import { IconButton } from '@material-ui/core';
 import { Tooltip } from '@material-ui/core';
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
+import { style } from '../../scripts';
 import { useQuery } from '@apollo/client';
 import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
 import { displayGenres } from '../../scripts';
@@ -44,11 +45,6 @@ const Details = ({
   if (error1) return <p>Error :(</p>;
   if (loading2) return <p>Loading...</p>; 
   if (error2) return <p>Error :(</p>;
-
-  const style = {
-   color: 'snow'
-
-  }
   
   return (
     <>
