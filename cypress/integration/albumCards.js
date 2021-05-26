@@ -1,15 +1,12 @@
-context('Album Cards', () => {
-
-  
-
+describe('Album Cards', () => {
   beforeEach(() => {
     cy
-    .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
-      if (req.body.query.includes('John')) {
-        req.reply({ fixture: 'albumsCards.json' })
-      }
-    })
-    // .visit('https://turing-selector.herokuapp.com/')
+    .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', { fixture: 'albumsCards.json'})
+    // .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
+      // if (req.body.query.includes('John')) {
+        // req.reply({ fixture: 'albumsCards.json' })
+    //   }
+    // })
   })
 
   
