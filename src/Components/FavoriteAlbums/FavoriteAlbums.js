@@ -7,14 +7,14 @@ function FavoriteAlbumsDisplay ({ favorites }) {
   const renderGivenAlbums = (list) => {
 
     return list.map(title => {
-      return <FavoriteCard  title={title}/>
+      return <FavoriteCard title={title} />
     })
   }
 
   return (
-      <div className='card-container' data-cy='card-container'>
-        {renderGivenAlbums(favorites) }
-      </div>
+    <div className='card-container' data-cy='card-container'>
+      { renderGivenAlbums(favorites) }
+    </div>
   )
 }
 

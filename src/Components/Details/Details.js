@@ -1,15 +1,15 @@
 import { React, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import './Details.css';
-import '../Details/assets/discogs_logo.svg'
-import discogsLogo from '../Details/assets/discogs_logo.svg';
+import discogsLogo from '../Details/assets/discogs_white.svg';
 import { IconButton } from '@material-ui/core';
 import { Tooltip } from '@material-ui/core';
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
+import { style } from '../../scripts';
 import { useQuery } from '@apollo/client';
 import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
 import { displayGenres } from '../../scripts';
-
+import { Skeleton } from '@material-ui/lab';
 
 const Details = ({ 
   title, 
@@ -19,8 +19,6 @@ const Details = ({
 }) => {
   
   const [isFav, setIsFav] = useState(isFavorite(title));
-
-
 
   useEffect(() => {
     setIsFav(isFavorite(title));
@@ -47,10 +45,12 @@ const Details = ({
     { loading: loading2, error: error2, data: data2 }
   ] = QueryMultiple()
 
-  if (loading1) return <p>Loading...</p>; 
-  if (error1) return <p>Error :(</p>;
-  if (loading2) return <p>Loading...</p>; 
-  if (error2) return <p>Error :(</p>;
+  if (loading1 || loading2) return (
+    <div className='card-container' data-cy='card-container'>
+      <Skeleton animation="wave" height={675} width={878} />
+    </div>
+  )
+  if (error1 || error2) return <h2 className="details_error">⚠️ We're sorry - something went wrong! Please try again later.</h2>;
   
   return (
     <>
@@ -67,6 +67,7 @@ const Details = ({
                 className="details_favorite-button click"
                 data-cy="details_favorites-button"
                 aria-label={"Add to Favorites"}
+                style={style}
                 onClick={ () => handleFavoriteClick() }
                 >
                 { determineFav(isFav) }

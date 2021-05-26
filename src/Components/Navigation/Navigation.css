@@ -24,16 +24,19 @@ nav > * {
  
 .nav__web_view {
   color: var(--primary-color);
+  max-height: 115px;
 }
 
 .nav__web_view > a {
   position: static;
-  justify-self: flex-end;
+  justify-self: center;
   padding: 1rem 1rem 0 1rem;
 }
 
 .nav__mobile_view {
   color: var(--accent-color);
+  justify-content: center;
+  text-align: center;
 }
 
 .nav__mobile_view > a {
@@ -49,10 +52,15 @@ details {
   justify-content: right;
 }
 
+details[open] {
+  transition: height .2s ease-in-out;
+}
+
 /* Remove details summary block default arrow */
 
 details > summary {
   list-style: none;
+
 }
 
 details > summary::-webkit-details-marker {

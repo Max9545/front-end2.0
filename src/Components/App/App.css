@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Racing+Sans+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Open+Sans:ital@0;1&family=Racing+Sans+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Racing+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Open+Sans:ital@0;1&family=Racing+Sans+One&display=swap");
 
 :root {
   --primary-color: hsl(11, 100%, 8%);
   --secondary-color: hsl(15, 27%, 37%);
   --accent-color: hsl(45, 100%, 50%);
   --accent-glow: hsl(45, 90%, 65%);
-  --text-color: hsl(206, 19%, 84%);
+  --text-color: hsl(0, 100%, 99%);
   --cyan: hsl(184, 96%, 90%);
-  --deco-font: 'Monoton', cursive;
-  --header-font: 'Racing Sans One', cursive;
-  --body-font: 'Open Sans', sans-serif;
+  --deco-font: "Monoton", cursive;
+  --header-font: "Racing Sans One", cursive;
+  --body-font: "Open Sans", sans-serif;
   font-size: 16px;
-
 }
 
 h1 {
@@ -45,6 +44,7 @@ header {
   grid-template-areas: "title title search";
   color: var(--primary-color);
   padding: 0px 3rem;
+  margin-bottom: 1rem;
 }
 
 .header__h1 {
@@ -65,19 +65,18 @@ a {
   width: 100%;
 }
 
-
 .glass {
-  background: rgba( 205, 214, 221, 0.25 );
+  background: rgba(205, 214, 221, 0.25);
   box-shadow: 0 8px 32px 0 #775144;
-  backdrop-filter: blur( 1.5px );
-  -webkit-backdrop-filter: blur( 1.5px );
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
   border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 video {
   z-index: -1;
-  position: absolute;
+  position: fixed;
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -98,10 +97,17 @@ video {
   .App {
     gap: 1rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 75px auto;
+    grid-template-rows: 180px 75px auto;
     grid-template-areas:
-    "header"
-    "nav"
-    "main";
+      "header"
+      "nav"
+      "main";
+  }
+  header {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "search";
+    height: 200px;
   }
 }

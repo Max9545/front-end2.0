@@ -1,4 +1,5 @@
 import SearchIcon from '@material-ui/icons/Search';
+import { style } from '../../scripts';
 import './Search.css';
 import { useState } from 'react';
 import { useQuery, gql } from '@apollo/client';
@@ -12,14 +13,11 @@ const ALBUM_TITLES = gql`
   }
 `
 
-
-
 const Search = ({ setSearchArtist }) => {
 
   const history = useHistory()
   const [userQuery, setUserQuery] = useState('');
   const [type, setType] = useState('artist');
-
 
   const determineSearchType = (event) => {
 
@@ -37,7 +35,7 @@ const Search = ({ setSearchArtist }) => {
 
   return (
     <form className="search" data-cy='search'>
-      <SearchIcon />
+      <SearchIcon style={style}/>
       <input
         id="searchField"
         className="search__input"
@@ -54,7 +52,9 @@ const Search = ({ setSearchArtist }) => {
           <option value="album">Album</option>
         </select>
         <button onClick={(e) => determineSearchType(e, type)}
-        data-cy='search-submit'>Search</button>
+        className="search-submit" data-cy='search-submit'>
+          Search
+        </button>
     </form>
   )
 }

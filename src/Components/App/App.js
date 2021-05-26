@@ -84,7 +84,7 @@ function App() {
               <FavoriteAlbumsDisplay
                 favorites={ favorites }
               />
-            /</section>  
+            </section>  
           </Route>
           <Route exact path="/:title" render={({ match }) => {
             const { title } = match.params;

@@ -5,10 +5,7 @@ import './AlbumCard.css'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react';
 
-
-
 function AlbumCard ({ album }) {
-
   
    const displayImage = (image) => {
 
@@ -39,7 +36,7 @@ function AlbumCard ({ album }) {
         </div>}
         <div className='card_discogs-link' data-cy='card_discogs-link'>
             { album.year }
-          </div>
+        </div>
       </>
     )
   }
