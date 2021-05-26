@@ -9,4 +9,9 @@ describe('User can favorite or unfavorite any single album with the favoriting b
       .should('exist')
       .and('be.visible')
   })
+
+  it('User should be able to click on favoriting button', () => {
+    cy.get('[data-cy=details_favorites-button_unfilled]')
+      .click()
+  })
 })
