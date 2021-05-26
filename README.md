@@ -160,4 +160,4 @@ In the spirit of collaboration, things done together are better than done on our
 
 ### Roadmap
 
-See the [open issues](https://github.com/selector-turing/back_end/issues) for a list of proposed features (and known issues). Please open an issue ticket if you see an existing error or bug.
+See the [open issues](https://github.com/selector-turing/front_end/issues) for a list of proposed features (and known issues). Please open an issue ticket if you see an existing error or bug.
