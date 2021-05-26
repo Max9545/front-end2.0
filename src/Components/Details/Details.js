@@ -53,7 +53,7 @@ const Details = ({
       <Skeleton animation="wave" height={675} width={878} />
     </div>
   )
-  if (error1 && error2) return <h2 className="details_error">⚠️ We're sorry - something went wrong! Please try again later.</h2>;
+  if (error1 || error2) return <h2 className="details_error">⚠️ We're sorry - something went wrong! Please try again later.</h2>;
   
   return (
     <>
