@@ -36,7 +36,7 @@ describe('User navigation capabilities', () => {
 
   it('Should display a bad path message to all invalid paths', () => {
     cy.visit('http://localhost:3000/some-invalid-path-nonsense');
-    cy.get('main > h2')
+    cy.get('h2')
       .should('contain', "⚠️ We're sorry - something went wrong! Please try again later.");
   })
 });
