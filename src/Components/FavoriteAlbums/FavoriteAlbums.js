@@ -1,7 +1,5 @@
 import '../AlbumCard/AlbumCard.css'
 import FavoriteCard from '../FavoriteCard/FavoriteCard';
-import { useQuery } from '@apollo/client';
-import { GET_ALBUMS_BY_ARTIST }from '../../queries';
 
 function FavoriteAlbumsDisplay ({ favorites }) {
 
