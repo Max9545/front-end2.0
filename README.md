@@ -1,27 +1,23 @@
 
-# Selector Back End
+# Selector (Front-End)
 
-This is the backend engine Selector, a web application that connects users with Spotify and Discogs, for a seamless, music browsing (and eventually "purchasing") experience. The application is built with service oriented architecture. The backend communicates with the frontend using our choice of "stretch technology" for this project, as a single GraphQL endpoint, which supplies data from multiple other endpoints the Back End is interacting with. The database currently stores "Favorites", but there are plans for much more, starting with users.
 
 ### Site Link
 https://turing-selector.herokuapp.com/
 
 ### Selector App Created by:
-- [Reggie Thompson](https://github.com/rdtho2525) | [LinkedIn](https://www.linkedin.com/in/reggie-thompson-136979137/)
-- [Max Bregman](https://github.com/Max9545) | [LinkedIn](https://www.linkedin.com/in/max-bregman-216063203/)
-- [Marika Shanahan](https://github.com/monshan) | [LinkedIn](https://www.linkedin.com/in/marika-shanahan/)
-- [Megan Gonzales](https://github.com/MGonzales26) | [LinkedIn](https://www.linkedin.com/in/megan-e-gonzales/)
 - [Adam J. Bowers](https://github.com/Pragmaticpraxis37) | [LinkedIn](https://www.linkedin.com/in/adam-bowers-06a871209/)
 - [Jordan Beck](https://github.com/jordanfbeck0528) | [LinkedIn](https://www.linkedin.com/in/jordan-f-beck/)
+- [Marika Shanahan](https://github.com/monshan) | [LinkedIn](https://www.linkedin.com/in/marika-shanahan/)
+- [Max Bregman](https://github.com/Max9545) | [LinkedIn](https://www.linkedin.com/in/max-bregman-216063203/)
+- [Megan Gonzales](https://github.com/MGonzales26) | [LinkedIn](https://www.linkedin.com/in/megan-e-gonzales/)
+- [Reggie Thompson](https://github.com/rdtho2525) | [LinkedIn](https://www.linkedin.com/in/reggie-thompson-136979137/)
 
-### Selector Front End ReadMe
 
-https://github.com/selector-turing/front_end#readme
-# Rancid Tomatillos
+### Selector Back-End ReadMe
 
-A [Front-End Project](https://frontend.turing.io/projects/module-3/rancid-tomatillos-v3.html) by [Jeff Shepherd](https://github.com/JeffShepherd) and [Reggie Thompson](https://github.com/rdtho2525).
+View [here](https://github.com/selector-turing/back_end)
 
-[Check out the deployed application](https://rancid---tomatillos.herokuapp.com/)
 
 1. [Overview](#overview)
 2. [Planning Resources](#planning-resources)
@@ -36,16 +32,11 @@ A [Front-End Project](https://frontend.turing.io/projects/module-3/rancid-tomati
 
 ## Overview
 
-This project is definitely not Rotten Tomatoes. Nor is it Netflix. Nor is it IMDB. It’s R A N C I D T O M A T I L L O S. Very different!
-
-_Rancid Tomatillos_ is a [Turing School of Software and Design](https://turing.io/) Module 3 paired project. The purpose of this project is to create a dynamic application that leverages an API to receive, and display, movie data. A user can search and filter a long list of movies, as well as view detailed information about a specific movie by clicking on it. To create this application, we leveraged React, React Router, JavaScript, HTML, and CSS to create the front-end. As we worked, we used Cypress for test-driven development of our application.
-
-
 
 
 ## Planning Resources
 
-* [GitHub Project Board](https://github.com/JeffShepherd/Rancid-Tomatillos/projects/1)
+* [GitHub Project Board](https://github.com/orgs/selector-turing/projects/1)
 * ![wireframe](https://user-images.githubusercontent.com/70557704/119737153-0e2bd180-be3c-11eb-96a4-a3689cf88368.png)
 
 
@@ -76,10 +67,6 @@ If you see `Compiled successfully!` in your terminal, the application is running
 
 ## Learning Goals
 
-* Gain competency with React fundamentals
-* Learn how to test React components & asynchronous JavaScript
-* Practice refactoring
-* Create a multi-page UX using Router
 
 
 ## Technologies
