@@ -79,12 +79,6 @@ function App() {
             <section className="glass">
               <FavoriteAlbumsDisplay
                 favorites={ favorites }
-                // searchAlbum={searchAlbum.map()}
-                // favorites={ favorites }
-                // artist={ artist }
-                // toggleFav={ toggleFav }
-                // determineFav={ determineFav }
-                // isFavorite={ isFavorite }
               />
           </Route>
           <Route exact path="/:title" render={({ match }) => {

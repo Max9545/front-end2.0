@@ -4,6 +4,8 @@ import { Skeleton } from '@material-ui/lab';
 import './AlbumCard.css'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react';
+// import CoverStandIn from '../../../public'
+
 
 function AlbumCard ({ album }) {
 
@@ -34,11 +36,22 @@ function AlbumCard ({ album }) {
     return list.map(name => <p>{ name }</p>)
    }
 
+
+   const displayImage = (image) => {
+
+    if(image && !image.includes('gif')) {
+      return (<img className='card_cover' data-cy='card_cover'src={album.coverImage} alt={`Cover for ${album.title}`}/>)
+    } else {
+      return (<img className='card_cover' data-cy='card_cover' src='/CoverFillStandIn.png' alt={`Cover for ${album.title}`}/>)
+    }
+   }
+
   const deconstruct = ( album ) => {
     return (
       <>
         <Link  to={`/${album.title}`} className='card_details-link-container' data-cy='card_details-link-container'>
-          <img className='card_cover' data-cy='card_cover'src={album.coverImage} alt={`Cover for ${album.title}`}/>
+          {/* <img className='card_cover' data-cy='card_cover'src={album.coverImage} alt={`Cover for ${album.title}`}/> */}
+          {displayImage(album.coverImage)}
           <h2 className='card_title' data-cy='card_title'>{album.title}</h2>
           <p className='card_artist-container' data-cy='card_artist-container'>
             { album.artist }
