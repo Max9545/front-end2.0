@@ -1,6 +1,6 @@
 import { GET_SINGLE_ALBUM }from '../../queries';
 import { useQuery } from '@apollo/client';
-import { Skeleton } from '@material-ui/lab';
+
 import './AlbumCard.css'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react';
@@ -51,16 +51,13 @@ function AlbumCard ({ album }) {
     return (
       <>
         <Link  to={`/${album.title}`} className='card_details-link-container' data-cy='card_details-link-container'>
-          {/* <img className='card_cover' data-cy='card_cover'src={album.coverImage} alt={`Cover for ${album.title}`}/> */}
           {displayImage(album.coverImage)}
           <h2 className='card_title' data-cy='card_title'>{album.title}</h2>
           <p className='card_artist-container' data-cy='card_artist-container'>
             { album.artist }
           </p>
-          
           <p className='card_date' data-cy='card_date'>This Edition Released in {album.year}</p>
         </Link>
-        
         {album.label && 
           <div className='card_genre' data-cy='card_genre'>
             {  `Record Label: ${album.label}` }
@@ -71,7 +68,6 @@ function AlbumCard ({ album }) {
         <div className='card_discogs-link' data-cy='card_discogs-link'>
             { album.year }
           </div>
-        {/* <a href={album.uri} target='_blank' className='card_discogs-link' data-cy='card_discogs-link' >Purchase on Discogs</a> */}
       </>
     )
   }

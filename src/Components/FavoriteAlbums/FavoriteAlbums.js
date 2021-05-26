@@ -15,7 +15,6 @@ function FavoriteAlbumsDisplay ({ favorites }) {
 
   return (
       <div className='card-container' data-cy='card-container'>
-        <h2>Albums</h2>
         {renderGivenAlbums(favorites) }
       </div>
   )
