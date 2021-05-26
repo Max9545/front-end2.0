@@ -3,6 +3,7 @@ import { useQuery, useState } from '@apollo/client';
 import '../AlbumCard/AlbumCard.css'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react';
+import { Skeleton } from '@material-ui/lab';
 
 function FavoriteCard ({ title }) {
 
@@ -11,8 +12,17 @@ function FavoriteCard ({ title }) {
   const { loading, error, data } = useQuery(GET_SINGLE_ALBUM, {
     variables: { title: title }
   })
-console.log(data)
-  if (loading) return 'Loading...'
+
+  if (loading) return (
+    <div className='card_card' data-cy='card_card'>
+      <Skeleton animation="wave" variant="rect" width={250} height={250} />
+      <Skeleton animation="wave" variant="text" height={32} />
+      <Skeleton animation="wave" variant="text" />
+      <Skeleton animation="wave" variant="text" />
+      <Skeleton animation="wave" variant="text" />
+    </div>)
+
+
   if (error) return `Error! ${error.message}`  
 
 
