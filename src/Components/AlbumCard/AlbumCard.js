@@ -25,16 +25,25 @@ function AlbumCard ({  album }) {
     return list.map(name => <p>{ name }</p>)
    }
 
-  const deconstruct = ({ album }) => {
+
+   const displayImage = (image) => {
+
+    if(image && !image.includes('.gif')) {
+      return (<img className='card_cover' data-cy='card_cover'src={album.coverImage} alt={`Cover for ${album.title}`}/>)
+    } else {
+      return (<img className='card_cover' data-cy='card_cover' src='/CoverFillStandIn.png' alt={`Cover for ${album.title}`}/>)
+    }
+   }
+
+  const deconstruct = ( album ) => {
     return (
       <>
         <Link  to={`/${album.title}`} className='card_details-link-container' data-cy='card_details-link-container'>
-          <img className='card_cover' data-cy='card_cover'src={album.coverImage} alt={`Cover for ${album.title}`}/>
+          {displayImage(album.coverImage)}
           <h2 className='card_title' data-cy='card_title'>{album.title}</h2>
           <p className='card_artist-container' data-cy='card_artist-container'>
             { album.artists[0].name }
           </p>
-          {/* <h3 className='card_artist' data-cy='card_artist'>{}</h3> */}
           <p className='card_date' data-cy='card_date'>This Edition Released in {album.year}</p>
         </Link>
         <div className='card_genre-container' data-cy='card_genre-container'>
