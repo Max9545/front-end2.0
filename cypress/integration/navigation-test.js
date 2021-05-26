@@ -27,7 +27,7 @@ describe('User navigation capabilities', () => {
   })
 
   it('Should accurately navigate to the home page', () => {
-    cy.visit('https://turing-selector.herokuapp.com/your-favorites');
+    cy.visit('http://localhost:3000/your-favorites');
     cy.get('[data-cy="link-to-home"]').click();
     cy.location().should((loc) => {
       expect(loc.pathname).to.eq('/')
