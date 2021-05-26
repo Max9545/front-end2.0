@@ -1,22 +1,21 @@
 
 # Selector (Front-End)
-
+_Selector_ is a web application that seamlessly connects your Discogs vinyl purchasing experience with the convenient streaming capabilities of Spotify. Users can discover, browse, save, and sample their (soon-to-be) favorite music. This __Cypress-tested__, multi-page user-interface was built using __React__, __React Router__, __JavaScript__, __HTML__, __CSS__, and __ApolloClient__; integrated using __Travis CI__ and depolyed on __Heroku__.
 
 ### Site Link
 https://turing-selector.herokuapp.com/
 
 ### Selector App Created by:
-- [Adam J. Bowers](https://github.com/Pragmaticpraxis37) | [LinkedIn](https://www.linkedin.com/in/adam-bowers-06a871209/)
-- [Jordan Beck](https://github.com/jordanfbeck0528) | [LinkedIn](https://www.linkedin.com/in/jordan-f-beck/)
+FE Team:
 - [Marika Shanahan](https://github.com/monshan) | [LinkedIn](https://www.linkedin.com/in/marika-shanahan/)
 - [Max Bregman](https://github.com/Max9545) | [LinkedIn](https://www.linkedin.com/in/max-bregman-216063203/)
-- [Megan Gonzales](https://github.com/MGonzales26) | [LinkedIn](https://www.linkedin.com/in/megan-e-gonzales/)
 - [Reggie Thompson](https://github.com/rdtho2525) | [LinkedIn](https://www.linkedin.com/in/reggie-thompson-136979137/)
 
-
-### Selector Back-End ReadMe
-
-View [here](https://github.com/selector-turing/back_end)
+BE Team:
+- [Megan Gonzales](https://github.com/MGonzales26) | [LinkedIn](https://www.linkedin.com/in/megan-e-gonzales/)
+- [Adam J. Bowers](https://github.com/Pragmaticpraxis37) | [LinkedIn](https://www.linkedin.com/in/adam-bowers-06a871209/)
+- [Jordan Beck](https://github.com/jordanfbeck0528) | [LinkedIn](https://www.linkedin.com/in/jordan-f-beck/)
+- View the BE repo [here](https://github.com/selector-turing/back_end)
 
 
 1. [Overview](#overview)
@@ -46,13 +45,21 @@ View [here](https://github.com/selector-turing/back_end)
 Clone down this repository to your local machine:
 
 ```
-
+git clone git@github.com:JeffShepherd/Rancid-Tomatillos.git
 ```
 
-Then install the library dependencies by running:
+Then `npm install` the following dependencies:
 
 ```
-npm install
+@material-ui/core
+```
+
+```
+@material-ui/icons
+```
+
+```
+@material-ui/lab
 ```
 
 To start application, run:
@@ -66,7 +73,14 @@ If you see `Compiled successfully!` in your terminal, the application is running
 
 
 ## Learning Goals
-
++ Demonstrate knowledge you’ve gained throughout Turing
++ Use an agile process to turn well defined requirements into deployed and production ready software
++ Gain experience dividing applications into components and domains of responsibilities to facilitate multi-developer teams. Service oriented architecture concepts and patterns are highly encouraged.
++ Explore and implement new concepts, patterns, or libraries that have not been explicitly taught while at Turing
++ Practice an advanced, professional git workflow using Git Rebase
++ Gain experience using continuous integration tools to build and automate the deployment of features
++ Build applications that execute in development, test, CI, and production environments
++ Focus on communication between front-end and back-end teams in order to complete and deploy features that have been outlined by the project spec
 
 
 ## Technologies
@@ -83,10 +97,7 @@ If you see `Compiled successfully!` in your terminal, the application is running
 <img alt="Travis CI" src='https://img.shields.io/travis/jupyterhub/jupyterhub/master?logo=travis'/>
 
 _With_
-__GraphQL__
-__ApolloClient__
-
-
+__GraphQL__ & __ApolloClient__
 
 
 ---
@@ -116,20 +127,23 @@ __ApolloClient__
 
 ---
 ## Challenges
-
-
-
++ Familiarizing ourselves with the relationship between GraphQL and ApolloClient
++ Continous-Integration with Travis CI
++ Adapting to the Git Rebase workflow
++ State and UI synchronization with regards to the application's favoriting feature
 
 ---
 ## Wins
-
-
++ Successfully submitting requests to ApolloClient
++ Overcoming failing Travis CI builds
 
 
 ---
 ## Future Iterations
-
-
++ A user can add favorite albums to a non-local database. 
++ A user can display all of their favorite albums in alignment with the non-local database.  
++ Utilizing the non-local database to keep GSM throughout the cache
++ Additional media types to consume music (YouTube, Shazam, SoundCloud, a ticket selling API for live concerts)
 
 
 ### How to Contribute
