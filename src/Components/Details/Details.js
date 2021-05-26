@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import './Details.css';
 import discogsLogo from '../Details/assets/discogs_white.svg';
@@ -19,6 +19,12 @@ const Details = ({
 }) => {
   
   const [isFav, setIsFav] = useState(isFavorite(title));
+console.log(title)
+
+
+  useEffect(() => {
+    setIsFav(isFavorite(title));
+  }, [title])
 
   const handleFavoriteClick = () => {
     toggleFav(data1.album.title);
