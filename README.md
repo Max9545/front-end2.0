@@ -1,11 +1,25 @@
 
 # Selector (Front-End)
-_Selector_ is a web application that seamlessly connects your Discogs vinyl purchasing experience with the convenient streaming capabilities of Spotify. Users can discover, browse, save, and sample their (soon-to-be) favorite music. This __Cypress-tested__, multi-page user-interface was built using __React__, __React Router__, __JavaScript__, __HTML__, __CSS__, and __ApolloClient__; integrated using __Travis CI__ and depolyed on __Heroku__.
 
-### Site Link
+1. [Overview](#overview)
+2. [Team](#create-by)
+3. [Planning Resources](#planning-resources)
+4. [Set Up](#setup-instructions)
+5. [Learning Goals](#learning-goals)
+6. [Technologies](#technologies)
+7. [Features](#features)
+8. [Challenges](#challenges)
+9. [Wins](#wins)
+10. [Future Additions](#future-iterations)
+
+## Site Link
 https://turing-selector.herokuapp.com/
 
-### Selector App Created by:
+## Overview:
+
+_Selector_ is a web application that seamlessly connects your Discogs vinyl purchasing experience with the convenient streaming capabilities of Spotify. Users can discover, browse, save, and sample their (soon-to-be) favorite music. This __Cypress-tested__, multi-page user-interface was built using __React__, __React Router__, __JavaScript__, __HTML__, __CSS__, and __ApolloClient__; integrated using __Travis CI__ and depolyed on __Heroku__.
+
+## Created by:
 FE Team:
 - [Marika Shanahan](https://github.com/monshan) | [LinkedIn](https://www.linkedin.com/in/marika-shanahan/)
 - [Max Bregman](https://github.com/Max9545) | [LinkedIn](https://www.linkedin.com/in/max-bregman-216063203/)
@@ -17,22 +31,6 @@ _View the BE repo [here](https://github.com/selector-turing/back_end)_
 - [Megan Gonzales](https://github.com/MGonzales26) | [LinkedIn](https://www.linkedin.com/in/megan-e-gonzales/)
 - [Adam J. Bowers](https://github.com/Pragmaticpraxis37) | [LinkedIn](https://www.linkedin.com/in/adam-bowers-06a871209/)
 - [Jordan Beck](https://github.com/jordanfbeck0528) | [LinkedIn](https://www.linkedin.com/in/jordan-f-beck/)
-
-
-
-1. [Overview](#overview)
-2. [Planning Resources](#planning-resources)
-3. [Set Up](#setup-instructions)
-4. [Learning Goals](#learning-goals)
-5. [Technologies](#technologies)
-6. [Features](#features)
-7. [Challenges](#challenges)
-8. [Wins](#wins)
-9. [Future Additions](#future-iterations)
-
-
-## Overview
-
 
 
 ## Planning Resources
