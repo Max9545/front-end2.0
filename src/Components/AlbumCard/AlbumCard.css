@@ -2,12 +2,12 @@
   position: relative;
   margin: 3rem;
   border-radius: 1rem;
-  padding: 20px 20px 0px 20px;
+  padding: 20px 20px 7px 20px;
   width: 280px;
-  height: 507px;
+  min-height: 507px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-self: center;
   background: radial-gradient(ellipse at 13% 0, rgba( 205, 214, 221, 0.25 ) 25%, transparent 45%, rgba( 205, 214, 221, 0.25 ));
   backdrop-filter: blur( 1px );

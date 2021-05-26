@@ -28,13 +28,14 @@ function AlbumCard ({ album }) {
   // )
   // if (error) return `Error! ${error.message}`
 
-  const displayGenres = (list) => {
-   return list.map(genre => <p className='card_genre' data-cy='card_genre'>{genre}</p>)
-  }
+  // const displayGenres = (list) => {
+  //   console.log(list)
+  //  return list.map(genre => <p className='card_genre' data-cy='card_genre'>{genre}</p>)
+  // }
 
-  const displayArtists = (list) => {
-    return list.map(name => <p>{ name }</p>)
-   }
+  // const displayArtists = (list) => {
+  //   return list.map(name => <p>{ name }</p>)
+  //  }
 
 
    const displayImage = (image) => {
@@ -56,14 +57,21 @@ function AlbumCard ({ album }) {
           <p className='card_artist-container' data-cy='card_artist-container'>
             { album.artist }
           </p>
-          {/* <h3 className='card_artist' data-cy='card_artist'>{}</h3> */}
+          
           <p className='card_date' data-cy='card_date'>This Edition Released in {album.year}</p>
         </Link>
-        <div className='card_genre-container' data-cy='card_genre-container'>
-          {/* {album.format && displayGenres(album.format) } */}
-        </div>
+        
+        {album.label && 
+          <div className='card_genre' data-cy='card_genre'>
+            {  `Record Label: ${album.label}` }
+          </div>}
+        {album.format && <div className='card_genre' data-cy='card_genre'>
+          { album.format }
+        </div>}
+        <div className='card_discogs-link' data-cy='card_discogs-link'>
+            { album.year }
+          </div>
         {/* <a href={album.uri} target='_blank' className='card_discogs-link' data-cy='card_discogs-link' >Purchase on Discogs</a> */}
-     
       </>
     )
   }
