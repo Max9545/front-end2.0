@@ -15,7 +15,7 @@ BE Team:
 - [Megan Gonzales](https://github.com/MGonzales26) | [LinkedIn](https://www.linkedin.com/in/megan-e-gonzales/)
 - [Adam J. Bowers](https://github.com/Pragmaticpraxis37) | [LinkedIn](https://www.linkedin.com/in/adam-bowers-06a871209/)
 - [Jordan Beck](https://github.com/jordanfbeck0528) | [LinkedIn](https://www.linkedin.com/in/jordan-f-beck/)
-- View the BE repo [here](https://github.com/selector-turing/back_end)
+_View the BE repo [here](https://github.com/selector-turing/back_end)_
 
 
 1. [Overview](#overview)
