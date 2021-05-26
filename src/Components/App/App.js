@@ -14,7 +14,6 @@ import FavoriteAlbumsDisplay from '../FavoriteAlbums/FavoriteAlbums'
 
 
 function App() {
-  const [titles, setTitles] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [searchAlbum, setAlbumSearch] = useState([])
   const [artist, setSearchArtist] = useState("The Kinks");

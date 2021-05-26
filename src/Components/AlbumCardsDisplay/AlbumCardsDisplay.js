@@ -4,17 +4,20 @@ import AlbumCard from '../AlbumCard/AlbumCard';
 function AlbumCardsDisplay ({ artist }) {
 
 
+function AlbumCardsDisplay ({ artist }) {
 
- const { loading, error, data } = useQuery(GET_ALBUMS_BY_ARTIST, {
+  const { loading, error, data } = useQuery(GET_ALBUMS_BY_ARTIST, {
     variables: { artist: artist }
   })
 
-  if (loading) return 'Loading...'
+  if (loading) return (
+    <div className='card-container' data-cy='card-container'>
+      <Skeleton animation="wave" height={300} width={500} />
+    </div>
+  )
   if (error) return `Error! ${error.message}`  
 
-
   const renderGivenAlbums = (list) => {
-
     return list.map(album => {
       return <AlbumCard  album={album}/>
     })
