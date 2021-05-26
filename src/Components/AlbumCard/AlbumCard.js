@@ -5,8 +5,7 @@ import './AlbumCard.css'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react';
 
-function AlbumCard ({  album }) {
-
+function AlbumCard ({ album }) {
 
   // const [currentAlbum, setCurrentAlbum] = useState()
 

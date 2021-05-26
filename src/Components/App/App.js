@@ -10,13 +10,15 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { Tooltip } from '@material-ui/core';
 import './App.css';
 import '../../normalize.css';
+import FavoriteAlbumsDisplay from '../FavoriteAlbums/FavoriteAlbums'
 
 
 function App() {
   // const [titles, setTitles] = useState(["The Payback"]);
-  const [favorites, setFavorites] = useState(["Ben", "The Wall", "The Payback"]);
+  const [favorites, setFavorites] = useState(["The Wall"]);
   const [searchAlbum, setAlbumSearch] = useState([])
   const [artist, setSearchArtist] = useState("Micheal Jackson");
+
 
   const addFavorite = (toAdd) => {
     if (favorites.includes(toAdd)) {
@@ -75,10 +77,12 @@ function App() {
             </section>
           </Route>
           <Route exact path="/your-favorites">
-              <AlbumCardsDisplay
-                titles={ favorites }
+            <section className="glass">
+              <FavoriteAlbumsDisplay
                 favorites={ favorites }
-                artist={ artist }
+                // searchAlbum={searchAlbum.map()}
+                // favorites={ favorites }
+                // artist={ artist }
                 // toggleFav={ toggleFav }
                 // determineFav={ determineFav }
                 // isFavorite={ isFavorite }
