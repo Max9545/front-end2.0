@@ -4,6 +4,7 @@ import '../AlbumCard/AlbumCard.css'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react';
 import { Skeleton } from '@material-ui/lab';
+import { displayGenres } from '../../scripts';
 
 function FavoriteCard ({ title }) {
 
@@ -24,11 +25,6 @@ function FavoriteCard ({ title }) {
 
 
   if (error) return `Error! ${error.message}`  
-
-
-  const displayGenres = (list) => {
-   return list.map(genre => <p className='card_genre' data-cy='card_genre'>{genre}</p>)
-  }
 
   const deconstruct = ( album ) => {
   
