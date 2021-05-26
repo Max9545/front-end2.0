@@ -15,7 +15,7 @@ function AlbumCardsDisplay ({ artist }) {
       <Skeleton animation="wave" height={300} width={500} />
     </div>
   )
-  if (error) return `Error! ${error.message}`  
+  if (error) return <h2 className="details_error">⚠️ We were unable to what you're looking for... please try again!</h2>
 
   const renderGivenAlbums = (list) => {
     return list.map(album => {
