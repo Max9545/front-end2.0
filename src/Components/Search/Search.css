@@ -2,13 +2,33 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-right: 1rem;
+  margin: 0 1rem 1rem;
   height: 100px;
+  max-width: 400px;
 }
 
 .search__input {
   width: 100%;
   background-color: transparent;
+  color: var(--text-color);
+  margin: 0 .25rem;
   border-width: 0px 0px 2px 0px;
   border-color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+.search-submit {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  opacity: .7;
+  border: none;
+  border-radius: 7px;
+  padding: .3rem .5rem;
+}
+
+@media screen and (max-width: 780px) {
+  .search {
+    height: 0px;
+    max-width: 310px;
+  }
 }

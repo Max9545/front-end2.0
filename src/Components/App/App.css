@@ -45,6 +45,7 @@ header {
   grid-template-areas: "title title search";
   color: var(--primary-color);
   padding: 0px 3rem;
+  margin-bottom: 1rem;
 }
 
 .header__h1 {
@@ -109,5 +110,6 @@ video {
     grid-template-areas: 
     "title"
     "search";
+    /* align-items: center; */
   }
 }
