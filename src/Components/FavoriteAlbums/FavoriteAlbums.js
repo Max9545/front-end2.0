@@ -1,33 +1,24 @@
-import './AlbumCardsDisplay.css'
-import AlbumCard from '../AlbumCard/AlbumCard';
+import '../AlbumCard/AlbumCard.css'
+import FavoriteCard from '../FavoriteCard/FavoriteCard';
 import { useQuery } from '@apollo/client';
 import { GET_ALBUMS_BY_ARTIST }from '../../queries';
 
-function FavoriteAlbumsDisplay ({ titles }) {
-
-// console.log(artist, titles)
-
- const { loading, error, data } = useQuery(GET_ALBUMS_BY_ARTIST, {
-    variables: { artist: artist }
-  })
-
-  if (loading) return 'Loading...'
-  if (error) return `Error! ${error.message}`  
+function FavoriteAlbumsDisplay ({ favorites }) {
 
 
   const renderGivenAlbums = (list) => {
     console.log(list)
-    return list.map(album => {
-      return <AlbumCard  artist={artist} album={album}/>
+    return list.map(title => {
+      return <FavoriteCard  title={title}/>
     })
   }
 
   return (
       <div className='card-container' data-cy='card-container'>
         <h2>Albums</h2>
-        {renderGivenAlbums(titles) }
+        {renderGivenAlbums(favorites) }
       </div>
   )
 }
 
-export default favoriteAlbumsDisplay
+export default FavoriteAlbumsDisplay
