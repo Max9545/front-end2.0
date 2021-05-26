@@ -1,6 +1,6 @@
 describe('User navigation capabilities', () => {
   beforeEach(() => {
-    cy.visit('https://turing-selector.herokuapp.com/')
+    cy.visit('http://localhost:3000/')
   })
 
   it('The nav bar should exist', () => {
