@@ -17,7 +17,7 @@ function App() {
 
   const [favorites, setFavorites] = useState([]);
   const [searchAlbum, setAlbumSearch] = useState([])
-  const [artist, setSearchArtist] = useState("Black Sabbath");
+  const [artist, setSearchArtist] = useState("The Kinks");
   
   const addFavorite = (toAdd) => {
     if (favorites.includes(toAdd)) {
@@ -80,6 +80,7 @@ function App() {
               <FavoriteAlbumsDisplay
                 favorites={ favorites }
               />
+            /</section>  
           </Route>
           <Route exact path="/:title" render={({ match }) => {
             const { title } = match.params;

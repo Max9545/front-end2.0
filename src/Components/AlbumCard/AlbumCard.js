@@ -17,16 +17,16 @@ function AlbumCard ({ album }) {
   //   variables: { title: title }
   // })
   
-  if (loading) return (
-    <div className='card_card' data-cy='card_card'>
-      <Skeleton animation="wave" variant="rect" width={250} height={250} />
-      <Skeleton animation="wave" variant="text" height={32} />
-      <Skeleton animation="wave" variant="text" />
-      <Skeleton animation="wave" variant="text" />
-      <Skeleton animation="wave" variant="text" />
-    </div>
-  )
-  if (error) return `Error! ${error.message}`
+  // if (loading) return (
+  //   <div className='card_card' data-cy='card_card'>
+  //     <Skeleton animation="wave" variant="rect" width={250} height={250} />
+  //     <Skeleton animation="wave" variant="text" height={32} />
+  //     <Skeleton animation="wave" variant="text" />
+  //     <Skeleton animation="wave" variant="text" />
+  //     <Skeleton animation="wave" variant="text" />
+  //   </div>
+  // )
+  // if (error) return `Error! ${error.message}`
 
   const displayGenres = (list) => {
    return list.map(genre => <p className='card_genre' data-cy='card_genre'>{genre}</p>)
