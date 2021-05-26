@@ -55,19 +55,25 @@ describe('User can favorite or unfavorite any single album with the favoriting b
       .should('contain', 'Soul');
   })
 
-  it('User should be able to favorite multiple albums and see them rendered on the /your-favorite path accurately', () => {
-    // cy.get('[data-cy=details_favorites-button_unfilled]')
-    //   .click();
+  it('User should be able to favorite multiple albums and see them rendered on the /your-favorites path accurately', () => {
     cy.get('[data-cy=search__input]').type('Freak Out');
     cy.get('[data-cy=search__select]').select('album');
     cy.get('[data-cy=search-submit]').click();
-    cy.get('[data-cy=card_card]').click();
     cy.get('[data-cy=details_favorites-button_unfilled]')
       .click();
     cy.get('[data-cy=link-to-liked]')
       .click();
     cy.get('[data-cy=card-container] > [data-cy=card_card]')
+      .eq(0)
       .get('[data-cy=card_title]')
-      // .should('contain', 'Freak Out');
+      .should('contain', 'The Payback');
+    cy.get('[data-cy=card-container] > [data-cy=card_card]')
+      .eq(1)
+      .get('[data-cy=card_title]')
+      .should('contain', 'Freak Out');
   })
+
+  // it('User should be able to remove a favorite with the favoriting button and observe accurate render on the /your-favorites path', () => {
+
+  // })
 })
