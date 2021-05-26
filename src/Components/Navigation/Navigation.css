@@ -24,6 +24,7 @@ nav > * {
  
 .nav__web_view {
   color: var(--primary-color);
+  max-height: 115px;
 }
 
 .nav__web_view > a {
