@@ -8,8 +8,6 @@ import { displayGenres } from '../../scripts';
 
 function FavoriteCard ({ title }) {
 
-
-
   const { loading, error, data } = useQuery(GET_SINGLE_ALBUM, {
     variables: { title: title }
   })

@@ -18,6 +18,7 @@ const Search = ({ setSearchArtist }) => {
   const history = useHistory()
   const [userQuery, setUserQuery] = useState('');
   const [type, setType] = useState('artist');
+
   const determineSearchType = (event) => {
 
     if(type === 'artist') {

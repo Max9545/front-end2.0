@@ -3,8 +3,9 @@ import { useQuery } from '@apollo/client';
 
 import './AlbumCard.css'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react';
 
-function AlbumCard ({  album }) {
+function AlbumCard ({ album }) {
   
    const displayImage = (image) => {
 
@@ -22,7 +23,7 @@ function AlbumCard ({  album }) {
           {displayImage(album.coverImage)}
           <h2 className='card_title' data-cy='card_title'>{album.title}</h2>
           <p className='card_artist-container' data-cy='card_artist-container'>
-            { album.artists[0].name }
+            { album.artist }
           </p>
           <p className='card_date' data-cy='card_date'>This Edition Released in {album.year}</p>
         </Link>
@@ -42,7 +43,7 @@ function AlbumCard ({  album }) {
 
   return (
     <div className='card_card' data-cy='card_card'>
-      { deconstruct(data) }
+      { album && deconstruct(album) }
     </div>
   )
 }

@@ -11,7 +11,6 @@ import { GET_SINGLE_ALBUM, GET_SPOTIFY } from '../../queries';
 import { displayGenres } from '../../scripts';
 import { Skeleton } from '@material-ui/lab';
 
-
 const Details = ({ 
   title, 
   determineFav, 
@@ -20,8 +19,6 @@ const Details = ({
 }) => {
   
   const [isFav, setIsFav] = useState(isFavorite(title));
-
-
 
   useEffect(() => {
     setIsFav(isFavorite(title));
@@ -67,7 +64,7 @@ const Details = ({
             <img className="details_album-cover shadow" data-cy="details_album-cover" src={data1.album.coverImage} alt={`${data1.album.title} album cover`}/>
             <div className="details_links">
               <IconButton
-                className="details_favorite-button" 
+                className="details_favorite-button click"
                 data-cy="details_favorites-button"
                 aria-label={"Add to Favorites"}
                 style={style}
