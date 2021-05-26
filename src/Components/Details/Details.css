@@ -12,6 +12,10 @@
   width: 100%;
 }
 
+.details_error {
+  color: var(--text-color);
+}
+
 .details_main {
   max-height: 750px;
   width: 98%;
