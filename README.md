@@ -133,6 +133,7 @@ __GraphQL__ & __ApolloClient__
 + Continous-Integration with Travis CI
 + Adapting to the Git Rebase workflow
 + State and UI synchronization with regards to the application's favoriting feature
++ Disrupted flow of work caused by network request limitations from the source Discogs API
 
 ---
 ## Wins
