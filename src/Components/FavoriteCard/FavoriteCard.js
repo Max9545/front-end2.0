@@ -30,10 +30,6 @@ function FavoriteCard ({ title }) {
    return list.map(genre => <p className='card_genre' data-cy='card_genre'>{genre}</p>)
   }
 
-  // const displayArtists = (list) => {
-  //   return list.map(name => <p>{ name }</p>)
-  //  }
-
   const deconstruct = ( album ) => {
     console.log(album.album)
     return (
@@ -44,7 +40,6 @@ function FavoriteCard ({ title }) {
           <p className='card_artist-container' data-cy='card_artist-container'>
             { album.album.artists[0].name }
           </p>
-          {/* <h3 className='card_artist' data-cy='card_artist'>{}</h3> */}
           <p className='card_date' data-cy='card_date'>This Edition Released in {album.album.year}</p>
         </Link>
         <div className='card_genre-container' data-cy='card_genre-container'>
