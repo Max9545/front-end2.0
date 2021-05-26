@@ -76,7 +76,7 @@ a {
 
 video {
   z-index: -1;
-  position: absolute;
+  position: fixed;
 }
 
 @media (min-aspect-ratio: 16/9) {
