@@ -8,7 +8,7 @@ context('Album Cards', () => {
     })
     .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
       if (req.body.query.includes('Freak Out')) {
-        req.reply({ fixture: 'freakOut.js' })
+        req.reply({ fixture: 'freakOut.json' })
       }
     })
     .visit('http://localhost:3000/')
