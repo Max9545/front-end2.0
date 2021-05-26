@@ -14,12 +14,11 @@ import FavoriteAlbumsDisplay from '../FavoriteAlbums/FavoriteAlbums'
 
 
 function App() {
-  // const [titles, setTitles] = useState(["The Payback"]);
-  const [favorites, setFavorites] = useState(["The Wall"]);
+
+  const [favorites, setFavorites] = useState([]);
   const [searchAlbum, setAlbumSearch] = useState([])
-  const [artist, setSearchArtist] = useState("Micheal Jackson");
-
-
+  const [artist, setSearchArtist] = useState("Black Sabbath");
+  
   const addFavorite = (toAdd) => {
     if (favorites.includes(toAdd)) {
       return;
