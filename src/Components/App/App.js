@@ -14,7 +14,6 @@ import FavoriteAlbumsDisplay from '../FavoriteAlbums/FavoriteAlbums'
 
 
 function App() {
-
   const [favorites, setFavorites] = useState([]);
   const [searchAlbum, setAlbumSearch] = useState([])
   const [artist, setSearchArtist] = useState("The Kinks");
@@ -34,13 +33,19 @@ function App() {
     if (isFav) {
       return (
       <Tooltip title="Remove from Favorites" placement="left">
-        <FavoriteIcon fontSize="large" />
+        <FavoriteIcon
+        fontSize="large"
+        data-cy="details_favorites-button_filled"
+        />
       </Tooltip>
       )
     }
     return (
       <Tooltip title="Add to Favorites" placement="left">
-        <FavoriteBorderIcon fontSize="large" />
+        <FavoriteBorderIcon
+        fontSize="large"
+        data-cy="details_favorites-button_unfilled"
+        />
       </Tooltip>
     )
   }

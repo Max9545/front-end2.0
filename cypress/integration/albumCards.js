@@ -1,21 +1,22 @@
 context('Album Cards', () => {
   beforeEach(() => {
     cy
-    .intercept('POST', 'https://pure-hollows-05817.herokuapp.com/https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
+    .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
       if (req.body.query.includes('The Payback')) {
         req.reply({ fixture: 'details-fixture.json' })
       }
     })
-    .intercept('POST', 'https://pure-hollows-05817.herokuapp.com/https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
+    .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
       if (req.body.query.includes('Freak Out')) {
-        req.reply({ fixture: 'freakOut.js' })
+        req.reply({ fixture: 'freakOut.json' })
       }
     })
-    .visit('https://turing-selector.herokuapp.com/')
+    .visit('http://localhost:3000/')
     .get('.search__input')
-    .type('Freak Out')  
-    .get('[data-cy=search-submit]')
-    .click()
+    .type('Freak Out')
+    
+    cy.get('[data-cy=search-submit]')
+      .click()
   })
 
   it('Should have an album cover', () => {
@@ -49,11 +50,5 @@ context('Album Cards', () => {
     .get('[data-cy=card_genre]').should('exist')
     .should('contain', 'Electronic')
     .should('contain', 'Rock')
-  })
-
-  it('Should have a link to purchase the album on discogs', () => {
-    cy
-    .get('[data-cy=card_discogs-link]').should('exist')
-    .should('contain', 'Purchase on Discogs')
   })
 })

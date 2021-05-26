@@ -41,6 +41,7 @@ const Search = ({ setSearchArtist }) => {
       <input
         id="searchField"
         className="search__input"
+        data-cy="search__input"
         placeholder="Search ..."
         defaultValue=""
         list="albumTitles"

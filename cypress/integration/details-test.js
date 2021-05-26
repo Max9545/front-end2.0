@@ -1,13 +1,12 @@
-// **UNCOMMENT WHEN BEHAVIOR IS IMPLEMENTED**
 // describe('', () => {
 //   beforeEach(() => {
 //     cy
-//     .intercept('POST', 'https://pure-hollows-05817.herokuapp.com/https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
+//     .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
 //       if (req.body.query.includes('The Payback')) {
 //         req.reply({ fixture: 'details-fixture.json' })
 //       }
 //     })
-//     .visit('https://turing-selector.herokuapp.com/')
+//     .visit('http://localhost:3000/The%20Payback')
 //   })
 
 //   it('should display the current album cover', () => {
