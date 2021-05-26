@@ -3,9 +3,6 @@ import AlbumCard from '../AlbumCard/AlbumCard';
 
 function AlbumCardsDisplay ({ artist }) {
 
-
-function AlbumCardsDisplay ({ artist }) {
-
   const { loading, error, data } = useQuery(GET_ALBUMS_BY_ARTIST, {
     variables: { artist: artist }
   })
@@ -30,4 +27,4 @@ function AlbumCardsDisplay ({ artist }) {
   )
 }
 
-export default AlbumCardsDisplay
+export default AlbumCardsDisplay;
