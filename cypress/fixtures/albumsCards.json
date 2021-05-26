@@ -1,0 +1,96 @@
+{
+  "data": {
+      "artistAlbums": [
+          {
+              "artist": "John Coltrane",
+              "title": "Mating Call ",
+              "id": 9896569,
+              "coverImage": "https://img.discogs.com/S-ffrwNacsI2r9pt_O2t9aoSZqs=/fit-in/600x603/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-9896569-1621854039-3478.jpeg.jpg",
+              "format": "7\", Single",
+              "year": 1956,
+              "label": "Prestige"
+          },
+          {
+              "artist": "Tadd Dameron With John Coltrane",
+              "title": "Mating Call",
+              "id": 8201124,
+              "coverImage": null,
+              "format": "7\", EP, Mono",
+              "year": 1957,
+              "label": "Metronome"
+          },
+          {
+              "artist": "John Coltrane",
+              "title": "Time Was",
+              "id": 10546138,
+              "coverImage": "https://img.discogs.com/li9hOBO03d4PCDz8eDdnC9IIf08=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-10546138-1543242191-7650.jpeg.jpg",
+              "format": "7\", Single, Mono",
+              "year": 1957,
+              "label": "Prestige"
+          },
+          {
+              "artist": "Idrees Sulieman, Webster Young, John Coltrane, Bobby Jaspar With Mal Waldron, Kenny Burrell, Paul Chambers (3), Art Taylor",
+              "title": "Interplay For 2 Trumpets And 2 Tenors",
+              "id": 270900,
+              "coverImage": null,
+              "format": null,
+              "year": 1957,
+              "label": null
+          },
+          {
+              "artist": "Mal Waldron With Jackie McLean, John Coltrane, Idrees Sulieman, Sahib Shihab , And Bill Hardman",
+              "title": "Mal/2",
+              "id": 664841,
+              "coverImage": null,
+              "format": null,
+              "year": 1957,
+              "label": null
+          },
+          {
+              "artist": "John Coltrane",
+              "title": "Coltrane",
+              "id": 75907,
+              "coverImage": "https://img.discogs.com/WnF_v9h0scK1KIMSb5GJH6FFxdA=/fit-in/600x598/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3016396-1354569966-8114.jpeg.jpg",
+              "format": null,
+              "year": 1957,
+              "label": null
+          },
+          {
+              "artist": "Tadd Dameron With John Coltrane",
+              "title": "Mating Call",
+              "id": 313937,
+              "coverImage": null,
+              "format": null,
+              "year": 1957,
+              "label": null
+          },
+          {
+              "artist": "Hank Mobley / Al Cohn / John Coltrane / Zoot Sims",
+              "title": "Tenor Conclave",
+              "id": 62778,
+              "coverImage": "https://img.discogs.com/1hPrUB0KBHA0XWn9IaiYU2foZcY=/fit-in/600x607/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-843266-1615412575-9138.jpeg.jpg",
+              "format": null,
+              "year": 1957,
+              "label": null
+          },
+          {
+              "artist": "John Coltrane",
+              "title": "Blue Train",
+              "id": 415471,
+              "coverImage": "https://img.discogs.com/CA_TLyRPuiPOUumGSBvPPv32_No=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3022494-1426183782-8293.jpeg.jpg",
+              "format": null,
+              "year": 1957,
+              "label": null
+          },
+          {
+              "artist": "John Coltrane",
+              "title": "Blue Train",
+              "id": 32208,
+              "coverImage": "https://img.discogs.com/CA_TLyRPuiPOUumGSBvPPv32_No=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3022494-1426183782-8293.jpeg.jpg",
+              "format": null,
+              "year": 1957,
+              "label": null
+          }
+      ]
+  }
+}
