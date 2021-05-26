@@ -14,8 +14,9 @@ context('Album Cards', () => {
     .visit('https://turing-selector.herokuapp.com/')
     .get('.search__input')
     .type('Freak Out')  
-    .get('[data-cy=search-submit]')
-    .click()
+    
+    cy.get('[data-cy=search-submit]')
+      .click()
   })
 
   it('Should have an album cover', () => {
