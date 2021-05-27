@@ -54,6 +54,7 @@ const Search = ({ setSearchArtist }) => {
         <datalist id="albumTitles">
         </datalist>
         <select
+          className="search-type"
           value={type}
           data-cy="search__select"
           onChange={(e) => setType(e.target.value)}

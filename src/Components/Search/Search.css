@@ -32,6 +32,15 @@
   cursor: pointer;
 }
 
+.search-type {
+  background-color: var(--cyan);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 7px;
+  padding: 0.3rem 0.5rem;
+  margin: 0 4px 0 4px;
+}
+
 @media screen and (max-width: 780px) {
   .search {
     height: 0px;
