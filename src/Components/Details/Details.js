@@ -73,7 +73,7 @@ const Details = ({
                 { determineFav(isFav) }
               </IconButton>
               <Tooltip title="View on Discogs" placement="right">
-                <a className="details_discogs-link" data-cy="details_discogs-link" href={data1.album.uri} target="_blnk">
+                <a className="details_discogs-link" data-cy="details_discogs-link" href={data1.album.uri} target="_blank">
                   <img className="details_discogs-logo" data-cy="details_discogs-logo" src={discogsLogo} alt="discogs logo"/>
                 </a>
               </Tooltip>
