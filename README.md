@@ -113,7 +113,7 @@ __GraphQL__ & __ApolloClient__
 ---
 ## Challenges
 + Familiarizing ourselves with the relationship between GraphQL and ApolloClient
-+ Continous-Integration with Travis CI
++ Failed builds with Travis CI caused by API request delimiting
 + Adapting to the Git Rebase workflow
 + State and UI synchronization with regards to the application's favoriting feature
 + Disrupted flow of work caused by network request limitations from the source Discogs API
