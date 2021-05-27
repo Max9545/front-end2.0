@@ -19,6 +19,8 @@ const Search = ({ setSearchArtist }) => {
   const [userQuery, setUserQuery] = useState('');
   const [type, setType] = useState('artist');
 
+  const searchField = document.getElementById('searchField');
+
   const determineSearchType = (event) => {
 
     if(type === 'artist') {
@@ -31,6 +33,10 @@ const Search = ({ setSearchArtist }) => {
       event.preventDefault()
       history.push(`/${userQuery}`)
     }
+  }
+
+  const clearSearch = () => {
+    searchField.value = '';
   }
 
   return (
@@ -47,11 +53,18 @@ const Search = ({ setSearchArtist }) => {
         />
         <datalist id="albumTitles">
         </datalist>
-        <select value={type} onChange={(e) => setType(e.target.value)}>
+        <select
+          value={type}
+          data-cy="search__select"
+          onChange={(e) => setType(e.target.value)}
+          >
           <option selected value="artist">Artist</option>
           <option value="album">Album</option>
         </select>
-        <button onClick={(e) => determineSearchType(e, type)}
+        <button onClick={(e) => {
+          determineSearchType(e, type);
+          clearSearch();
+        }}
         className="search-submit" data-cy='search-submit'>
           Search
         </button>

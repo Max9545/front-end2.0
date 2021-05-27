@@ -33,4 +33,10 @@ describe('User navigation capabilities', () => {
       expect(loc.pathname).to.eq('/')
     })
   })
+
+  it('Should display a bad path message to all invalid paths', () => {
+    cy.visit('http://localhost:3000/some-invalid-path-nonsense');
+    cy.get('h2')
+      .should('contain', "⚠️ We're sorry - something went wrong! Please try again later.");
+  })
 });

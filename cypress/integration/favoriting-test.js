@@ -12,10 +12,10 @@ describe('User can favorite or unfavorite any single album with the favoriting b
         req.reply({ fixture: 'freakOut.json' })
       }
     })
-    cy.visit('http://localhost:3000/The%20Payback')
   })
   
   it('Should have a favoriting button that starts out unfilled', () => {
+    cy.visit('http://localhost:3000/The%20Payback')
     cy.get('[data-cy=details_favorites-button_unfilled]')
       .should('exist')
       .and('be.visible')
@@ -30,18 +30,16 @@ describe('User can favorite or unfavorite any single album with the favoriting b
   })
 
   it('Favoriting button should be able to toggle between unfilled and filled icons on multiple clicks', () => {
-    cy.get('[data-cy=details_favorites-button_unfilled]')
-      .click()
     cy.get('[data-cy=details_favorites-button_filled]')
       .click()
     cy.get('[data-cy=details_favorites-button_unfilled]')
+      .click()
+    cy.get('[data-cy=details_favorites-button_filled]')
       .should('exist')
       .and('be.visible')
   })
 
   it('User should be able to see the same album favorited rendered on the /your-favorites path', () => {
-    cy.get('[data-cy=details_favorites-button_unfilled]')
-      .click()
     cy.get('[data-cy=link-to-liked]')
       .click();
     cy.get('[data-cy=card_cover]')
@@ -57,19 +55,37 @@ describe('User can favorite or unfavorite any single album with the favoriting b
       .should('contain', 'Soul');
   })
 
-  // Can implement test after expected branch is nmerged
-  // it('User should be able to favorite multiple albums and see them rendered on the /your-favorite path accurately', () => {
-  //   cy.get('[data-cy=details_favorites-button_unfilled]')
-  //     .click();
-  //   cy.get('[data-cy=search__input]').type('Freak Out');
-  //   cy.get('[data-cy=search-submit]').click();
-  //   cy.get('[data-cy=card_card]').click();
-  //   cy.get('[data-cy=details_favorites-button_unfilled]')
-  //     .click();
-  //   cy.get('[data-cy=link-to-liked]')
-  //     .click();
-  //   cy.get('[data-cy=card-container] > [data-cy=card_card]')
-  //     .get('[data-cy=card_title]')
-  //     .should('contain', 'Freak Out');
-  // })
+  it('User should be able to favorite multiple albums and see them rendered on the /your-favorites path accurately', () => {
+    cy.get('[data-cy=search__input]').type('Freak Out');
+    cy.get('[data-cy=search__select]').select('Album');
+    cy.get('[data-cy=search-submit]').click();
+    cy.get('[data-cy=details_favorites-button_unfilled]')
+      .click();
+    cy.get('[data-cy=link-to-liked]')
+      .click();
+    cy.get('[data-cy=card-container] > [data-cy=card_card]')
+      .eq(0)
+      .get('[data-cy=card_title]')
+      .should('contain', 'The Payback');
+    cy.get('[data-cy=card-container] > [data-cy=card_card]')
+      .eq(1)
+      .get('[data-cy=card_title]')
+      .should('contain', 'Freak Out');
+  })
+
+  it('User should be able to remove a favorited album with the favoriting button and observe accurate render on the /your-favorites path', () => {
+    cy.get('[data-cy=search__input]').type('The Payback');
+    cy.get('[data-cy=search__select]').select('Album');
+    cy.get('[data-cy=search-submit]').click();
+    cy.get('[data-cy=details_favorites-button_filled]')
+      .should('exist')
+      .and('be.visible')
+      .click()
+    cy.get('[data-cy=link-to-liked]')
+      .click();
+    cy.get('[data-cy=card-container] > [data-cy=card_card]')
+      .eq(0)
+      .get('[data-cy=card_title]')
+      .should('contain', 'Freak Out');
+  })
 })
