@@ -45,7 +45,7 @@ _View the BE repo [here](https://github.com/selector-turing/back_end)_
 Clone down this repository to your local machine:
 
 ```
-git clone git@github.com:JeffShepherd/Rancid-Tomatillos.git
+git clone git@github.com:selector-turing/front_end.git
 ```
 
 Then `npm install` the following dependencies:
