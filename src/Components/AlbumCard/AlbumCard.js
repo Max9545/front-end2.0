@@ -12,7 +12,7 @@ function AlbumCard ({ album }) {
     if(image && !image.includes('.gif')) {
       return (<img className='card_cover' data-cy='card_cover'src={album.coverImage} alt={`Cover for ${album.title}`}/>)
     } else {
-      return (<img className='card_cover' data-cy='card_cover' src='/CoverFillStandIn.png' alt={`Cover for ${album.title}`}/>)
+      return (<img className='card_cover_standIn' data-cy='card_cover' src='/CoverFillStandIn.png' alt={`Cover for ${album.title}`}/>)
     }
    }
 

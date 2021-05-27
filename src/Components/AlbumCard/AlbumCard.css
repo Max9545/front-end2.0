@@ -40,6 +40,11 @@
   border: 1px rgb(219, 161, 161)
 }
 
+.card_cover_standIn {
+  height: 250px;
+  width: 250px;
+}
+
 .card_date {
   margin: 0;
 }
