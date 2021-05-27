@@ -108,21 +108,6 @@ __GraphQL__ & __ApolloClient__
 
 ![demo-vid]()
 
-#### Landing Page
-
-![landing-page]()
-
-#### Details View
-
-![details-page]()
-
-#### Details View
-
-![details-page]()
-
-#### Mobile View
-![mobile-landing page]()
-
 
 
 ---
@@ -132,6 +117,7 @@ __GraphQL__ & __ApolloClient__
 + Adapting to the Git Rebase workflow
 + State and UI synchronization with regards to the application's favoriting feature
 + Disrupted flow of work caused by network request limitations from the source Discogs API
++ Album objects without unique title matches yields unexpected results
 
 ---
 ## Wins
