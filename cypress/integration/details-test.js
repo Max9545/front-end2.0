@@ -6,10 +6,11 @@ describe('', () => {
         req.reply({ fixture: 'details-fixture.json' })
       }
     })
-    .visit('http://localhost:3000/The%20Payback')
   })
 
   it('should display the current album cover', () => {
+    cy.visit('http://localhost:3000/The%20Payback')
+
     cy.get('[data-cy=details_album-cover')
       .should('have.attr', 'src', 'https://img.discogs.com/MUELn9ObTL-ZpxyUgF5M9D_Kumc=/fit-in/600x591/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-719877-1247870750.jpeg.jpg')
   });
