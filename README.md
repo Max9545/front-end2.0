@@ -68,7 +68,7 @@ To start application, run:
 npm start
 ```
 
-If you see `Compiled successfully!` in your terminal, the application is running and the app can be veiwed at `http://localhost:3000/` in your browser.
+After a successful compilation, the application is running and the app can be veiwed at `http://localhost:3000/` in your browser.
 
 
 
