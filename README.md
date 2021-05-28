@@ -115,7 +115,7 @@ __GraphQL__ & __ApolloClient__
 ![Search By Artist](https://media.giphy.com/media/CRKNKtlrhteBOTb2it/giphy.gif)
 
 #### Link To Discogs
-![Search By Artist](https://media.giphy.com/media/CRKNKtlrhteBOTb2it/giphy.gif)
+![Search By Artist](https://media.giphy.com/media/rGb6xRS56AvPU75tpE/giphy.gif)
 
 
 ---
