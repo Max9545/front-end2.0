@@ -106,7 +106,7 @@ __GraphQL__ & __ApolloClient__
 
 #### Application Demo
 
-<-- ![demo-vid](./public/AlluresDemoSelector.gif) -->
+<!-- ![demo-vid](./public/AlluresDemoSelector.gif) -->
 
 #### Search By Album and Favorites
 ![Search By Album](https://media.giphy.com/media/uJnJR5tiHjAO07QjSp/giphy.gif)
