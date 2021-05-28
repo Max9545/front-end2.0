@@ -104,7 +104,7 @@ __GraphQL__ & __ApolloClient__
 ## Features
 
 
-#### Application Demo
+### Application Demo
 
 <!-- ![demo-vid](./public/AlluresDemoSelector.gif) -->
 
