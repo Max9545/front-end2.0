@@ -95,7 +95,9 @@ After a successful compilation, the application is running and the app can be ve
 <img alt="React Router" src='https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white'/>
 <img alt="Material UI" src='https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white'/>
 <img alt="Travis CI" src='https://img.shields.io/travis/jupyterhub/jupyterhub/master?logo=travis'/>
-<img alt="ApolloClient" src='https://cdn.worldvectorlogo.com/logos/apollo-graphql-1.svg'/>
+
+
+<!-- <img alt="ApolloClient" src='https://cdn.worldvectorlogo.com/logos/apollo-graphql-1.svg'/>. -->
 
 _With_
 __GraphQL__ & __ApolloClient__
