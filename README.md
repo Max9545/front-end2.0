@@ -108,10 +108,10 @@ __GraphQL__ & __ApolloClient__
 
 ![demo-vid](public/AlluresDemoSelector.gif)
 
-
+#### Search By Album
 ![Search By Album](https://media.giphy.com/media/uJnJR5tiHjAO07QjSp/giphy.gif)
 
-
+#### Search By Artist
 ![Search By Artist](https://media.giphy.com/media/CRKNKtlrhteBOTb2it/giphy.gif)
 
 
