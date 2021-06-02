@@ -2,6 +2,7 @@ import AlbumCardsDisplay from '../AlbumCardsDisplay/AlbumCardsDisplay'
 import Navigation from '../Navigation/Navigation';
 import Search from '../Search/Search';
 import Details from '../Details/Details.js';
+import RandomDetails from '../RandomDetails/RandomDetails'
 import { Switch, Route } from 'react-router-dom';
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
@@ -86,6 +87,15 @@ function App() {
               />
             </section>  
           </Route>
+          <Route exact path="/random-album" render={() => {
+            return (
+              <RandomDetails
+                toggleFav={ toggleFav }
+                determineFav={ determineFav }
+                isFavorite={ isFavorite }
+              />
+            )
+          }} />
           <Route exact path="/:title" render={({ match }) => {
             const { title } = match.params;
             return (
