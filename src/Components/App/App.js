@@ -16,7 +16,7 @@ import FavoriteAlbumsDisplay from '../FavoriteAlbums/FavoriteAlbums'
 function App() {
   const [favorites, setFavorites] = useState([]);
   const [searchAlbum, setAlbumSearch] = useState([])
-  const [artist, setSearchArtist] = useState("John Coltrane");
+  const [artist, setSearchArtist] = useState("Pink Floyd");
   
   const addFavorite = (toAdd) => {
     if (favorites.includes(toAdd)) {

@@ -15,6 +15,7 @@
   transition: transform .6s;
 }
  
+
 .card_card:hover {
   transform: scale(1.1);
 }
@@ -41,6 +42,7 @@
 }
 
 .card_cover_standIn {
+  /* background-color: var(--cyan); */
   height: 250px;
   width: 250px;
 }
