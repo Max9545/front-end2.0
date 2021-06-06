@@ -13,7 +13,7 @@ context('Album Cards', () => {
     })
   })
 
-  it('Should display a random album with its cover', () => {
+  it.only('Should display a random album with its cover', () => {
       cy
       .visit('http://localhost:3000/')
       .get('[data-cy=link-to-random-album]')
@@ -50,6 +50,14 @@ context('Album Cards', () => {
     cy
     .get('[data-cy=details_release-year')
     .contains('Released: 1986')
+  });
+
+  it.only('should display the genres of that album', () => {
+    cy
+    .get('[data-cy=details_genre-container]').should('exist')
+    .should('contain', 'Rock')
+    .should('contain', 'Pop')
+    .should('contain', 'Folk, World, & Country')
   });
 
   it('should display a playlist where users can preview that album', () => {
