@@ -1,7 +1,12 @@
 describe('Album Cards', () => {
   beforeEach(() => {
     cy
-    .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', { fixture: 'albumsCards.json'})
+    // .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', { fixture: 'albumsCards.json'})
+    .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
+      if (req.body.query.includes('artistAlbums')) {
+        req.reply({ fixture: 'albumsCards.json' })
+      }
+    })
   })
 
 
