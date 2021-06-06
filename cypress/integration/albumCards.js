@@ -2,14 +2,8 @@ describe('Album Cards', () => {
   beforeEach(() => {
     cy
     .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', { fixture: 'albumsCards.json'})
-    // .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
-      // if (req.body.query.includes('John')) {
-        // req.reply({ fixture: 'albumsCards.json' })
-    //   }
-    // })
   })
 
-  
 
   it('Should have an album cover', () => {
     cy
@@ -37,7 +31,7 @@ describe('Album Cards', () => {
   it('Should have an album version release date', () => {
     cy
     .get('[data-cy=card_date]').should('exist')
-    .should('contain', 'This Edition Released in 1956')
+    .should('contain', '1956')
   })
 
   it('Should have album fomat', () => {

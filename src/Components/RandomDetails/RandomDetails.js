@@ -26,9 +26,9 @@ const RandomDetails = ({
   
   const QueryMultiple = () => {
     const res1 = useQuery(GET_RANDOM_ALBUM)
-    console.log(res1)
+
     const title = res1?.data?.randomAlbum?.title
-    console.log(title)
+
     const res2 = useQuery(GET_SPOTIFY, {
         skip: !title,
         variables: { title: title }

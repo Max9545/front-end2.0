@@ -34,7 +34,7 @@ function AlbumCard ({ album }) {
         {album.format && <div className='card_genre' data-cy='card_genre'>
           { album.format }
         </div>}
-        <div className='card_discogs-link' data-cy='card_discogs-link'>
+        <div className='card_discogs-link' data-cy='card_date'>
             { album.year }
         </div>
       </>
