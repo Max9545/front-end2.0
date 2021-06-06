@@ -1,4 +1,5 @@
 context('Album Cards', () => {
+
   beforeEach(() => {
     cy
     .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
@@ -13,13 +14,13 @@ context('Album Cards', () => {
     })
   })
 
-  it('Should display a random album with its cover', () => {
-      cy
-      .visit('http://localhost:3000/')
-      .get('[data-cy=link-to-random-album]')
-      .click()
-      .get('[data-cy=details_album-cover')
-      .should('have.attr', 'src', 'https://i.scdn.co/image/ab67616d0000b273aa694f60a6b960b475ec246a')
+  it('Should take a user to a random album when the Random Album button is pressed and display a random album with its cover', () => {
+    cy
+    .visit('http://localhost:3000/')
+    .get('[data-cy=link-to-random-album]')
+    .click()
+    .get('[data-cy=details_album-cover')
+    .should('have.attr', 'src', 'https://i.scdn.co/image/ab67616d0000b273aa694f60a6b960b475ec246a')
   });
     
   it('should allow users to add the current album to their collection of favorites', () => {
