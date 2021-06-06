@@ -13,7 +13,7 @@ context('Album Cards', () => {
     })
   })
 
-  it.only('Should display a random album with its cover', () => {
+  it('Should display a random album with its cover', () => {
       cy
       .visit('http://localhost:3000/')
       .get('[data-cy=link-to-random-album]')
@@ -52,7 +52,7 @@ context('Album Cards', () => {
     .contains('Released: 1986')
   });
 
-  it.only('should display the genres of that album', () => {
+  it('should display the genres of that album', () => {
     cy
     .get('[data-cy=details_genre-container]').should('exist')
     .should('contain', 'Rock')
@@ -65,5 +65,13 @@ context('Album Cards', () => {
     .get('[data-cy=details_web-player')
     .should('have.attr', 'src')
     .should('include', 'https://open.spotify.com/embed/album/')
+  });
+  it('should go back to the home page', () => {
+    cy
+    .get('[data-cy=details_back-button')
+    .click()
+    .get('[data-cy=card_card]')
+    .should('exist')
+    .get('[data-cy=card_title]').should('exist').should('contain', 'Mating Call ')
   });
 })
