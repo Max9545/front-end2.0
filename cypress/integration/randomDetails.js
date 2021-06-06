@@ -9,7 +9,7 @@ context('Album Cards', () => {
     })
     .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
       if (req.body.query.includes('randomAlbum')) {
-        req.reply({ fixture: 'freakOut.json' })
+        req.reply({ fixture: 'eastOfMidnight.json' })
       }
     })
   })
