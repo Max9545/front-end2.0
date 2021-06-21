@@ -5,6 +5,7 @@ import discogsLogo from '../Details/assets/discogs_white.svg';
 import { IconButton } from '@material-ui/core';
 import { Tooltip } from '@material-ui/core';
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
+import AlbumIcon from '@material-ui/icons/Album';
 import { style } from '../../scripts';
 import { useQuery } from '@apollo/client';
 import { GET_RANDOM_ALBUM, GET_SPOTIFY } from '../../queries';
@@ -20,7 +21,9 @@ const RandomDetails = ({
   const [isFav, setIsFav] = useState(false);
 
 
-  
+  const refreshPage = () => {
+    window.location.reload()
+  }
 
   const handleFavoriteClick = () => {
     toggleFav(data1.randomAlbum.title);
@@ -31,7 +34,6 @@ const RandomDetails = ({
     const res1 = useQuery(GET_RANDOM_ALBUM)
 
     const title = res1?.data?.randomAlbum?.title
-    const favStatus = res1?.data?.randomAlbum?.title
 
     const res2 = useQuery(GET_SPOTIFY, {
         skip: !title,
@@ -48,10 +50,12 @@ const RandomDetails = ({
 
 
   useEffect(() => {
-    setIsFav(isFavorite(data1.randomAlbum.title));
+    if (data1) {
+      setIsFav(isFavorite(data1.randomAlbum.title));
+    }
   }, [data1])
 
-  
+
   if (loading1 || loading2) return (
     <div className='card-container' data-cy='card-container'>
       <Skeleton animation="wave" height={675} width={878} />
@@ -61,10 +65,17 @@ const RandomDetails = ({
   return (
     <>
       <section className="details_main" data-cy="details_main"> 
+        <div className='random-details_nav' data-cy='random-details_nav'>
         <Link to="/" className="details_back-button click" data-cy="details_back-button">
           <KeyboardReturnIcon className="details_return-arrow"/>
             Back
-        </Link> 
+        </Link>
+        <button to="/random-album" className="details_back-button click" data-cy="details_back-button" onClick={ refreshPage }>
+          
+          <AlbumIcon className="details_return-arrow"/>
+            Another Random Album
+        </button>  
+        </div>
         <div className="details_content" data-cy="details_content">
           <article className="details_box left">
             <img className="details_album-cover shadow" data-cy="details_album-cover" src={data1.randomAlbum.coverImage} alt={`${data1.randomAlbum.title} album cover`}/>
