@@ -19,6 +19,9 @@ const RandomDetails = ({
   
   const [isFav, setIsFav] = useState(false);
 
+
+  
+
   const handleFavoriteClick = () => {
     toggleFav(data1.randomAlbum.title);
     setIsFav(!isFav);
@@ -26,8 +29,9 @@ const RandomDetails = ({
   
   const QueryMultiple = () => {
     const res1 = useQuery(GET_RANDOM_ALBUM)
-    console.log(res1)
+
     const title = res1?.data?.randomAlbum?.title
+    const favStatus = res1?.data?.randomAlbum?.title
 
     const res2 = useQuery(GET_SPOTIFY, {
         skip: !title,
@@ -42,6 +46,12 @@ const RandomDetails = ({
     { loading: loading2, error: error2, data: data2 }
   ] = QueryMultiple()
 
+
+  useEffect(() => {
+    setIsFav(isFavorite(data1.randomAlbum.title));
+  }, [data1])
+
+  
   if (loading1 || loading2) return (
     <div className='card-container' data-cy='card-container'>
       <Skeleton animation="wave" height={675} width={878} />
