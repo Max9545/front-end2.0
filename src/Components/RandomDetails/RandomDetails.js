@@ -70,10 +70,9 @@ const RandomDetails = ({
           <KeyboardReturnIcon className="details_return-arrow"/>
             Back
         </Link>
-        <button to="/random-album" className="details_back-button click" data-cy="details_back-button" onClick={ refreshPage }>
-          
-          <AlbumIcon className="details_return-arrow"/>
+        <button className="details_another-random click" data-cy="details_another-random" onClick={ refreshPage }>
             Another Random Album
+          <AlbumIcon className="details_return-arrow"/>
         </button>  
         </div>
         <div className="details_content" data-cy="details_content">
