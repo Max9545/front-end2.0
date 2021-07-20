@@ -12,7 +12,7 @@ function AlbumCard ({ album }) {
     if(image && !image.includes('.gif')) {
       return (<img className='card_cover' data-cy='card_cover'src={album.coverImage} alt={`Cover for ${album.title}`}/>)
     } else {
-      return (<img className='card_cover' data-cy='card_cover' src='/CoverFillStandIn.png' alt={`Cover for ${album.title}`}/>)
+      return (<img className='card_cover_standIn' data-cy='card_cover' src='/CoverFillStandIn.png' alt={`Cover for ${album.title}`}/>)
     }
    }
 
@@ -25,7 +25,7 @@ function AlbumCard ({ album }) {
           <p className='card_artist-container' data-cy='card_artist-container'>
             { album.artist }
           </p>
-          <p className='card_date' data-cy='card_date'>This Edition Released in {album.year}</p>
+          {/* <p className='card_date' data-cy='card_date'>This Edition Released in {album.year}</p> */}
         </Link>
         {album.label && 
           <div className='card_genre' data-cy='card_genre'>
@@ -34,7 +34,7 @@ function AlbumCard ({ album }) {
         {album.format && <div className='card_genre' data-cy='card_genre'>
           { album.format }
         </div>}
-        <div className='card_discogs-link' data-cy='card_discogs-link'>
+        <div className='card_discogs-link' data-cy='card_date'>
             { album.year }
         </div>
       </>

@@ -37,7 +37,7 @@ query ($artist: String!) {
 }
 `
 
-export const GET_RANDOM_ALBUMS = gql`
+export const GET_RANDOM_ALBUM = gql`
 query {
   randomAlbum {
           id

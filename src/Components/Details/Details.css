@@ -128,7 +128,20 @@
   color: hsl(0, 0%, 0%);
 }
 
-@media only screen and (max-width: 385px) {
+.random-details_nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details_another-random {
+  text-decoration: none;
+  background-color: transparent;
+  align-self:flex-end;
+  border: none;
+}
+
+@media only screen and (max-width: 679px) {
   .details_album-cover {
     height: 260px;
     width: 261px;
@@ -141,9 +154,16 @@
   .details_main-text {
     width: 261px;
   }
+
+
+  .random-details_nav {
+    align-self: center;
+    width: 70%;
+  }
+
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 680px) {
   .details_main {
     width: 95%;
     flex-direction: column;

@@ -1,0 +1,91 @@
+{
+  "data": {
+    "randomAlbum": {
+        "__typename": "RandomAlbum",
+        "id": "12971610",
+        "title": "East Of Midnight",
+        "artists": [
+            {
+                "__typename": "Artist",
+                "name": "Gordon Lightfoot"
+            }
+        ],
+        "year": 1986,
+        "genres": [
+            "Rock",
+            "Pop",
+            "Folk, World, & Country"
+        ],
+        "coverImage": "https://i.scdn.co/image/ab67616d0000b273aa694f60a6b960b475ec246a",
+        "resourceUrl": "https://api.discogs.com/releases/12971610",
+        "styles": [
+            "Folk Rock",
+            "Country Rock",
+            "Ballad"
+        ],
+        "tracklist": [
+            {
+                "__typename": "Tracklist",
+                "position": "A1",
+                "title": "Stay Loose",
+                "duration": "3:53"
+            },
+            {
+                "__typename": "Tracklist",
+                "position": "A2",
+                "title": "Morning Glory",
+                "duration": "3:24"
+            },
+            {
+                "__typename": "Tracklist",
+                "position": "A3",
+                "title": "East Of Midnight",
+                "duration": "3:58"
+            },
+            {
+                "__typename": "Tracklist",
+                "position": "A4",
+                "title": "A Lesson In Love",
+                "duration": "4:05"
+            },
+            {
+                "__typename": "Tracklist",
+                "position": "A5",
+                "title": "Anything For Love",
+                "duration": "3:43"
+            },
+            {
+                "__typename": "Tracklist",
+                "position": "B1",
+                "title": "Let It Ride",
+                "duration": "3:40"
+            },
+            {
+                "__typename": "Tracklist",
+                "position": "B2",
+                "title": "Ecstasy Made Easy",
+                "duration": "4:05"
+            },
+            {
+                "__typename": "Tracklist",
+                "position": "B3",
+                "title": "You Just Gotta Be",
+                "duration": "3:34"
+            },
+            {
+                "__typename": "Tracklist",
+                "position": "B4",
+                "title": "A Passing Ship",
+                "duration": "3:55"
+            },
+            {
+                "__typename": "Tracklist",
+                "position": "B5",
+                "title": "I'll Tag Along",
+                "duration": "3:08"
+            }
+        ],
+        "uri": "https://www.discogs.com/Gordon-Lightfoot-East-Of-Midnight/release/12971610"
+    }
+  }
+}

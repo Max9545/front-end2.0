@@ -25,6 +25,13 @@ const Navigation = ({ isMobile }) => {
         >
           Your Favorite Albums
         </NavLink>
+        <NavLink to="/random-album"
+          activeStyle={activeStyle}
+          className="navLink"
+          data-cy="link-to-random-album"
+        >
+          Random Album
+        </NavLink>
       </>
     )
   }

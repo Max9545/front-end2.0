@@ -1,15 +1,14 @@
 describe('Album Cards', () => {
   beforeEach(() => {
     cy
-    .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', { fixture: 'albumsCards.json'})
-    // .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
-      // if (req.body.query.includes('John')) {
-        // req.reply({ fixture: 'albumsCards.json' })
-    //   }
-    // })
+    // .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', { fixture: 'albumsCards.json'})
+    .intercept('POST', 'https://tranquil-depths-91575.herokuapp.com/graphql', (req) => {
+      if (req.body.query.includes('artistAlbums')) {
+        req.reply({ fixture: 'albumsCards.json' })
+      }
+    })
   })
 
-  
 
   it('Should have an album cover', () => {
     cy
@@ -34,12 +33,6 @@ describe('Album Cards', () => {
     .should('contain', 'John Coltrane')
   })
 
-  it('Should have an album version release date', () => {
-    cy
-    .get('[data-cy=card_date]').should('exist')
-    .should('contain', 'This Edition Released in 1956')
-  })
-
   it('Should have album fomat', () => {
     cy
     .get('[data-cy=card_genre]').should('exist')
@@ -51,5 +44,11 @@ describe('Album Cards', () => {
     .get('[data-cy=card_card]')
     .get('[data-cy=card_genre]').should('exist')
     .should('contain', 'Prestige')
+  })
+  
+  it('Should have an album version release date', () => {
+    cy
+    .get('[data-cy=card_date]').should('exist')
+    .should('contain', '1956')
   })
 })

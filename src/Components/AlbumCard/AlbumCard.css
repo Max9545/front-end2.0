@@ -15,6 +15,7 @@
   transition: transform .6s;
 }
  
+
 .card_card:hover {
   transform: scale(1.1);
 }
@@ -38,6 +39,12 @@
   max-height: 250px;
   max-width: 250px;
   border: 1px rgb(219, 161, 161)
+}
+
+.card_cover_standIn {
+  /* background-color: var(--cyan); */
+  height: 250px;
+  width: 250px;
 }
 
 .card_date {
